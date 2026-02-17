@@ -65,7 +65,7 @@ export default function Home() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden">
-          <div className="relative aspect-[3/1] w-full min-h-[280px] sm:min-h-[320px]">
+          <div className="relative aspect-[3/1] w-full min-h-[min(420px,85vh)] sm:min-h-[min(480px,80vh)]">
             <Image
               src="/hero-graphic.png"
               alt=""
@@ -75,28 +75,28 @@ export default function Home() {
               sizes="100vw"
             />
             <div
-              className="absolute inset-0 bg-gradient-to-t from-teal-50/95 via-teal-50/60 to-transparent dark:from-stone-950/95 dark:via-stone-950/60"
+              className="absolute inset-0 bg-gradient-to-t from-teal-50/98 via-teal-50/85 to-teal-50/70 dark:from-stone-950/98 dark:via-stone-950/90 dark:to-stone-950/80"
               aria-hidden
             />
           </div>
-          <div className="absolute inset-0 flex items-center justify-center px-5 py-8 sm:px-6 sm:py-10">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-serif text-4xl font-light tracking-tight text-stone-900 dark:text-teal-50 sm:text-5xl lg:text-6xl">
+          <div className="absolute inset-0 flex items-center justify-center overflow-y-auto px-5 py-8 sm:overflow-visible sm:px-6 sm:py-10">
+            <div className="mx-auto my-auto max-w-3xl shrink-0 py-4 text-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] sm:py-0">
+              <h1 className="font-serif text-3xl font-light tracking-tight text-stone-900 dark:text-teal-50 sm:text-4xl lg:text-5xl xl:text-6xl">
                 Ethereum Localism
               </h1>
-              <p className="mt-6 text-lg leading-relaxed text-stone-600 dark:text-stone-400 sm:text-xl">
+              <p className="mt-4 text-base leading-relaxed text-stone-700 dark:text-teal-100 sm:mt-6 sm:text-lg lg:text-xl">
                 Ethereum Localism connects digital tools with on-the-ground action, empowering communities to build more resilient local economies through local currencies and marketplaces, innovative funding models, community-led governance, and more.
               </p>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-4 sm:mt-8 sm:gap-6">
                 <Link
                   href="/knowledge-garden/introduction"
-                  className="text-base font-medium text-teal-700 underline decoration-teal-700/40 underline-offset-4 hover:decoration-teal-700 dark:text-teal-300 dark:decoration-teal-300/40 dark:hover:decoration-teal-300"
+                  className="text-base font-medium text-teal-800 underline decoration-teal-700/60 underline-offset-4 hover:decoration-teal-700 dark:text-teal-200 dark:decoration-teal-300/60 dark:hover:decoration-teal-300"
                 >
                   An Introduction to Ethereum Localism →
                 </Link>
                 <Link
                   href="/knowledge-garden/resources/Ethereum-Localism-Registry"
-                  className="text-base font-medium text-teal-700 underline decoration-teal-700/40 underline-offset-4 hover:decoration-teal-700 dark:text-teal-300 dark:decoration-teal-300/40 dark:hover:decoration-teal-300"
+                  className="text-base font-medium text-teal-800 underline decoration-teal-700/60 underline-offset-4 hover:decoration-teal-700 dark:text-teal-200 dark:decoration-teal-300/60 dark:hover:decoration-teal-300"
                 >
                   Find a local group →
                 </Link>
