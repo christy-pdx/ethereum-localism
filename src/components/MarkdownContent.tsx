@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import { remarkTransformLinks } from "@/lib/remark-transform-links";
 import { rehypeTransformLinks } from "@/lib/rehype-transform-links";
+import { transformAssetSrc } from "@/lib/content-links";
 import type { Components } from "react-markdown";
 
 /** Extract YouTube video ID from watch or youtu.be URLs */
@@ -30,10 +31,29 @@ function isExternalLink(href: string | undefined): boolean {
   return href.startsWith("http://") || href.startsWith("https://");
 }
 
-const components: Components = {
-  a: ({ href, children, ...props }) => (
+/** Resolve href to absolute KG URL. Handles paths the remark/rehype plugins may have missed. */
+function resolveHref(href: string | undefined, baseSlug?: string): string | undefined {
+  if (!href || typeof href !== "string") return href;
+  if (href.startsWith("/") || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("#"))
+    return href;
+  // Content-root paths: library/..., resources/...
+  if (href.startsWith("library/") || href.startsWith("resources/"))
+    return `/knowledge-garden/${href.replace(/\.md$/i, "")}`;
+  // Single-segment relative links (e.g. ethereum-localism-book-01-introduction.md) - resolve from baseSlug
+  const normalized = href.replace(/\.md$/i, "").replace(/\s+/g, "-");
+  if (baseSlug && !normalized.includes("/")) {
+    const baseDir = baseSlug.includes("/") ? baseSlug.split("/").slice(0, -1).join("/") : "";
+    const resolved = baseDir ? `${baseDir}/${normalized}` : normalized;
+    return `/knowledge-garden/${resolved}`;
+  }
+  return href;
+}
+
+function createComponents(baseSlug?: string): Components {
+  return {
+    a: ({ href, children, ...props }) => (
     <a
-      href={href}
+      href={resolveHref(href, baseSlug)}
       className="text-teal-700 underline hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-200"
       target={isExternalLink(href) ? "_blank" : undefined}
       rel={isExternalLink(href) ? "noopener noreferrer" : undefined}
@@ -57,9 +77,10 @@ const components: Components = {
         </div>
       );
     }
+    const resolvedSrc = typeof src === "string" ? transformAssetSrc(src) : src;
     return (
       <img
-        src={src}
+        src={resolvedSrc}
         alt={alt ?? ""}
         className="max-w-full h-auto rounded-lg my-4"
         {...props}
@@ -109,19 +130,22 @@ const components: Components = {
       {children}
     </p>
   ),
-};
+  };
+}
 
 interface MarkdownContentProps {
   content: string;
+  /** Slug of the source document (for resolving relative links) */
+  baseSlug?: string;
 }
 
-export function MarkdownContent({ content }: MarkdownContentProps) {
+export function MarkdownContent({ content, baseSlug }: MarkdownContentProps) {
   return (
     <article className="prose-kg">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm, remarkTransformLinks]}
-        rehypePlugins={[rehypeRaw, rehypeTransformLinks]}
-        components={components}
+        remarkPlugins={[remarkGfm, remarkTransformLinks({ baseSlug })]}
+        rehypePlugins={[rehypeRaw, rehypeTransformLinks({ baseSlug })]}
+        components={createComponents(baseSlug)}
       >
         {content}
       </ReactMarkdown>

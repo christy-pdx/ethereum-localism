@@ -36,7 +36,7 @@ const knowledgeCards = [
 
 const getInvolvedCards = [
   {
-    title: "Find a Local Group",
+    title: "Find a Local Community Group",
     description: "Browse our Community Registry to discover Ethereum Localism initiatives in your region—from Portland to Rome to Taipei.",
     links: [
       { href: "/knowledge-garden/resources/Ethereum-Localism-Registry", label: "View Community Registry →" },
@@ -98,7 +98,7 @@ export default function Home() {
                   href="/knowledge-garden/resources/Ethereum-Localism-Registry"
                   className="text-base font-medium text-teal-800 underline decoration-teal-700/60 underline-offset-4 hover:decoration-teal-700 dark:text-teal-200 dark:decoration-teal-300/60 dark:hover:decoration-teal-300"
                 >
-                  Find a local group →
+                  Find a local community group →
                 </Link>
               </div>
             </div>
@@ -157,7 +157,7 @@ export default function Home() {
 
             <div id="local-groups-map" className="mt-12 rounded-xl border border-teal-700/20 bg-teal-50/80 p-6 dark:border-teal-400/20 dark:bg-teal-950/30 sm:p-8">
               <h3 className="font-serif text-xl font-light text-stone-900 dark:text-teal-50 sm:text-2xl">
-                Find a Local Group Near You
+                Find a Local Community Group Near You
               </h3>
               <p className="mt-2 max-w-xl text-stone-600 dark:text-stone-400">
                 Connect with Ethereum Localism communities across Asia, Europe, North America, and South America. Explore the map and browse the full registry to find a group in your region.

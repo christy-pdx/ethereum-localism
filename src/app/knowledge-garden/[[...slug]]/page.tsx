@@ -440,7 +440,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
                       ? String(content.meta.title)
                       : slugStr.split("/").pop()?.replace(/-/g, " ") ?? "Page"}
                   </h1>
-                  <MarkdownContent content={content.body} />
+                  <MarkdownContent content={content.body} baseSlug={content.slug} />
                 </>
               )}
             </div>

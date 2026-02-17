@@ -149,6 +149,17 @@ export function getContentBySlug(slug: string): ContentItem | null {
   const possiblePath2 = path.join(CONTENT_DIR, slug + ".md");
   if (fs.existsSync(possiblePath2)) return getContentByPath(possiblePath2);
 
+  // Fallback: match by filename when slug is short (e.g. ethereum-localism-book-01-introduction)
+  // Used for direct navigation and links from markdown using relative paths
+  if (slug.includes("/")) return null;
+  const paths = getAllContentPaths();
+  const slugNormalized = slug.toLowerCase();
+  const matches = paths.filter((p) => {
+    const s = pathToSlug(p);
+    return s.endsWith("/" + slug) || s === slug || s.toLowerCase().endsWith("/" + slugNormalized);
+  });
+  if (matches.length === 1) return getContentByPath(matches[0]);
+
   return null;
 }
 
