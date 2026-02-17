@@ -55,6 +55,28 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
   const graphRef = useRef<ForceGraphRef | null>(null);
   const isCorrectingRef = useRef(false);
   const [dimensions, setDimensions] = useState({ width: 640, height: height || 400 });
+  const [isDark, setIsDark] = useState(false);
+
+  // Detect dark mode (prefers-color-scheme or .dark class)
+  useEffect(() => {
+    const checkDark = () => {
+      const hasDarkClass = document.documentElement.classList.contains("dark");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setIsDark(hasDarkClass || prefersDark);
+    };
+    checkDark();
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    mediaQuery.addEventListener("change", checkDark);
+    const observer = new MutationObserver(checkDark);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+    return () => {
+      mediaQuery.removeEventListener("change", checkDark);
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -218,12 +240,13 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
         graphData={data}
         width={dimensions.width}
         height={dimensions.height}
+        backgroundColor={isDark ? "#1c1917" : "#ffffff"}
         nodeId="id"
         nodeLabel={(node) => (node as { name?: string }).name ?? (node as { id?: string }).id ?? ""}
         nodeColor={(node) => getNodeColor((node as { group?: string }).group)}
         linkDirectionalArrowLength={4}
         linkDirectionalArrowRelPos={1}
-        linkColor="#cbd5e1"
+        linkColor={isDark ? "#94a3b8" : "#cbd5e1"}
         onNodeClick={handleNodeClick}
         onEngineStop={handleEngineStop}
         onZoom={handleZoom}
