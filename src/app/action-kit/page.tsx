@@ -10,7 +10,7 @@ export const metadata = {
 
 const kitComponents = [
   {
-    title: "Find a Local Group",
+    title: "Find a Local Community Group",
     description: "Browse the Community Registry to discover initiatives in your region—from Portland to Rome to Taipei.",
     href: "/knowledge-garden/resources/Ethereum-Localism-Registry",
     external: false,
