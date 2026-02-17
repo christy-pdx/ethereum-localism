@@ -2,16 +2,29 @@
   "name": "ethereum-localism-v2",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "ulimit -n 10240 2>/dev/null || true; node scripts/copy-assets.js && node scripts/build-search-index.js && next dev --hostname 127.0.0.1",
+    "build": "node scripts/copy-assets.js && node scripts/build-search-index.js && next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@types/leaflet": "^1.9.21",
+    "@types/mdast": "^4.0.4",
+    "gray-matter": "^4.0.3",
+    "leaflet": "^1.9.4",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-force-graph-2d": "^1.29.1",
+    "react-leaflet": "^5.0.0",
+    "react-markdown": "^10.1.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "unist-util-visit": "^5.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
