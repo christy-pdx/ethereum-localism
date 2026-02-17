@@ -79,8 +79,8 @@ export default function Home() {
               aria-hidden
             />
           </div>
-          <div className="absolute inset-0 flex items-center justify-center overflow-y-auto px-5 py-8 sm:overflow-visible sm:px-6 sm:py-10">
-            <div className="mx-auto my-auto max-w-3xl shrink-0 py-4 text-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] sm:py-0">
+          <div className="absolute inset-0 flex items-center justify-center overflow-y-auto overflow-x-hidden px-5 py-8 sm:overflow-visible sm:px-6 sm:py-10">
+            <div className="w-full min-w-0 max-w-3xl break-words py-4 text-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)] dark:drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] sm:py-0">
               <h1 className="font-serif text-3xl font-light tracking-tight text-stone-900 dark:text-teal-50 sm:text-4xl lg:text-5xl xl:text-6xl">
                 Ethereum Localism
               </h1>
