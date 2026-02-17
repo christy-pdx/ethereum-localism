@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { SearchProvider } from "@/contexts/SearchContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import { SearchModal } from "@/components/SearchModal";
+import { ThemeScript } from "@/components/ThemeScript";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -66,14 +68,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} font-sans antialiased`}
       >
-        <SearchProvider>
-          {children}
-          <SearchModal />
-        </SearchProvider>
+        <ThemeScript />
+        <ThemeProvider>
+          <SearchProvider>
+            {children}
+            <SearchModal />
+          </SearchProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

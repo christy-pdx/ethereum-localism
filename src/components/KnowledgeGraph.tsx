@@ -3,6 +3,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
+import { useTheme } from "@/contexts/ThemeContext";
 import type { GraphData } from "@/lib/graph-data";
 
 /** Ref methods for pan boundary and engine control */
@@ -51,32 +52,11 @@ const PAN_BOUNDARY_PADDING = 2.5;
 
 export function KnowledgeGraph({ data, height = 400, className = "" }: KnowledgeGraphProps) {
   const router = useRouter();
+  const { isDark } = useTheme();
   const containerRef = useRef<HTMLDivElement>(null);
   const graphRef = useRef<ForceGraphRef | null>(null);
   const isCorrectingRef = useRef(false);
   const [dimensions, setDimensions] = useState({ width: 640, height: height || 400 });
-  const [isDark, setIsDark] = useState(false);
-
-  // Detect dark mode (prefers-color-scheme or .dark class)
-  useEffect(() => {
-    const checkDark = () => {
-      const hasDarkClass = document.documentElement.classList.contains("dark");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setIsDark(hasDarkClass || prefersDark);
-    };
-    checkDark();
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    mediaQuery.addEventListener("change", checkDark);
-    const observer = new MutationObserver(checkDark);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-    return () => {
-      mediaQuery.removeEventListener("change", checkDark);
-      observer.disconnect();
-    };
-  }, []);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -235,6 +215,7 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
         </button>
       </div>
       <ForceGraph2D
+        key={isDark ? "dark" : "light"}
         // eslint-disable-next-line @typescript-eslint/no-explicit-any -- react-force-graph-2d ref types are stricter than our usage
         ref={graphRef as any}
         graphData={data}
