@@ -108,25 +108,31 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
             {/* Main content */}
             <div className="min-w-0 flex-1 px-4 py-8 sm:px-6 lg:px-8">
               {/* Mobile categories */}
-              <div className="mb-6 flex flex-wrap gap-2 lg:hidden">
-                {POPULAR_CATEGORIES.slice(0, 4).map((cat) => (
-                  <Link
-                    key={cat.href}
-                    href={cat.href}
-                    className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-700 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-300"
-                  >
-                    {cat.label}
-                  </Link>
-                ))}
-                {CONTRIBUTE_LINKS.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-sm font-medium text-teal-800 dark:border-teal-800 dark:bg-teal-950/50 dark:text-teal-200"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+              <div className="mb-6 lg:hidden">
+                <p className="mb-3 text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400">
+                  Browse the Knowledge Garden
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {POPULAR_CATEGORIES.slice(0, 4).map((cat) => (
+                    <Link
+                      key={cat.href}
+                      href={cat.href}
+                      className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-700 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-300"
+                    >
+                      {cat.label}
+                    </Link>
+                  ))}
+                  {CONTRIBUTE_LINKS.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-sm font-medium text-teal-800 dark:border-teal-800 dark:bg-teal-950/50 dark:text-teal-200"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+                <div className="mt-6 border-t border-stone-200 pt-6 dark:border-stone-700" />
               </div>
 
               <div className="mb-10">
@@ -258,25 +264,31 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
 
             <div className="flex-1 border-y border-teal-950/10 bg-white dark:border-teal-100/10 dark:bg-stone-900/30">
               <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
-                <div className="mb-6 flex flex-wrap gap-2 lg:hidden">
-                  {POPULAR_CATEGORIES.slice(0, 4).map((cat) => (
-                    <Link
-                      key={cat.href}
-                      href={cat.href}
-                      className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-700 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-300"
-                    >
-                      {cat.label}
-                    </Link>
-                  ))}
-                  {CONTRIBUTE_LINKS.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-sm font-medium text-teal-800 dark:border-teal-800 dark:bg-teal-950/50 dark:text-teal-200"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+                <div className="mb-6 lg:hidden">
+                  <p className="mb-3 text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400">
+                    Browse the Knowledge Garden
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {POPULAR_CATEGORIES.slice(0, 4).map((cat) => (
+                      <Link
+                        key={cat.href}
+                        href={cat.href}
+                        className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-700 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-300"
+                      >
+                        {cat.label}
+                      </Link>
+                    ))}
+                    {CONTRIBUTE_LINKS.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-sm font-medium text-teal-800 dark:border-teal-800 dark:bg-teal-950/50 dark:text-teal-200"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="mt-6 border-t border-stone-200 pt-6 dark:border-stone-700" />
                 </div>
                 <Link
                   href="/knowledge-garden"
@@ -389,25 +401,31 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
           <div className="flex-1 border-y border-teal-950/10 bg-white dark:border-teal-100/10 dark:bg-stone-900/30">
             <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
               {/* Mobile categories (sidebar hidden on small screens) */}
-              <div className="mb-6 flex flex-wrap gap-2 lg:hidden">
-                {POPULAR_CATEGORIES.slice(0, 4).map((cat) => (
-                  <Link
-                    key={cat.href}
-                    href={cat.href}
-                    className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-700 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-300"
-                  >
-                    {cat.label}
-                  </Link>
-                ))}
-                {CONTRIBUTE_LINKS.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-sm font-medium text-teal-800 dark:border-teal-800 dark:bg-teal-950/50 dark:text-teal-200"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+              <div className="mb-6 lg:hidden">
+                <p className="mb-3 text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400">
+                  Browse the Knowledge Garden
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {POPULAR_CATEGORIES.slice(0, 4).map((cat) => (
+                    <Link
+                      key={cat.href}
+                      href={cat.href}
+                      className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-700 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-300"
+                    >
+                      {cat.label}
+                    </Link>
+                  ))}
+                  {CONTRIBUTE_LINKS.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-sm font-medium text-teal-800 dark:border-teal-800 dark:bg-teal-950/50 dark:text-teal-200"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+                <div className="mt-6 border-t border-stone-200 pt-6 dark:border-stone-700" />
               </div>
               <Link
                 href={backHref}
