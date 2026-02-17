@@ -75,7 +75,7 @@ export default function Home() {
               sizes="100vw"
             />
             <div
-              className="absolute inset-0 bg-gradient-to-t from-teal-50/98 via-teal-50/85 to-teal-50/70 dark:from-stone-950/98 dark:via-stone-950/90 dark:to-stone-950/80"
+              className="absolute inset-0 bg-gradient-to-t from-teal-50/85 via-teal-50/60 to-teal-50/45 dark:from-stone-950/85 dark:via-stone-950/65 dark:to-stone-950/50"
               aria-hidden
             />
           </div>
