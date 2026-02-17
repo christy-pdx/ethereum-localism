@@ -65,7 +65,7 @@ export default function Home() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden">
-          <div className="relative aspect-[3/1] w-full min-h-[180px] sm:min-h-[240px]">
+          <div className="relative aspect-[3/1] w-full min-h-[280px] sm:min-h-[320px]">
             <Image
               src="/hero-graphic.png"
               alt=""
@@ -79,7 +79,7 @@ export default function Home() {
               aria-hidden
             />
           </div>
-          <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6">
+          <div className="absolute inset-0 flex items-center justify-center px-5 py-8 sm:px-6 sm:py-10">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="font-serif text-4xl font-light tracking-tight text-stone-900 dark:text-teal-50 sm:text-5xl lg:text-6xl">
                 Ethereum Localism

@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-teal-950/10 bg-teal-50/95 backdrop-blur supports-[backdrop-filter]:bg-teal-50/80 dark:border-teal-100/10 dark:bg-stone-950/95 dark:supports-[backdrop-filter]:dark:bg-stone-950/80">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-6">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-6">
         <Link
           href="/"
           className="text-lg font-semibold tracking-tight text-stone-900 dark:text-teal-50 hover:text-teal-800 dark:hover:text-teal-200"
@@ -75,7 +75,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="border-t border-teal-950/10 px-5 py-4 md:hidden dark:border-teal-100/10">
+        <div className="border-t border-teal-950/10 px-6 py-4 md:hidden dark:border-teal-100/10">
           <div className="flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
