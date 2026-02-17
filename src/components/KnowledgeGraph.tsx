@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { useTheme } from "@/contexts/ThemeContext";
-import type { GraphData } from "@/lib/graph-data";
+import type { GraphData, GraphNode } from "@/lib/graph-data";
 
 /** Ref methods for pan boundary and engine control */
 interface ForceGraphRef {
@@ -50,9 +51,57 @@ function getNodeColor(group?: string): string {
 /** Padding multiplier: view center must stay within graph bbox expanded by this factor */
 const PAN_BOUNDARY_PADDING = 2.5;
 
+const MOBILE_BREAKPOINT = 1024; // lg
+
+function useIsMobile(): boolean {
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined"
+      ? window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`).matches
+      : false
+  );
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
+    const update = () => setIsMobile(mq.matches);
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  return isMobile;
+}
+
+function MobileNodeList({
+  nodes,
+  className = "",
+  height = 360,
+}: {
+  nodes: GraphNode[];
+  className?: string;
+  height?: number;
+}) {
+  return (
+    <div
+      className={`overflow-y-auto rounded-lg border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 ${className}`}
+      style={{ maxHeight: height }}
+    >
+      <ul className="divide-y divide-stone-200 dark:divide-stone-700">
+        {nodes.map((node) => (
+          <li key={node.id}>
+            <Link
+              href={node.url}
+              className="block px-4 py-3 text-stone-700 transition hover:bg-teal-50 hover:text-teal-800 dark:text-stone-300 dark:hover:bg-teal-950/50 dark:hover:text-teal-200"
+            >
+              {node.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export function KnowledgeGraph({ data, height = 400, className = "" }: KnowledgeGraphProps) {
   const router = useRouter();
   const { isDark } = useTheme();
+  const isMobile = useIsMobile();
   const containerRef = useRef<HTMLDivElement>(null);
   const graphRef = useRef<ForceGraphRef | null>(null);
   const isCorrectingRef = useRef(false);
@@ -177,6 +226,16 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
     );
   }
 
+  if (isMobile) {
+    return (
+      <MobileNodeList
+        nodes={data.nodes}
+        className={className}
+        height={height}
+      />
+    );
+  }
+
   const btnClass =
     "rounded-md border border-stone-200 bg-white/90 p-1.5 text-stone-600 shadow-sm transition hover:bg-stone-50 dark:border-stone-600 dark:bg-stone-900/90 dark:text-stone-400 dark:hover:bg-stone-800";
 
@@ -225,6 +284,37 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
         nodeId="id"
         nodeLabel={(node) => (node as { name?: string }).name ?? (node as { id?: string }).id ?? ""}
         nodeColor={(node) => getNodeColor((node as { group?: string }).group)}
+        nodeRelSize={6}
+        nodeCanvasObject={(node, ctx, globalScale) => {
+          const n = node as { x?: number; y?: number; name?: string; id?: string };
+          const label = n.name ?? n.id ?? "";
+          const color = getNodeColor((node as { group?: string }).group);
+          const nodeRadius = 6;
+          ctx.beginPath();
+          ctx.arc(n.x ?? 0, n.y ?? 0, nodeRadius, 0, 2 * Math.PI);
+          ctx.fillStyle = color;
+          ctx.fill();
+          ctx.strokeStyle = isDark ? "#475569" : "#e2e8f0";
+          ctx.lineWidth = 1 / globalScale;
+          ctx.stroke();
+          if (label && globalScale > 1.2) {
+            const fontSize = 10 / globalScale;
+            ctx.font = `${Math.max(8, fontSize)}px sans-serif`;
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillStyle = isDark ? "#e2e8f0" : "#334155";
+            ctx.fillText(label, n.x ?? 0, (n.y ?? 0) + nodeRadius + 6);
+          }
+        }}
+        nodeCanvasObjectMode="replace"
+        nodePointerAreaPaint={(node, paintColor, ctx) => {
+          const n = node as { x?: number; y?: number };
+          const r = 10;
+          ctx.fillStyle = paintColor;
+          ctx.beginPath();
+          ctx.arc(n.x ?? 0, n.y ?? 0, r, 0, 2 * Math.PI);
+          ctx.fill();
+        }}
         linkDirectionalArrowLength={4}
         linkDirectionalArrowRelPos={1}
         linkColor={isDark ? "#94a3b8" : "#cbd5e1"}

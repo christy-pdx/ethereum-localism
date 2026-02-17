@@ -204,6 +204,7 @@ export function getAllTags(): string[] {
 }
 
 export const POPULAR_CATEGORIES = [
+  { label: "Home", href: "/knowledge-garden" },
   { label: "Introduction", href: "/knowledge-garden/introduction" },
   { label: "Library", href: "/knowledge-garden/library" },
   { label: "Resources", href: "/knowledge-garden/resources" },
@@ -218,6 +219,5 @@ export const POPULAR_CATEGORIES = [
 
 /** Contribute links shown as pills on mobile (sidebar is hidden there) */
 export const CONTRIBUTE_LINKS = [
-  { label: "+ New Note", href: "/knowledge-garden/new-note" },
   { label: "Contribution Guide", href: "/knowledge-garden/contribution-guide" },
 ];
