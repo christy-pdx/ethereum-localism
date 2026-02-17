@@ -150,7 +150,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
                   Knowledge Graph
                 </h2>
                 <p className="mt-1 text-sm text-stone-500 dark:text-stone-400">
-                  Connections between notes. Click a node to navigate. The graph grows as you add internal links.
+                  Connections between notes. Click a node to navigate. The graph grows as internal links are added.
                 </p>
                 <div className="mt-4">
                   <KnowledgeGraph data={graphData} height={360} className="w-full" />
