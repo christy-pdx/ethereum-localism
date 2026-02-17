@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { useTheme } from "@/contexts/ThemeContext";
-import type { GraphData, GraphNode } from "@/lib/graph-data";
+import type { GraphData } from "@/lib/graph-data";
 
 /** Ref methods for pan boundary and engine control */
 interface ForceGraphRef {
@@ -68,36 +67,6 @@ function useIsMobile(): boolean {
   return isMobile;
 }
 
-function MobileNodeList({
-  nodes,
-  className = "",
-  height = 360,
-}: {
-  nodes: GraphNode[];
-  className?: string;
-  height?: number;
-}) {
-  return (
-    <div
-      className={`overflow-y-auto rounded-lg border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 ${className}`}
-      style={{ maxHeight: height }}
-    >
-      <ul className="divide-y divide-stone-200 dark:divide-stone-700">
-        {nodes.map((node) => (
-          <li key={node.id}>
-            <Link
-              href={node.url}
-              className="block px-4 py-3 text-stone-700 transition hover:bg-teal-50 hover:text-teal-800 dark:text-stone-300 dark:hover:bg-teal-950/50 dark:hover:text-teal-200"
-            >
-              {node.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 export function KnowledgeGraph({ data, height = 400, className = "" }: KnowledgeGraphProps) {
   const router = useRouter();
   const { isDark } = useTheme();
@@ -106,6 +75,11 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
   const graphRef = useRef<ForceGraphRef | null>(null);
   const isCorrectingRef = useRef(false);
   const [dimensions, setDimensions] = useState({ width: 640, height: height || 400 });
+  const [selectedNode, setSelectedNode] = useState<{
+    id: string;
+    name: string;
+    url: string;
+  } | null>(null);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -126,16 +100,32 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
 
   const handleEngineStop = useCallback(() => {
     graphRef.current?.pauseAnimation();
-  }, []);
+    if (isMobile) {
+      setTimeout(() => {
+        graphRef.current?.zoomToFit(200, 16);
+      }, 50);
+    }
+  }, [isMobile]);
 
   const handleNodeClick = useCallback(
     (node: object) => {
-      const n = node as { url?: string };
-      if (n.url) {
+      const n = node as { id?: string; name?: string; url?: string };
+      if (!n.url) return;
+      if (isMobile) {
+        if (selectedNode?.id === n.id) {
+          router.push(n.url);
+        } else {
+          setSelectedNode({
+            id: n.id ?? "",
+            name: n.name ?? n.id ?? "Note",
+            url: n.url,
+          });
+        }
+      } else {
         router.push(n.url);
       }
     },
-    [router]
+    [router, isMobile, selectedNode]
   );
 
   /** Enforce pan boundary: snap back if view center has left the padded graph area.
@@ -191,8 +181,14 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
   );
 
   const handleResetView = useCallback(() => {
-    graphRef.current?.zoomToFit(300, 40);
-  }, []);
+    graphRef.current?.zoomToFit(300, isMobile ? 16 : 40);
+  }, [isMobile]);
+
+  const handleGoToSelected = useCallback(() => {
+    if (selectedNode) {
+      router.push(selectedNode.url);
+    }
+  }, [router, selectedNode]);
 
   const ZOOM_FACTOR = 1.4;
   const handleZoomIn = useCallback(() => {
@@ -226,16 +222,6 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
     );
   }
 
-  if (isMobile) {
-    return (
-      <MobileNodeList
-        nodes={data.nodes}
-        className={className}
-        height={height}
-      />
-    );
-  }
-
   const btnClass =
     "rounded-md border border-stone-200 bg-white/90 p-1.5 text-stone-600 shadow-sm transition hover:bg-stone-50 dark:border-stone-600 dark:bg-stone-900/90 dark:text-stone-400 dark:hover:bg-stone-800";
 
@@ -245,6 +231,30 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
       className={`relative w-full max-w-full overflow-hidden rounded-lg border border-stone-200 bg-white dark:border-stone-700 dark:bg-stone-900 ${className}`}
       style={{ minHeight: height, maxWidth: MAX_GRAPH_WIDTH }}
     >
+      {isMobile && selectedNode && (
+        <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-between gap-3 border-t border-stone-200 bg-white/95 px-4 py-3 dark:border-stone-700 dark:bg-stone-900/95">
+          <span className="min-w-0 truncate text-sm font-medium text-stone-800 dark:text-stone-200">
+            {selectedNode.name}
+          </span>
+          <div className="flex shrink-0 gap-2">
+            <button
+              type="button"
+              onClick={() => setSelectedNode(null)}
+              className="text-sm text-stone-500 hover:text-stone-700 dark:text-stone-400 dark:hover:text-stone-200"
+              aria-label="Dismiss"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              onClick={handleGoToSelected}
+              className="rounded-md bg-teal-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600"
+            >
+              Go →
+            </button>
+          </div>
+        </div>
+      )}
       <div className="absolute right-2 top-2 z-10 flex items-center gap-1">
         <button
           type="button"
@@ -289,7 +299,7 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
           const n = node as { x?: number; y?: number; name?: string; id?: string };
           const label = n.name ?? n.id ?? "";
           const color = getNodeColor((node as { group?: string }).group);
-          const nodeRadius = 6;
+          const nodeRadius = isMobile ? 8 : 6;
           ctx.beginPath();
           ctx.arc(n.x ?? 0, n.y ?? 0, nodeRadius, 0, 2 * Math.PI);
           ctx.fillStyle = color;
@@ -297,19 +307,20 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
           ctx.strokeStyle = isDark ? "#475569" : "#e2e8f0";
           ctx.lineWidth = 1 / globalScale;
           ctx.stroke();
-          if (label && globalScale > 1.2) {
-            const fontSize = 10 / globalScale;
+          const showLabel = label && (isMobile || globalScale > 1.2);
+          if (showLabel) {
+            const fontSize = isMobile ? 11 : 10 / globalScale;
             ctx.font = `${Math.max(8, fontSize)}px sans-serif`;
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
             ctx.fillStyle = isDark ? "#e2e8f0" : "#334155";
-            ctx.fillText(label, n.x ?? 0, (n.y ?? 0) + nodeRadius + 6);
+            ctx.fillText(label, n.x ?? 0, (n.y ?? 0) + nodeRadius + 8);
           }
         }}
         nodeCanvasObjectMode="replace"
         nodePointerAreaPaint={(node, paintColor, ctx) => {
           const n = node as { x?: number; y?: number };
-          const r = 10;
+          const r = isMobile ? 16 : 10;
           ctx.fillStyle = paintColor;
           ctx.beginPath();
           ctx.arc(n.x ?? 0, n.y ?? 0, r, 0, 2 * Math.PI);
@@ -319,6 +330,11 @@ export function KnowledgeGraph({ data, height = 400, className = "" }: Knowledge
         linkDirectionalArrowRelPos={1}
         linkColor={isDark ? "#94a3b8" : "#cbd5e1"}
         onNodeClick={handleNodeClick}
+        onBackgroundClick={
+          isMobile && selectedNode
+            ? () => setSelectedNode(null)
+            : undefined
+        }
         onEngineStop={handleEngineStop}
         onZoom={handleZoom}
         enableNodeDrag={true}
