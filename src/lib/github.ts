@@ -14,8 +14,10 @@ function getRepoFromGit(): string | null {
   return null;
 }
 
+// Edit links point here. When repo moves to clinamenic/gfel, set GITHUB_REPO=clinamenic/gfel
+// in your deployment environment (e.g. Vercel) so links stay correct.
 export const GITHUB_REPO =
-  process.env.GITHUB_REPO ?? getRepoFromGit() ?? "ethereumlocalism/ethereum-localism";
+  process.env.GITHUB_REPO ?? getRepoFromGit() ?? "christy-pdx/ethereum-localism";
 const GITHUB_BRANCH = process.env.GITHUB_BRANCH ?? "main";
 
 /**
