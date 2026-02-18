@@ -7,6 +7,15 @@ tags:
 ---
 ### ethereumlocalism.xyz
 
+## Why Contributions Matter
+
+The Knowledge Garden thrives on community input. Every contribution strengthens the movement by helping root it deeper in place:
+
+- **The garden grows with you.** This is a living, growing resource. Field Reports, definitions, and initiatives add to a shared understanding that others can build on.
+- **Real-world evidence matters.** Stories from Portland, Boulder, Taipei, Rome, and beyond help show what works. Your experiment might inspire another community needs to get started.
+- **Localism is anticapture.** From the [GFEL 2023 announcement](library/GFEL/GFEL-Announcement-2023): every site of novel local use is a potential inoculation site against capture. Documenting and sharing helps others seed the same and more.
+
+---
 ## How to Contribute
 
 ### About
