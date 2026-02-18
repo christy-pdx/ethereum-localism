@@ -162,12 +162,13 @@ body {
   animation: exploratory-fade-out 0.8s ease-out 0.15s forwards;
 }
 
-/* Body parallax background: scroll on mobile (iOS), fixed on desktop */
-.body-parallax-bg {
-  background-attachment: scroll;
-}
+/* Body parallax background: desktop only (hidden on mobile for better performance/UX) */
 @media (min-width: 768px) {
   .body-parallax-bg {
+    background-image: url(/body-background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
   }
 }
