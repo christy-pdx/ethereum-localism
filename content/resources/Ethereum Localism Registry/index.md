@@ -7,7 +7,7 @@ tags:
 ---
 A public directory of communities, DAOs, and other localist experiments using Ethereum-based tools. Registry entries power the [interactive map on our homepage](/)—which also includes initiatives from [Field Reports](library/Field-Reports) and allied organizations around the world. Entries are grouped by region; **Global** communities have distributed networks with place-based local activations. See [Implementation Guides](library/Implementation-Guides) for how-to resources.
 
-Want to add your initiative? Use the Edit on GitHub link above to add it directly, or [reach out to the curators](/knowledge-garden/contribution-guide).
+**Want to add your initiative?** Use the Edit on GitHub link above to add it directly, or [reach out to the curators](/knowledge-garden/contribution-guide).
 
 Entries are listed in alphabetical order by initiative name within each region. Please add new entries in alphabetical order. Listings are reviewed by curators before going live.
 
@@ -46,3 +46,11 @@ Portland, Oregon — Local DAO, civic education and governance experiments
 Boulder, Colorado — Bioregional hub, regenerative finance and community coordination  
 **Contact:** [regenhub.xyz](https://regenhub.xyz)  
 **More:** [Regen Hub Playbook](library/Implementation-Guides/Regen-Hub-Playbook), [Lessons Learned from the Boulder Blockchain Meetup](library/Field-Reports/Lessons-Learned-from-the-Boulder-Blockchain-Meetup)
+
+---
+
+### Global
+
+**Pizza DAO**  
+Global — Distributed network with local activations; annual Global Pizza Parties on Bitcoin Pizza Day (May 22), supporting local pizzerias and small businesses  
+**Contact:** [globalpizza.party](https://globalpizza.party/) · [pizzadao.xyz](https://pizzadao.xyz/)
