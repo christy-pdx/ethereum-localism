@@ -8,11 +8,12 @@ import { fireConfetti } from "@/lib/confetti";
 
 const NAVIGATION_DELAY_MS = 300;
 
-function fireConfettiFromClick(e: React.MouseEvent<HTMLAnchorElement>) {
+function getOriginFromClick(e: React.MouseEvent<HTMLAnchorElement>) {
   const rect = e.currentTarget.getBoundingClientRect();
-  const x = (rect.left + rect.width / 2) / window.innerWidth;
-  const y = (rect.top + rect.height / 2) / window.innerHeight;
-  fireConfetti({ x, y });
+  return {
+    x: (rect.left + rect.width / 2) / window.innerWidth,
+    y: (rect.top + rect.height / 2) / window.innerHeight,
+  };
 }
 
 type ConfettiLinkProps = ComponentProps<typeof Link>;
@@ -27,7 +28,7 @@ export function ConfettiLink({ children, href, onClick, ...props }: ConfettiLink
         return; // Allow default for external links, mailto, anchors
       }
       e.preventDefault();
-      fireConfettiFromClick(e);
+      fireConfetti(getOriginFromClick(e));
       onClick?.(e);
       setTimeout(() => {
         router.push(targetHref);

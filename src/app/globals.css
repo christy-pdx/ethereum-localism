@@ -102,3 +102,62 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Exploratory link: shimmer + fade-out */
+@keyframes exploratory-shimmer {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes exploratory-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+.exploratory-link {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.exploratory-link--shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.5) 30%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.5) 70%,
+    transparent 100%
+  );
+  border-radius: inherit;
+  animation: exploratory-shimmer 0.6s ease-out forwards;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.dark .exploratory-link--shimmer::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 30%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.15) 70%,
+    transparent 100%
+  );
+}
+
+.exploratory-link--fade-out {
+  animation: exploratory-fade-out 0.8s ease-out 0.15s forwards;
+}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ExploratoryLink } from "@/components/ExploratoryLink";
 import { ConfettiLink } from "@/components/ConfettiLink";
 import { ConfettiTrigger } from "@/components/ConfettiTrigger";
 import { InteractiveMapClient } from "@/components/InteractiveMapClient";
@@ -156,12 +157,12 @@ export default function Home() {
             </div>
 
             <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <ConfettiLink
+              <ExploratoryLink
                 href="/knowledge-garden"
-                className="inline-flex items-center justify-center rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-teal-50 hover:bg-stone-800 dark:bg-teal-50 dark:text-stone-900 dark:hover:bg-teal-100"
+                className="bg-stone-900 text-teal-50 hover:bg-stone-800 dark:bg-teal-50 dark:text-stone-900 dark:hover:bg-teal-100"
               >
                 Explore the Garden
-              </ConfettiLink>
+              </ExploratoryLink>
               <Link
                 href="/knowledge-garden/contribution-guide"
                 className="inline-flex items-center justify-center rounded-full border border-stone-300 px-6 py-3 text-sm font-medium text-stone-700 hover:border-stone-400 hover:bg-stone-100 dark:border-stone-600 dark:text-stone-300 dark:hover:border-stone-500 dark:hover:bg-stone-800"
