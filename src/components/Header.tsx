@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useSearch } from "@/contexts/SearchContext";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -21,8 +22,16 @@ export function Header() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-6">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight text-stone-900 dark:text-teal-50 hover:text-teal-800 dark:hover:text-teal-200"
+          className="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-stone-900 dark:text-teal-50 hover:text-teal-800 dark:hover:text-teal-200"
         >
+          <Image
+            src="/logo-mark-bw.png"
+            alt=""
+            width={28}
+            height={28}
+            className="h-7 w-7 invert dark:invert-0"
+            aria-hidden
+          />
           Ethereum Localism
         </Link>
 

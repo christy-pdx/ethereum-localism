@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const socialLinks = [
   { href: "https://t.me/+5Enk4J4d98MyMDkx", label: "Telegram" },
@@ -27,8 +28,16 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              className="text-lg font-semibold text-stone-900 dark:text-teal-50"
+              className="flex items-center gap-2.5 text-lg font-semibold text-stone-900 dark:text-teal-50"
             >
+              <Image
+                src="/logo-mark-bw.png"
+                alt=""
+                width={28}
+                height={28}
+                className="h-7 w-7 shrink-0 invert dark:invert-0"
+                aria-hidden
+              />
               Ethereum Localism
             </Link>
             <div className="mt-4 flex gap-4">

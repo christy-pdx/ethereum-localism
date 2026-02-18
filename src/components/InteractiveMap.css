@@ -1,0 +1,14 @@
+/* Map marker pulse - gentle glow behind each node using box-shadow (no overflow issues) */
+@keyframes map-marker-pulse {
+  0%,
+  100% {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(13, 148, 136, 0.35);
+  }
+  50% {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), 0 0 0 20px rgba(13, 148, 136, 0);
+  }
+}
+
+.custom-marker .marker-dot {
+  animation: map-marker-pulse 2.5s ease-in-out infinite;
+}

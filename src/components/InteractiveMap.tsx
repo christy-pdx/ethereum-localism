@@ -1,27 +1,54 @@
 "use client";
 
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "./InteractiveMap.css";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import Link from "next/link";
 import type { MapLocation } from "@/lib/map-locations";
 
-// Custom teal marker matching site aesthetic (avoids default icon 404 in Next.js)
+// Reset view control - must be a child of MapContainer to use useMap
+function MapResetControl({
+  center,
+  zoom,
+}: {
+  center: [number, number];
+  zoom: number;
+}) {
+  const map = useMap();
+  return (
+    <button
+      type="button"
+      onClick={() => map.flyTo(center, zoom, { duration: 0.5 })}
+      className="absolute bottom-4 right-4 z-[1000] rounded-md border border-teal-700/30 bg-white/95 px-3 py-2 text-sm font-medium text-stone-800 shadow-md transition hover:bg-white hover:border-teal-700/50 dark:border-teal-400/30 dark:bg-stone-900/95 dark:text-teal-50 dark:hover:bg-stone-800 dark:hover:border-teal-400/50"
+      aria-label="Reset map view"
+    >
+      Reset View
+    </button>
+  );
+}
+
+// Custom teal marker with gentle pulse behind each node
 const markerIcon = L.divIcon({
   className: "custom-marker",
   html: `
-    <div style="
-      width: 24px;
-      height: 24px;
-      background: #0d9488;
-      border: 2px solid #f5f5f4;
-      border-radius: 50%;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transform: translate(-50%, -50%);
-    "></div>
+    <div style="position: relative; width: 48px; height: 48px; margin-left: -24px; margin-top: -24px;">
+      <div class="marker-dot" style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        margin-top: -12px;
+        background: #0d9488;
+        border: 2px solid #f5f5f4;
+        border-radius: 50%;
+      "></div>
+    </div>
   `,
-  iconSize: [24, 24],
-  iconAnchor: [12, 12],
+  iconSize: [48, 48],
+  iconAnchor: [24, 24],
 });
 
 function MapContent({ locations }: { locations: MapLocation[] }) {
@@ -42,6 +69,7 @@ function MapContent({ locations }: { locations: MapLocation[] }) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
       />
+      <MapResetControl center={center} zoom={zoom} />
       {locations.map((loc) => (
         <Marker key={loc.id} position={[loc.lat, loc.lng]} icon={markerIcon}>
           <Popup>
