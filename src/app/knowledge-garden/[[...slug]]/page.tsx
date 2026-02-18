@@ -438,12 +438,14 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
                   </div>
                 ) : null;
               })()}
-              <Link
-                href={backHref}
-                className="mb-6 inline-block text-sm font-medium text-stone-500 hover:text-stone-700 dark:text-stone-400 dark:hover:text-teal-200"
-              >
-                ← Back to {backLabel}
-              </Link>
+              {!content || !getBookNav(content.slug) ? (
+                <Link
+                  href={backHref}
+                  className="mb-6 inline-block text-sm font-medium text-stone-500 hover:text-stone-700 dark:text-stone-400 dark:hover:text-teal-200"
+                >
+                  ← Back to {backLabel}
+                </Link>
+              ) : null}
               {content && (
                 <>
                   <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
