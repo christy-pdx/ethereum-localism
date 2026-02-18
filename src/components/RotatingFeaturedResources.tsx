@@ -88,7 +88,7 @@ export function RotatingFeaturedResources({
             />
           </div>
         )}
-        <div className="mt-3 text-stone-600 dark:text-stone-400">
+        <div className="mt-3 max-w-2xl text-stone-600 dark:text-stone-400">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
