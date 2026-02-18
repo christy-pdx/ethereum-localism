@@ -51,18 +51,31 @@ function resolveHref(href: string | undefined, baseSlug?: string): string | unde
 
 function createComponents(baseSlug?: string): Components {
   return {
-    a: ({ href, children, ...props }) => (
-    <a
-      href={resolveHref(href, baseSlug)}
-      className="text-teal-700 underline hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-200"
-      target={isExternalLink(href) ? "_blank" : undefined}
-      rel={isExternalLink(href) ? "noopener noreferrer" : undefined}
-      {...props}
-    >
-      {children}
-    </a>
-  ),
-  img: ({ src, alt, ...props }) => {
+    a: ({ href, children, ...props }) => {
+      const external = isExternalLink(href);
+      return (
+        <a
+          href={resolveHref(href, baseSlug)}
+          className={
+            external
+              ? "inline-flex items-baseline gap-1 text-teal-700 underline hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-200"
+              : "text-teal-700 underline hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-200"
+          }
+          target={external ? "_blank" : undefined}
+          rel={external ? "noopener noreferrer" : undefined}
+          aria-label={external ? `${typeof children === "string" ? children : "External link"} (opens in new tab)` : undefined}
+          {...props}
+        >
+          {children}
+          {external && (
+            <span className="text-[0.6em] opacity-70" aria-hidden>
+              ↗
+            </span>
+          )}
+        </a>
+      );
+    },
+    img: ({ src, alt, ...props }) => {
     const videoId = typeof src === "string" ? getYouTubeEmbedId(src) : null;
     if (videoId) {
       return (
