@@ -10,7 +10,11 @@ tags:
 
 Welcome to the **Shared Definitions** page. This is a collaboratively curated glossary of core concepts frequently used across the Ethereum Localism and cosmo-localist ecosystems. This page is for everyone - it's meant to help us align our language as we co-create regenerative, locally rooted, and globally connected futures.
 
-**Living Definitions**: This glossary is at a starting point. It will evolve with input from our communities. **Ethereum Localism** is listed first as the anchoring concept; all other terms follow in **alphabetical order**. To contribute: use the **Edit on GitHub** link at the top of this page to propose changes directly—GitHub will prompt you to fork and open a pull request if you're not a collaborator. You can also reach out or see the [Contribution Guide →](/knowledge-garden/contribution-guide). For real-world applications of these concepts, see [Field Reports](library/Field-Reports) and [Implementation Guides](library/Implementation-Guides).
+**Ethereum Localism** is listed first as the anchoring concept; all other terms follow in **alphabetical order**.
+
+**Living Definitions**: This glossary is at a starting point. It will evolve with input from our communities. **To contribute**: use the **Edit on GitHub** link at the top of this page to propose changes directly—GitHub will prompt you to fork and open a pull request if you're not a collaborator. You can also reach out or see the [Contribution Guide →](/knowledge-garden/contribution-guide).
+
+For real-world applications of these concepts, see [Field Reports](library/Field-Reports) and [Implementation Guides](library/Implementation-Guides).
 
 ---
 
