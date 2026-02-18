@@ -17,7 +17,7 @@ Entries are listed in alphabetical order by initiative name within each region. 
 
 **GreenSofa Taiwan**  
 Taipei, Taiwan — Ethereum public goods culture, bridging Web3 with civic tech  
-**Contact:** [@greensofa_tw](https://twitter.com/greensofa_tw) 
+**Contact:** [@greensofa_tw](https://twitter.com/greensofa_tw)  
 **More:** [GreenSofa Taiwan](library/Field-Reports/GreenSofa-Taiwan)
 
 ---
@@ -39,7 +39,7 @@ Rome, Italy — Web3 builder community, meetups and hackathons across Europe
 
 **PDX DAO**  
 Portland, Oregon — Local DAO, civic education and governance experiments  
-**Contact:** [pdxdao.xyz](https://pdxdao.xyz) · [@PDXDAO](https://twitter.com/pdxdao)
+**Contact:** [pdxdao.xyz](https://pdxdao.xyz) · [@PDXDAO](https://twitter.com/pdxdao)  
 **More:** [Imagination Circle in Portland](library/Field-Reports/Imagination-Circle-in-Portland)
 
 **Regen Hub Boulder**  
