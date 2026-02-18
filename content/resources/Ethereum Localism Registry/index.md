@@ -7,7 +7,7 @@ tags:
 ---
 A public directory of communities, DAOs, and other localist experiments using Ethereum-based tools. Registry entries power the [interactive map on our homepage](/)—which also includes initiatives from [Field Reports](library/Field-Reports) and allied organizations around the world. Entries are grouped by region; **Global** communities have distributed networks with place-based local activations. See [Implementation Guides](library/Implementation-Guides) for how-to resources.
 
-Want to be listed? → Use the Github link above, or [Reach out to the curators](/knowledge-garden/contribution-guide).
+Want to be listed? → Use the GitHub link above, or [Reach out to the curators](/knowledge-garden/contribution-guide).
 
 ---
 
