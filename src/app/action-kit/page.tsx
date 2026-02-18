@@ -13,36 +13,42 @@ const kitComponents = [
     title: "Find a Local Community Group",
     description: "Browse the Community Registry to discover initiatives in your region—from Portland to Rome to Taipei.",
     href: "/knowledge-garden/resources/Ethereum-Localism-Registry",
+    cta: "Browse",
     external: false,
   },
   {
     title: "Host an Eth Localism Event",
     description: "Resources for hosting local gatherings",
     href: "/knowledge-garden/introduction/action-kit/host-an-event",
+    cta: "Plan",
     external: false,
   },
   {
     title: "Host an AlloIRL Funding Round",
     description: "Resource for operating a local on-chain funding round",
     href: "https://irl.allo.capital",
+    cta: "Host",
     external: true,
   },
   {
     title: "Start a Regen Hub",
     description: "Initiate a space for your community to come together",
     href: "/knowledge-garden/library/Implementation-Guides/Regen-Hub-Playbook",
+    cta: "Read More",
     external: false,
   },
   {
     title: "Learn from Others",
     description: "Read Field Reports from communities in Boulder, Portland, Taiwan, and beyond—real experiments and lessons learned.",
     href: "/knowledge-garden/library/Field-Reports",
+    cta: "Read More",
     external: false,
   },
   {
     title: "Document Your Experiment",
     description: "Add your experience to the Knowledge Garden. Share what you've learned so others can build on it.",
     href: "/knowledge-garden/contribution-guide",
+    cta: "Share",
     external: false,
   },
 ];
@@ -125,7 +131,7 @@ export default function ActionKitPage() {
                     rel="noopener noreferrer"
                     className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
                   >
-                    Explore →
+                    {component.cta} →
                     <svg
                       className="h-3.5 w-3.5"
                       fill="none"
@@ -146,7 +152,7 @@ export default function ActionKitPage() {
                     href={component.href}
                     className="mt-4 inline-flex items-center text-sm font-medium text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
                   >
-                    Explore →
+                    {component.cta} →
                   </Link>
                 )}
               </div>

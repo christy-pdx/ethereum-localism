@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ConfettiLink } from "@/components/ConfettiLink";
+import { ConfettiTrigger } from "@/components/ConfettiTrigger";
 import { InteractiveMapClient } from "@/components/InteractiveMapClient";
 import { RotatingFeaturedResources } from "@/components/RotatingFeaturedResources";
 import { getFeaturedResources } from "@/lib/featured-resources";
@@ -102,7 +104,8 @@ export default function Home() {
                 </Link>
               </div>
               <p className="mt-8 text-base font-medium text-teal-800 sm:mt-10 dark:text-teal-200">
-                Join the movement! #ethereumlocalism
+                Join the movement!{" "}
+                <ConfettiTrigger>#ethereumlocalism</ConfettiTrigger>
               </p>
             </div>
           </div>
@@ -133,23 +136,32 @@ export default function Home() {
                   <p className="mt-2 text-sm text-stone-600 dark:text-stone-400">
                     {card.description}
                   </p>
-                  <Link
-                    href={card.href}
-                    className="mt-4 inline-block text-sm font-medium text-teal-700 hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-200"
-                  >
-                    {card.cta}
-                  </Link>
+                  {card.href === "/action-kit" ? (
+                    <ConfettiLink
+                      href={card.href}
+                      className="mt-4 inline-block text-sm font-medium text-teal-700 hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-200"
+                    >
+                      {card.cta}
+                    </ConfettiLink>
+                  ) : (
+                    <Link
+                      href={card.href}
+                      className="mt-4 inline-block text-sm font-medium text-teal-700 hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-200"
+                    >
+                      {card.cta}
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>
 
             <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Link
+              <ConfettiLink
                 href="/knowledge-garden"
                 className="inline-flex items-center justify-center rounded-full bg-stone-900 px-6 py-3 text-sm font-medium text-teal-50 hover:bg-stone-800 dark:bg-teal-50 dark:text-stone-900 dark:hover:bg-teal-100"
               >
                 Explore the Garden
-              </Link>
+              </ConfettiLink>
               <Link
                 href="/knowledge-garden/contribution-guide"
                 className="inline-flex items-center justify-center rounded-full border border-stone-300 px-6 py-3 text-sm font-medium text-stone-700 hover:border-stone-400 hover:bg-stone-100 dark:border-stone-600 dark:text-stone-300 dark:hover:border-stone-500 dark:hover:bg-stone-800"
