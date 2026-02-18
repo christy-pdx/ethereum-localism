@@ -13,7 +13,7 @@ export default function IntroductionPage() {
     <div className="min-h-screen bg-teal-50 dark:bg-stone-950">
       <Header />
 
-      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
+      <main className="mx-auto max-w-5xl px-5 py-12 sm:px-6 sm:py-16">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-stone-500 dark:text-stone-400">
           <Link href="/" className="text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300">

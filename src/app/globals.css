@@ -28,6 +28,15 @@ body {
 }
 
 /* Knowledge Garden content styles */
+.prose-kg {
+  /* Prevent overflow on mobile; tables/code can scroll horizontally */
+  overflow-wrap: break-word;
+}
+.prose-kg pre,
+.prose-kg table {
+  max-width: 100%;
+  overflow-x: auto;
+}
 .prose-kg .home-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

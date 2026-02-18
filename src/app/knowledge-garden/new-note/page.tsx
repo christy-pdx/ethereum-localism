@@ -39,7 +39,7 @@ export default function NewNotePage() {
           <KgSidebar isKnowledgeHome={false} />
 
           <div className="min-w-0 flex-1 border-y border-teal-950/10 bg-white dark:border-teal-100/10 dark:bg-stone-900/30">
-            <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
+            <div className="mx-auto max-w-4xl px-5 py-12 sm:px-6 sm:py-16">
               <Link
                 href="/knowledge-garden"
                 className="mb-6 inline-block text-sm font-medium text-stone-500 hover:text-stone-700 dark:text-stone-400 dark:hover:text-teal-200"

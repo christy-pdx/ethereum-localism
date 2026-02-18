@@ -10,6 +10,8 @@ import {
   POPULAR_CATEGORIES,
   CONTRIBUTE_LINKS,
 } from "@/lib/kg-landing";
+import { getBookNav, stripBookNavFromBody } from "@/lib/ethereum-localism-book";
+import { BookNavLinks } from "@/components/BookNavLinks";
 import { getEditOnGitHubUrl } from "@/lib/github";
 import { buildGraphData } from "@/lib/graph-data";
 import { KgSidebar } from "@/components/KgSidebar";
@@ -107,7 +109,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
             <KgSidebar isKnowledgeHome />
 
             {/* Main content */}
-            <div className="min-w-0 flex-1 px-4 py-8 sm:px-6 lg:px-8">
+            <div className="min-w-0 flex-1 px-5 py-8 sm:px-6 lg:px-8">
               {/* Mobile categories */}
               <div className="mb-6 lg:hidden">
                 <p className="mb-3 text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400">
@@ -264,7 +266,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
             <KgSidebar isKnowledgeHome={false} />
 
             <div className="flex-1 border-y border-teal-950/10 bg-white dark:border-teal-100/10 dark:bg-stone-900/30">
-              <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
+              <div className="mx-auto max-w-4xl px-5 py-12 sm:px-6 sm:py-16">
                 <div className="mb-6 lg:hidden">
                   <p className="mb-3 text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400">
                     Browse the Knowledge Garden
@@ -400,7 +402,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
           <KgSidebar isKnowledgeHome={false} />
 
           <div className="flex-1 border-y border-teal-950/10 bg-white dark:border-teal-100/10 dark:bg-stone-900/30">
-            <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 sm:py-16">
+            <div className="mx-auto max-w-4xl px-5 py-12 sm:px-6 sm:py-16">
               {/* Mobile categories (sidebar hidden on small screens) */}
               <div className="mb-6 lg:hidden">
                 <p className="mb-3 text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400">
@@ -428,6 +430,14 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
                 </div>
                 <div className="mt-6 border-t border-stone-200 pt-6 dark:border-stone-700" />
               </div>
+              {(() => {
+                const bookNav = content ? getBookNav(content.slug) : null;
+                return bookNav ? (
+                  <div className="mb-6">
+                    <BookNavLinks bookNav={bookNav} position="top" />
+                  </div>
+                ) : null;
+              })()}
               <Link
                 href={backHref}
                 className="mb-6 inline-block text-sm font-medium text-stone-500 hover:text-stone-700 dark:text-stone-400 dark:hover:text-teal-200"
@@ -459,7 +469,20 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
                       Edit on GitHub
                     </a>
                   </div>
-                  <MarkdownContent content={content.body} baseSlug={content.slug} />
+                  <MarkdownContent
+                    content={
+                      getBookNav(content.slug)
+                        ? stripBookNavFromBody(content.body)
+                        : content.body
+                    }
+                    baseSlug={content.slug}
+                  />
+                  {(() => {
+                    const bookNav = getBookNav(content.slug);
+                    return bookNav ? (
+                      <BookNavLinks bookNav={bookNav} position="bottom" />
+                    ) : null;
+                  })()}
                 </>
               )}
             </div>

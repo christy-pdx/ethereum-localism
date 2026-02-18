@@ -141,7 +141,7 @@ interface MarkdownContentProps {
 
 export function MarkdownContent({ content, baseSlug }: MarkdownContentProps) {
   return (
-    <article className="prose-kg">
+    <article className="prose-kg mx-auto max-w-prose lg:max-w-none">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkTransformLinks({ baseSlug })]}
         rehypePlugins={[rehypeRaw, rehypeTransformLinks({ baseSlug })]}
