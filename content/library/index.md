@@ -13,6 +13,9 @@ Welcome to the **Ethereum Localism Library** - a curated, growing collection of 
 
 ---
 
+## 📖 [Shared Definitions](library/Shared-Definitions)
+A living glossary of core concepts—Ethereum Localism, cosmo-localism, bioregionalism, and more—to align our language as we co-create.
+
 ## 📁 [Ethereum Localism](library/Ethereum-Localism)
 General content on the Ethereum Localism thesis.
 
@@ -21,9 +24,6 @@ Real-world case studies and narratives around the messy and inspiring work of ex
 
 ## 📁 [Implementation Guides](library/Implementation-Guides)
 Detailed resources for how to implement Ethereum Localist principles and toolkits.
-
-## 📖 [Shared Definitions](library/Shared-Definitions)
-A living glossary of core concepts—Ethereum Localism, cosmo-localism, bioregionalism, and more—to align our language as we co-create.
 
 ---
 
