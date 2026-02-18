@@ -18,8 +18,6 @@ license: CC BY-SA 4.0
 
 **Started:** February 2025  
 
-**Current Status:** Active
-
 **Website:** [ethereumlocalism.xyz](https://www.ethereumlocalism.xyz)  
 
 ---
