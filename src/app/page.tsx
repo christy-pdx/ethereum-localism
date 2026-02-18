@@ -269,7 +269,7 @@ export default function Home() {
                   Collated by The Open Machine (February 2025)
                 </p>
                 <p className="mt-4 text-stone-600 dark:text-stone-400">
-                  Explore the book as navigable Knowledge Garden pages, download the PDF, and claim a free NFT version on Manifold.
+                  Explore the book as navigable Knowledge Garden pages, buy a physical copy, download the PDF, or claim a free NFT version on Manifold.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
@@ -278,6 +278,14 @@ export default function Home() {
                   >
                     Start Reading →
                   </Link>
+                  <a
+                    href="https://www.blurb.com/b/12470725-ethereum-localism"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-full border border-stone-300 px-5 py-2.5 text-sm font-medium text-stone-700 hover:border-stone-400 dark:border-stone-600 dark:text-stone-300"
+                  >
+                    Buy Physical Copy
+                  </a>
                   <a
                     href="https://qxvqdga4v2uhlcgh7bvl5m6rukrhmesy6uzingqov76jw5miy3ka.arweave.net/hesBmByuqHWIx_hqvrPRoqJ2Elj1MoaaDq_8m3WIxtQ"
                     target="_blank"

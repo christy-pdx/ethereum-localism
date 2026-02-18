@@ -14,6 +14,8 @@ date: 2025-02-21
 ---
 View and Download as a PDF: [Ethereum Localism book](https://qxvqdga4v2uhlcgh7bvl5m6rukrhmesy6uzingqov76jw5miy3ka.arweave.net/hesBmByuqHWIx_hqvrPRoqJ2Elj1MoaaDq_8m3WIxtQ)
 
+[Buy a physical copy](https://www.blurb.com/b/12470725-ethereum-localism) on Blurb
+
 Claim a free NFT version of the book on [Manifold](https://app.manifold.xyz/c/ethereum-localism)
 
 ---
