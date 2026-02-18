@@ -11,6 +11,23 @@ export interface FeaturedResource {
   ctaHref: string;
 }
 
+/** Extract YouTube video ID from watch or youtu.be URLs */
+function getYouTubeEmbedId(src: string | undefined): string | null {
+  if (!src) return null;
+  try {
+    const url = new URL(src);
+    if (url.hostname.includes("youtube.com") && url.searchParams.get("v")) {
+      return url.searchParams.get("v");
+    }
+    if (url.hostname === "youtu.be") {
+      return url.pathname.slice(1).split("?")[0] || null;
+    }
+  } catch {
+    return null;
+  }
+  return null;
+}
+
 interface RotatingFeaturedResourcesProps {
   resources: FeaturedResource[];
   intervalSeconds?: number;
@@ -46,6 +63,7 @@ export function RotatingFeaturedResources({
   if (resources.length === 0) return null;
 
   const resource = resources[activeIndex];
+  const youtubeId = getYouTubeEmbedId(resource.ctaHref);
 
   return (
     <div className="relative">
@@ -59,6 +77,17 @@ export function RotatingFeaturedResources({
         <h3 className="font-serif text-xl font-light text-stone-900 dark:text-teal-50">
           {resource.title}
         </h3>
+        {youtubeId && (
+          <div className="mt-4 aspect-video w-full max-w-2xl overflow-hidden rounded-lg">
+            <iframe
+              src={`https://www.youtube.com/embed/${youtubeId}`}
+              title={resource.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="h-full w-full"
+            />
+          </div>
+        )}
         <div className="mt-3 text-stone-600 dark:text-stone-400">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
