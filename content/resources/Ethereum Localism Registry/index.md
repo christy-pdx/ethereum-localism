@@ -51,6 +51,18 @@ Boulder, Colorado — Bioregional hub, regenerative finance and community coordi
 
 ### Global
 
+**Bloom Network**  
+Global — Cooperative community for regenerative culture, bioregional economies and local-first social organizing; 40+ chapters in 24 countries, exploring federated DAO structure and FLO token for local action  
+**Contact:** [bloomnetwork.earth](https://bloomnetwork.earth) · [Start a Local Bloom Chapter](https://bloomnetwork.earth/startLocal)
+
+**Greenpill Network**  
+Global — Ethereum-based regenerative movement: local chapters, guilds and Impact DAOs; education on ReFi, public goods, DeSci, climate and on-chain impact  
+**Contact:** [greenpill.network](https://greenpill.network/)
+
 **Pizza DAO**  
 Global — Distributed network with local activations; annual Global Pizza Parties on Bitcoin Pizza Day (May 22), supporting local pizzerias and small businesses  
 **Contact:** [globalpizza.party](https://globalpizza.party/) · [pizzadao.xyz](https://pizzadao.xyz/)
+
+**Regens Unite**  
+Global — In-person gatherings connecting regenerative thinkers and builders across climate, Web3, ReFi and arts; events in Brussels, Berlin, London, Amsterdam, Bangkok and beyond  
+**Contact:** [regensunite.earth](https://www.regensunite.earth/) · [regensunite.eth](https://etherscan.io/address/regensunite.eth)
