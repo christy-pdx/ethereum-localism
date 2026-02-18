@@ -29,10 +29,9 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof document === "undefined") return "light";
-    return document.documentElement.classList.contains("dark") ? "dark" : "light";
-  });
+  // Always start with "light" so server and first client render match (avoids hydration mismatch).
+  // ThemeScript has already set the "dark" class on <html> before React loads; useEffect syncs state.
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
     const stored = localStorage.getItem(THEME_KEY) as Theme | null;
