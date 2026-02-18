@@ -162,13 +162,24 @@ body {
   animation: exploratory-fade-out 0.8s ease-out 0.15s forwards;
 }
 
-/* Body parallax background: desktop only (hidden on mobile for better performance/UX) */
-@media (min-width: 768px) {
-  .body-parallax-bg {
+/* Body background: scrolling on mobile, fixed parallax on desktop */
+@media (max-width: 767px) {
+  .body-bg-mobile {
     background-image: url(/body-background.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
+  }
+}
+@media (min-width: 768px) {
+  .body-parallax-fixed {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url(/body-background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }

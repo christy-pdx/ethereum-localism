@@ -65,7 +65,12 @@ export default function Home() {
     <div className="min-h-screen bg-teal-50 dark:bg-stone-950">
       <Header />
 
-      <main>
+      <main className="relative">
+        {/* Parallax background - position:fixed hack for Chrome/Safari cross-browser support; desktop only */}
+        <div
+          className="body-parallax-fixed hidden md:block"
+          aria-hidden
+        />
         {/* Hero */}
         <section className="relative overflow-hidden">
           <div className="relative aspect-[3/1] w-full min-h-[min(420px,85vh)] sm:min-h-[min(480px,80vh)]">
@@ -112,17 +117,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Body sections with parallax background - desktop only; mobile uses clean solid background */}
-        <div className="relative bg-teal-50 dark:bg-stone-950 body-parallax-bg">
-          {/* Gradient overlay for light/dark mode - desktop only, when image is shown */}
+        {/* Body sections - fixed div (desktop) or wrapper bg (mobile) for the cosmic image */}
+        <div className="relative z-10 bg-teal-50 dark:bg-stone-950 body-bg-mobile md:bg-transparent">
+          {/* Gradient overlay for light/dark mode - always when background image is shown */}
           <div
-            className="pointer-events-none absolute inset-0 hidden bg-gradient-to-b from-teal-50/75 via-teal-50/55 to-teal-50/75 md:block dark:from-stone-950/75 dark:via-stone-950/55 dark:to-stone-950/75"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-teal-50/75 via-teal-50/55 to-teal-50/75 dark:from-stone-950/75 dark:via-stone-950/55 dark:to-stone-950/75"
             aria-hidden
           />
 
           <div className="relative z-10">
         {/* Knowledge Garden */}
-        <section className="border-y border-teal-950/10 bg-white px-4 py-16 dark:border-teal-100/10 dark:bg-stone-900/30 sm:px-6 sm:py-24 md:bg-white/70 md:backdrop-blur-sm dark:md:bg-stone-900/40">
+        <section className="border-y border-teal-950/10 bg-white/75 px-4 py-16 backdrop-blur-sm dark:border-teal-100/10 dark:bg-stone-900/40 sm:px-6 sm:py-24 md:bg-white/70 dark:md:bg-stone-900/40">
           <div className="mx-auto max-w-5xl">
             <h2 className="font-serif text-2xl font-light text-stone-900 dark:text-teal-50 sm:text-3xl">
               Explore Our Digital Knowledge Garden
@@ -214,7 +219,7 @@ export default function Home() {
               {getInvolvedCards.map((card) => (
                 <div
                   key={card.title}
-                  className="rounded-lg border border-teal-950/10 bg-white p-6 dark:border-teal-100/10 dark:bg-stone-900/30 md:bg-white/80 md:backdrop-blur-sm dark:md:bg-stone-900/40"
+                  className="rounded-lg border border-teal-950/10 bg-white/80 p-6 backdrop-blur-sm dark:border-teal-100/10 dark:bg-stone-900/40"
                 >
                   <h3 className="font-semibold text-stone-900 dark:text-teal-50">
                     {card.title}
@@ -252,7 +257,7 @@ export default function Home() {
         </section>
 
         {/* Featured: Rotating resources */}
-        <section className="border-t border-teal-950/10 bg-stone-100 px-4 py-16 dark:border-teal-100/10 dark:bg-stone-900/50 sm:px-6 sm:py-24 md:bg-stone-100/70 md:backdrop-blur-sm dark:md:bg-stone-900/40">
+        <section className="border-t border-teal-950/10 bg-stone-100/80 px-4 py-16 backdrop-blur-sm dark:border-teal-100/10 dark:bg-stone-900/50 sm:px-6 sm:py-24 md:bg-stone-100/70 dark:md:bg-stone-900/40">
           <div className="mx-auto max-w-5xl">
             <h2 className="font-serif text-2xl font-light text-stone-900 dark:text-teal-50 sm:text-3xl">
               Featured Resource
