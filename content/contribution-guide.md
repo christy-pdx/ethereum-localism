@@ -15,6 +15,8 @@ Our knowledge garden is a [markdown-based](https://www.markdownguide.org/cheat-
 
 To contribute to this knowledge garden, you have two options: share resources with existing curators, or become a curator yourself. Browse the [Library](/knowledge-garden/library), [Field Reports](/knowledge-garden/library/Field-Reports), and [Shared Definitions](/knowledge-garden/library/Shared-Definitions) to see the kinds of content we host. Once you've reached out we may ask for additional information or respond with some editorial comments, or we may post directly.
 
+Listings are reviewed by curators before going live.
+
 ---
 ### Option 1: Share Resources
 

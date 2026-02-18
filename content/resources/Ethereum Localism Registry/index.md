@@ -11,6 +11,8 @@ Want to add your initiative? Use the Edit on GitHub link above to add it directl
 
 Entries are listed in alphabetical order by initiative name within each region. Please add new entries in alphabetical order.
 
+Listings are reviewed by curators before going live.
+
 ---
 
 ### Asia
