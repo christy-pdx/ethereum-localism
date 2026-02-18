@@ -112,5 +112,10 @@ export function getFeaturedResources(): FeaturedResource[] {
 
   results.sort((a, b) => a.order - b.order);
 
-  return results.map(({ order: _, ...r }) => r);
+  return results.map(({ title, description, ctaLabel, ctaHref }) => ({
+    title,
+    description,
+    ctaLabel,
+    ctaHref,
+  }));
 }

@@ -79,6 +79,7 @@ function createComponents(baseSlug?: string): Components {
     }
     const resolvedSrc = typeof src === "string" ? transformAssetSrc(src) : src;
     return (
+      // eslint-disable-next-line @next/next/no-img-element -- Dynamic markdown images: src from content, dimensions unknown
       <img
         src={resolvedSrc}
         alt={alt ?? ""}

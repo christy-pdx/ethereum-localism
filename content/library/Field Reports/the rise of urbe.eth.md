@@ -244,4 +244,4 @@ PS. if you missed ethrome, we prepared an [aftermovie](https://www.youtube.com/
 
 ---
 
-*This Field Report is part of the [ethereumlocalism.xyz](https://www.ethereumlocalism.xyz) Knowledge Garden — a growing collection of real-world experiments, reflections, and tools for grounding coordination in place. Want to share your story or contribute an update? [Get in touch →](https://www.ethereumlocalism.xyz/contribution-guide)*
+*This Field Report is part of the [ethereumlocalism.xyz](https://www.ethereumlocalism.xyz) Knowledge Garden — a growing collection of real-world experiments, reflections, and tools for grounding coordination in place. Want to share your story or contribute an update? [Get in touch →](/knowledge-garden/contribution-guide)*

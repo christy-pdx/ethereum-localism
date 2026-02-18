@@ -74,6 +74,7 @@ export function Header() {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden
             >
               <circle cx="11" cy="11" r="8" strokeWidth={2} />
               <path d="m21 21-4.3-4.3" strokeWidth={2} />
@@ -141,7 +142,7 @@ export function Header() {
               }}
               className="flex items-center gap-2 py-2 text-left text-sm font-medium text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-teal-100"
             >
-              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                 <circle cx="11" cy="11" r="8" strokeWidth={2} />
                 <path d="m21 21-4.3-4.3" strokeWidth={2} />
               </svg>

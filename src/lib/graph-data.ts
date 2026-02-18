@@ -1,6 +1,3 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import { visit } from "unist-util-visit";
@@ -12,9 +9,6 @@ import {
   pathToSlug,
   slugToUrl,
 } from "./content";
-
-const CONTENT_DIR = path.join(process.cwd(), "content");
-const KG_BASE = "/knowledge-garden";
 
 export interface GraphNode {
   id: string;

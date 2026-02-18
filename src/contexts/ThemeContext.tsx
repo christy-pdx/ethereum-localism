@@ -39,8 +39,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const resolved: Theme =
       stored === "dark" || stored === "light" ? stored : prefersDark ? "dark" : "light";
-    setTheme(resolved);
     document.documentElement.classList.toggle("dark", resolved === "dark");
+    queueMicrotask(() => setTheme(resolved));
   }, []);
 
   const toggleTheme = useCallback(() => {
