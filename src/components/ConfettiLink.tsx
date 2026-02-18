@@ -30,7 +30,7 @@ export function ConfettiLink({ children, href, onClick, ...props }: ConfettiLink
       fireConfettiFromClick(e);
       onClick?.(e);
       setTimeout(() => {
-        router.push(href);
+        router.push(targetHref);
       }, NAVIGATION_DELAY_MS);
     },
     [href, onClick, router]
