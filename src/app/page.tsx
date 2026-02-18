@@ -101,6 +101,9 @@ export default function Home() {
                   Find a local community group →
                 </Link>
               </div>
+              <p className="mt-8 text-base font-medium text-teal-800 sm:mt-10 dark:text-teal-200">
+                Join the movement! #ethereumlocalism
+              </p>
             </div>
           </div>
         </section>
