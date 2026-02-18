@@ -112,8 +112,20 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Body sections with parallax background - background on wrapper so it only shows in body area */}
+        <div
+          className="relative bg-cover bg-center bg-no-repeat body-parallax-bg"
+          style={{ backgroundImage: "url(/body-background.png)" }}
+        >
+          {/* Gradient overlay for light/dark mode - lighter than hero so background image is visible */}
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-teal-50/75 via-teal-50/55 to-teal-50/75 dark:from-stone-950/75 dark:via-stone-950/55 dark:to-stone-950/75"
+            aria-hidden
+          />
+
+          <div className="relative z-10">
         {/* Knowledge Garden */}
-        <section className="border-y border-teal-950/10 bg-white px-4 py-16 dark:border-teal-100/10 dark:bg-stone-900/30 sm:px-6 sm:py-24">
+        <section className="border-y border-teal-950/10 bg-white/70 px-4 py-16 backdrop-blur-sm dark:border-teal-100/10 dark:bg-stone-900/40 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-5xl">
             <h2 className="font-serif text-2xl font-light text-stone-900 dark:text-teal-50 sm:text-3xl">
               Explore Our Digital Knowledge Garden
@@ -205,7 +217,7 @@ export default function Home() {
               {getInvolvedCards.map((card) => (
                 <div
                   key={card.title}
-                  className="rounded-lg border border-teal-950/10 bg-white p-6 dark:border-teal-100/10 dark:bg-stone-900/30"
+                  className="rounded-lg border border-teal-950/10 bg-white/80 p-6 backdrop-blur-sm dark:border-teal-100/10 dark:bg-stone-900/40"
                 >
                   <h3 className="font-semibold text-stone-900 dark:text-teal-50">
                     {card.title}
@@ -243,7 +255,7 @@ export default function Home() {
         </section>
 
         {/* Featured: Rotating resources */}
-        <section className="border-t border-teal-950/10 bg-stone-100 px-4 py-16 dark:border-teal-100/10 dark:bg-stone-900/50 sm:px-6 sm:py-24">
+        <section className="border-t border-teal-950/10 bg-stone-100/70 px-4 py-16 backdrop-blur-sm dark:border-teal-100/10 dark:bg-stone-900/40 sm:px-6 sm:py-24">
           <div className="mx-auto max-w-5xl">
             <h2 className="font-serif text-2xl font-light text-stone-900 dark:text-teal-50 sm:text-3xl">
               Featured Resource
@@ -320,6 +332,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+          </div>
+        </div>
       </main>
 
       <Footer />

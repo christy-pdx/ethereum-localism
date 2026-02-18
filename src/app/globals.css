@@ -161,3 +161,13 @@ body {
 .exploratory-link--fade-out {
   animation: exploratory-fade-out 0.8s ease-out 0.15s forwards;
 }
+
+/* Body parallax background: scroll on mobile (iOS), fixed on desktop */
+.body-parallax-bg {
+  background-attachment: scroll;
+}
+@media (min-width: 768px) {
+  .body-parallax-bg {
+    background-attachment: fixed;
+  }
+}
