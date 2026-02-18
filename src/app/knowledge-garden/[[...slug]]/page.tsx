@@ -10,6 +10,7 @@ import {
   POPULAR_CATEGORIES,
   CONTRIBUTE_LINKS,
 } from "@/lib/kg-landing";
+import { getEditOnGitHubUrl } from "@/lib/github";
 import { buildGraphData } from "@/lib/graph-data";
 import { KgSidebar } from "@/components/KgSidebar";
 import { KnowledgeGraph } from "@/components/KnowledgeGraph";
@@ -435,11 +436,29 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
               </Link>
               {content && (
                 <>
-                  <h1 className="mb-8 font-serif text-3xl font-light text-stone-900 dark:text-teal-50 sm:text-4xl">
-                    {content.meta.title
-                      ? String(content.meta.title)
-                      : slugStr.split("/").pop()?.replace(/-/g, " ") ?? "Page"}
-                  </h1>
+                  <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
+                    <h1 className="font-serif text-3xl font-light text-stone-900 dark:text-teal-50 sm:text-4xl">
+                      {content.meta.title
+                        ? String(content.meta.title)
+                        : slugStr.split("/").pop()?.replace(/-/g, " ") ?? "Page"}
+                    </h1>
+                    <a
+                      href={getEditOnGitHubUrl(content.filePath)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
+                    >
+                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                        />
+                      </svg>
+                      Edit on GitHub
+                    </a>
+                  </div>
                   <MarkdownContent content={content.body} baseSlug={content.slug} />
                 </>
               )}

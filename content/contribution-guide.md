@@ -101,5 +101,12 @@ The Resources page is a curated directory of external tools, platforms, and comm
 The rotating "Featured Resource" carousel on the homepage is strictly curator-managed. Contributors cannot self-feature. Curators add items via `content/featured-resources/` or by setting `featured: true` on existing content. There is no public submission path.
 
 ---
+## Support
+
+**Join the conversation.** Connect with other Ethereum Localists in our [Telegram chat](https://t.me/+5Enk4J4d98MyMDkx).
+
+**Questions or other ways to help?** Reach out to the curators at the emails above, or share your idea in Telegram. Whether you're exploring local initiatives, hosting events, or want to support the movement in another way—we'd love to hear from you.
+
+---
 
 ![](assets/gfel-boulderhub.png)

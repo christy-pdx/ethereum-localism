@@ -2,10 +2,10 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { KgSidebar } from "@/components/KgSidebar";
+import { getNewFileOnGitHubUrl } from "@/lib/github";
 import { NewNoteTemplate } from "./NewNoteTemplate";
 
-const GITHUB_REPO = "ethereumlocalism/ethereum-localism";
-const GITHUB_NEW_FILE = `https://github.com/${GITHUB_REPO}/new/main?filename=content/library/Field-Reports/your-note-title.md`;
+const GITHUB_NEW_FILE = getNewFileOnGitHubUrl("content/library/Field-Reports/your-note-title.md");
 
 const TEMPLATE = `---
 title: "Your Note Title"
