@@ -104,7 +104,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
       <div className="min-h-screen bg-teal-50 dark:bg-stone-950">
         <Header />
 
-        <main className="border-t border-teal-950/10 dark:border-teal-100/10">
+        <main className="overflow-x-hidden border-t border-teal-950/10 dark:border-teal-100/10">
           <div className="mx-auto flex max-w-6xl">
             <KgSidebar isKnowledgeHome />
 
@@ -261,12 +261,12 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
       <div className="min-h-screen bg-teal-50 dark:bg-stone-950">
         <Header />
 
-        <main className="border-t border-teal-950/10 dark:border-teal-100/10">
+        <main className="overflow-x-hidden border-t border-teal-950/10 dark:border-teal-100/10">
           <div className="mx-auto flex max-w-6xl">
             <KgSidebar isKnowledgeHome={false} />
 
-            <div className="flex-1 border-y border-teal-950/10 bg-white dark:border-teal-100/10 dark:bg-stone-900/30">
-              <div className="mx-auto max-w-4xl px-5 py-12 sm:px-6 sm:py-16">
+            <div className="min-w-0 flex-1 border-y border-teal-950/10 bg-white dark:border-teal-100/10 dark:bg-stone-900/30">
+              <div className="mx-auto min-w-0 max-w-4xl px-5 py-12 sm:px-6 sm:py-16">
                 <div className="mb-6 lg:hidden">
                   <p className="mb-3 text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400">
                     Browse the Knowledge Garden
@@ -397,12 +397,12 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
     <div className="min-h-screen bg-teal-50 dark:bg-stone-950">
       <Header />
 
-      <main className="border-t border-teal-950/10 dark:border-teal-100/10">
+      <main className="overflow-x-hidden border-t border-teal-950/10 dark:border-teal-100/10">
         <div className="mx-auto flex max-w-6xl">
           <KgSidebar isKnowledgeHome={false} />
 
-          <div className="flex-1 border-y border-teal-950/10 bg-white dark:border-teal-100/10 dark:bg-stone-900/30">
-            <div className="mx-auto max-w-4xl px-5 py-12 sm:px-6 sm:py-16">
+          <div className="min-w-0 flex-1 border-y border-teal-950/10 bg-white dark:border-teal-100/10 dark:bg-stone-900/30">
+            <div className="mx-auto min-w-0 max-w-4xl px-5 py-12 sm:px-6 sm:py-16">
               {/* Mobile categories (sidebar hidden on small screens) */}
               <div className="mb-6 lg:hidden">
                 <p className="mb-3 text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400">
@@ -452,22 +452,28 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
                         ? String(content.meta.title)
                         : slugStr.split("/").pop()?.replace(/-/g, " ") ?? "Page"}
                     </h1>
-                    <a
-                      href={getEditOnGitHubUrl(content.filePath)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
-                    >
-                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                        />
-                      </svg>
-                      Edit on GitHub
-                    </a>
+                    {!getBookNav(content.slug) &&
+                      !(Array.isArray(content.meta?.tags) &&
+                        content.meta.tags.some((t: string) =>
+                          ["format/book", "format/transcript", "format/interview", "format/zine"].includes(t)
+                        )) && (
+                      <a
+                        href={getEditOnGitHubUrl(content.filePath)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
+                      >
+                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                          />
+                        </svg>
+                        Edit on GitHub
+                      </a>
+                    )}
                   </div>
                   <MarkdownContent
                     content={
