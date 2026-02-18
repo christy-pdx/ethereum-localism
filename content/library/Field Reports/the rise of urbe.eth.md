@@ -11,8 +11,6 @@ author: limone.eth
 ---
 **Location**: Rome, Italy
 
-For more on local DAOs and community coordination, see [Shared Definitions](library/Shared-Definitions), [Fun DAO](library/Implementation-Guides/Fun-DAO), and other [Field Reports](library/Field-Reports).
-
 **Started**: May 2022
 
 **Current Status**: Active
