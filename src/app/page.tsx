@@ -92,7 +92,7 @@ export default function Home() {
               </p>
               <div className="mt-6 flex flex-wrap items-center justify-center gap-4 sm:mt-8 sm:gap-6">
                 <Link
-                  href="/knowledge-garden/introduction"
+                  href="/introduction"
                   className="text-base font-medium text-teal-800 underline decoration-teal-700/60 underline-offset-4 hover:decoration-teal-700 dark:text-teal-200 dark:decoration-teal-300/60 dark:hover:decoration-teal-300"
                 >
                   An Introduction to Ethereum Localism →
