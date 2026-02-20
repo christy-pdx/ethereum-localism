@@ -9,6 +9,8 @@ Tools, guides, and communities we’ve found useful—from across the Ethereum L
 
 Sections are arranged by theme; browse what fits your interests. Links without ↗ stay in the Knowledge Garden; links with ↗ go to external sites (source in parentheses).
 
+**To contribute**: Add your initiative to the registry by using the Edit on GitHub link at the top of the page to propose changes directly—GitHub will prompt you to fork and open a pull request if you're not a collaborator. You can also reach out or see the [Contributon Guide →](/knowledge-garden/contribution-guide)
+
 → [Chat about Ethereum Localism with CosmoGPT](https://chatgpt.com/g/g-67bcda8bdffc8191bb45c9aa78064051-cosmo) — A chatbot trained on our gatherings; useful for cosmo-local coordination questions. (OpenAI)
 
 ## Ethereum
@@ -28,13 +30,13 @@ Hands-on guides for organizing locally—starting a Fun DAO, hosting a GFEL, run
 ## Regenerative Finance & Commons Economy
 Local currencies, commons governance, financial infrastructure that actually supports people and place. Theory and practice from the ReFi and commons economy worlds.
 
-- [Commons Economy Roadmap](https://www.commonseconomy.org/?v=28e89012f4b0491383940ca7ba568403) (commonseconomy.org) – A guide for transitioning from extractive systems to commons-based, cooperative economies.  
+- [Commons Economy Roadmap](https://info.commonseconomy.org/) (commonseconomy.org) – A guide for transitioning from extractive systems to commons-based, cooperative economies.  
 - [Commons-Based Peer Production](https://wiki.p2pfoundation.net/Commons-Based_Peer_Production) (P2P Foundation) – An overview of decentralized, collaborative production enabled by digital networks.
 - [Eight Forms of Capital](https://wiki.p2pfoundation.net/Eight_Forms_of_Capital) (P2P Foundation) – A framework that expands value beyond financial capital to include social, cultural, and ecological capital.  
 - [Grassroots Economics](https://www.grassrootseconomics.org) (grassrootseconomics.org) – Community currencies and local economic empowerment.  
 - [Ostrom's Eight Principles for Successful Commons](https://earthbound.report/2018/01/15/elinor-ostroms-8-rules-for-managing-the-commons/) (earthbound.report) – A summary of Nobel laureate Elinor Ostrom's principles for sustainable commons management.  
 - [Regen Commons](https://regencommons.com) (regencommons.com) – A digital space for regenerative finance and land stewardship collaboration.  
-- [Regen Coordination](https://www.regencoordination.xyz/?v=1b22e7251f2f800594c2000c9bb5a316) (regencoordination.xyz) – An evolving alliance of Web3 organizations fostering collaboration for ecological, social, and economic regeneration.
+- [Regen Coordination](https://hub.regencoordination.xyz/) (regencoordination.xyz) – An evolving alliance of Web3 organizations fostering collaboration for ecological, social, and economic regeneration.
 - [Regen Foundation](https://regen.foundation) (regen.foundation) – Supports ecological regeneration through Web3 tools and community-led initiatives.
 
 ## Cosmolocal Governance
@@ -59,6 +61,7 @@ Who decides what gets funded? Quadratic voting, retro PGF, place-based grants—
 ## Community
 Allies and fellow travelers in the space—people experimenting with new ways to coordinate, govern, and build locally. Worth knowing.
 
+- [Ethereum Localism Initiative & Community Registry →](/knowledge-garden/resources/Ethereum-Localism-Registry)
 - [Bloom Network](https://bloomnetwork.earth) (bloomnetwork.earth) – A place-based social network and peer incubator for regeneration, mutual aid, and local resilience.
 - [citydao.network (Telegram)](http://t.me/citydaonetwork) (citydao.network) – Networking hub for members or aspiring builders of local city DAOs.
 - [Crypto Commons Association](https://www.crypto-commons.org/) (crypto-commons.org) – A think/do tank in the Austrian Alps for crypto-commons, post-capitalist tech, and open knowledge.
@@ -78,14 +81,12 @@ Protocols and infrastructures beyond Ethereum that share localist values—peer-
 
 ---
 
-**Missing something?** Add your initiative to the registry.
+Know a resource that belongs here? [Tell us in Telegram](https://t.me/+5Enk4J4d98MyMDkx) (Ethereum Localism).
 
-[Ethereum Localism Initiative & Community Registry →](/knowledge-garden/resources/Ethereum-Localism-Registry)
 
 
 ![](assets/lovewall.jpeg)
 
-Know a resource that belongs here? [Tell us in Telegram](https://t.me/+5Enk4J4d98MyMDkx) (Ethereum Localism).
 
 
 ---
