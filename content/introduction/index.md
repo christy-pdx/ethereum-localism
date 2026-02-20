@@ -6,7 +6,7 @@ tags:
   - theme/community
   - theme/applied-cosmolocalism
 ---
-![](assets/whatisethereum.png)
+![Illustration: What is Ethereum Localism](assets/whatisethereum.png)
 
 ## What is Ethereum Localism?
 
@@ -16,36 +16,30 @@ Unlike many blockchain projects that focus primarily on global, borderless appli
 
 > Ethereum Localism balances blockchain's global power and intelligence with values-aligned, on-the-ground communities that bring life to the technology—enabling an ecosystem that roots down deeper to rise up higher.
 
-We know from history that the kind of technological simplicity that precedes real adoption requires local application, in all its experimental plurality. If this is so, then every site of novel local use is a potential inoculation site, a defense against capture. [Localism is an anticapture technology](library/GFEL/GFEL-Announcement-2023).
+We know from history that the kind of technological simplicity that precedes real adoption requires local application, in all its experimental plurality. If this is so, then every site of novel local use is a potential inoculation site, a defense against capture. [Localism is an anticapture technology](/knowledge-garden/library/GFEL/GFEL-Announcement-2023).
 
-**==RESOURCE==: CosmoGPT**→ [Chat and Learn about Ethereum Localism with Cosmo](https://chatgpt.com/g/g-67bcda8bdffc8191bb45c9aa78064051-cosmo)
+> **CosmoGPT** — [Chat and Learn about Ethereum Localism with Cosmo](https://chatgpt.com/g/g-67bcda8bdffc8191bb45c9aa78064051-cosmo)
+>
+> Created as an open, evolving AI steward for the cosmo-localist paradigm, CosmoGPT was trained on transcripts from the [General Forum on Ethereum Localism](/knowledge-garden/library/GFEL) gatherings—diverse streams of research and interest around commons-based governance, regenerative economics, decentralized tech, and place-based organizing. Cosmo exists to help navigate the space between global knowledge sharing and local autonomy—supporting collective sensemaking, systems thinking, and grounded action. Whatever you're working on, Cosmo offers insights and tools to help seed collaborative, just, and ecological futures.
 
-*Created as an open, evolving AI steward for the cosmo-localist paradigm, CosmoGPT was trained on transcripts from the [General Forum on Ethereum Localism](/library/GFEL) gatherings -- diverse streams of research and interest around commons-based governance, regenerative economics, decentralized tech, and place-based organizing. Cosmo exists to help navigate the space between global knowledge sharing and local autonomy—supporting collective sensemaking, systems thinking, and grounded action. Whatever you're working on, Cosmo offers insights and tools to help seed collaborative, just, and ecological futures.*
+## Principles of Ethereum Localism
 
-# Principles of Ethereum Localism
-
-## Foundational Reminders
+### Foundational Reminders
 
 Before applying frameworks or methodologies, Ethereum Localism might begin with three reminders—guiding anchors to help keep projects, and the Ethereum Localism meme, accountable to people and place.
 
 ### 1. Grounded in Place  
-> *“If it’s not rooted, it’s not localism.”*
-
-Ethereum Localist efforts are accountable to material conditions in specific places. Whether rural or urban, every project must engage with the lived realities of local life—community, food, labor, governance, and ecology. Localist technology takes root in the soil or the street.
+*If it's not rooted, it's not localism.* Ethereum Localist efforts are accountable to material conditions in specific places. Whether rural or urban, every project must engage with the lived realities of local life—community, food, labor, governance, and ecology. Localist technology takes root in the soil or the street.
 
 ### 2. Open by Default  
-> *“Open source and interoperable.”*
-
-Ethereum Localism resists gatekeeping and centralized control. It favors open-source coordination and tools that can be forked, remixed, and shared. If a tool can’t be adapted by others, it is not in service to the cosmo-local. 
+*Open source and interoperable.* Ethereum Localism resists gatekeeping and centralized control. It favors open-source coordination and tools that can be forked, remixed, and shared. If a tool can’t be adapted by others, it is not in service to the cosmo-local. 
 
 ### 3. Empirical Improvisation  
-> *“If it doesn’t work here, it doesn’t work.”*
-
-Ethereum Localism is grounded in practice. Projects respond to real-world conditions, adapt with feedback, and demonstrate relevance under local constraints. Viability is measured through use, not theory.
+*If it doesn't work here, it doesn't work.* Ethereum Localism is grounded in practice. Projects respond to real-world conditions, adapt with feedback, and demonstrate relevance under local constraints. Viability is measured through use, not theory.
 
 ---
 
-## Core Principles of Ethereum Localism
+### Core Principles
 
 Ethereum Localism builds on those foundational reminders with a set of principles that guide local blockchain practice. These principles are grounded in real-world application, not abstract ideals.
 
@@ -70,23 +64,26 @@ Ethereum Localism prioritizes the relationships that sustain mutual aid, coordin
 The field of Ethereum Localism is just taking shape—an evolving design space where communities are actively experimenting with new ways to coordinate, govern, and share resources. These use cases represent early patterns and possibilities rather than fixed models. Each application reflects a different facet of how blockchain tools can support local resilience and autonomy. This section aims to highlight practical examples that are already emerging, while inviting further exploration and adaptation.
 
 ### Local Currencies
-Community currencies, local token systems, and neighborhood marketplaces built on peer-to-peer networks help keep wealth circulating within communities, support local businesses, and incentivize community participation. See [Field Reports](/knowledge-garden/library/Field-Reports) for real-world examples like [PizzaDAO](library/Field-Reports/PizzaDAO).
+Community currencies, local token systems, and neighborhood marketplaces built on peer-to-peer networks help keep wealth circulating within communities, support local businesses, and incentivize community participation. See [Field Reports](/knowledge-garden/library/Field-Reports) for real-world examples.
 
 - Community currencies with local businesses
 - Mutual credit systems for local exchange
 - Neighborhood marketplaces and sharing economies
+
 ### Community Governance
 Coordination tools like DAOs (Decentralized Autonomous Organizations) can provide transparent, participatory governance for community projects, shared resources, and local decision-making processes. See [Local DAO Summer](library/Local-DAO-Summer) and the [Fun DAO](library/Implementation-Guides/Fun-DAO) guide for examples.
 
 - Neighborhood decision-making platforms
 - Transparent community treasury management
 - Participatory budgeting and proposal systems
+
 ### Commons Management
 Smart contracts can help communities manage shared resources, from community gardens and tool libraries to shared renewable energy systems and community spaces. Explore [Implementation Guides](/knowledge-garden/library/Implementation-Guides) like the [Regen Hub Playbook](library/Implementation-Guides/Regen-Hub-Playbook) for practical approaches.
 
 - Community garden coordination and resource sharing
 - Local renewable energy microgrids
 - Shared community spaces and equipment libraries
+
 ### Local Production
 Blockchain-based systems coordinate local manufacturing, track provenance of locally-produced goods, and facilitate sharing of designs and knowledge.
 
@@ -99,21 +96,27 @@ Blockchain-based systems coordinate local manufacturing, track provenance of loc
 
 ---
 ## Challenges and Considerations
+
 While Ethereum Localism offers new possibilities for community autonomy, coordination, and resilience, it also comes with real-world complexities. From the technical learning curve to uneven access to digital tools, communities face a range of challenges when implementing blockchain-based systems. Navigating uncertain regulatory terrain, building infrastructure that works in diverse conditions, and finding equilibrium between local needs and global networks are all critical considerations. This section outlines some of the most pressing barriers.
 
-- **Technical Barriers**: Blockchain technology remains complex and inaccessible to many people, requiring thoughtful onboarding and user experience design.
-- **Regulatory Uncertainty**: The legal and regulatory landscape for blockchain-based community systems is still evolving.
-- **Digital Divide**: Access to technology and digital literacy varies widely within and between communities.
-- **Infrastructure Resilience**: Ensuring decentralized networks remain functional in low-connectivity environments is crucial for widespread adoption.
-- **Balancing Local and Global**: Finding the right balance between local autonomy and global interoperability is an ongoing challenge.
-- **Market Volatility**: Price instability can impact funding, payments, and the reliability of blockchain-based financial tools.
+**Technical Barriers** — Blockchain technology remains complex and inaccessible to many people, requiring thoughtful onboarding and user experience design.
+
+**Regulatory Uncertainty** — The legal and regulatory landscape for blockchain-based community systems is still evolving.
+
+**Digital Divide** — Access to technology and digital literacy varies widely within and between communities.
+
+**Infrastructure Resilience** — Ensuring decentralized networks remain functional in low-connectivity environments is crucial for widespread adoption.
+
+**Balancing Local and Global** — Finding the right balance between local autonomy and global interoperability is an ongoing challenge.
+
+**Market Volatility** — Price instability can impact funding, payments, and the reliability of blockchain-based financial tools.
 
 ---
 ## Our Mission
 
 Our mission is to steward a global network of locally-rooted initiatives that demonstrate how blockchain technology can enhance community resilience, regenerative practices, and participatory governance.
 
-![](assets/goat.jpeg)
+![Ethereum Localism community](assets/goat.jpeg)
 
 ---
 ## Join the Movement
