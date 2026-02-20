@@ -9,7 +9,7 @@ Tools, guides, and communities we’ve found useful—from across the Ethereum L
 
 Sections are arranged by theme; browse what fits your interests. Links without ↗ stay in the Knowledge Garden; links with ↗ go to external sites (source in parentheses).
 
-**To contribute**: Add your initiative to the registry by using the Edit on GitHub link at the top of the page to propose changes directly—GitHub will prompt you to fork and open a pull request if you're not a collaborator. You can also reach out or see the [Contributon Guide →](/knowledge-garden/contribution-guide)
+**To contribute**: Add your initiative to the registry by using the Edit on GitHub link at the top of the page to propose changes directly—GitHub will prompt you to fork and open a pull request if you're not a collaborator. You can also reach out or see the [Contributon Guide →](/knowledge-garden/contribution-guide). Within each section (except Ethereum), entries are listed alphabetically.
 
 → [Chat about Ethereum Localism with CosmoGPT](https://chatgpt.com/g/g-67bcda8bdffc8191bb45c9aa78064051-cosmo) — A chatbot trained on our gatherings; useful for cosmo-local coordination questions. (OpenAI)
 
@@ -76,6 +76,7 @@ Protocols and infrastructures beyond Ethereum that share localist values—peer-
 - [Althea](https://www.althea.net) (althea.net) – Decentralized mesh networking and community-owned broadband, with micropayments between routers so anyone can buy or sell connectivity peer-to-peer.
 - [Grassroots Economics (Sarafu Network)](https://www.grassrootseconomics.org) (grassrootseconomics.org) – Commitment pooling and community currency infrastructure rooted in indigenous coordination practices, blockchain-supported but locally governed.
 - [Holochain](https://holochain.org) (holochain.org) – Agent-centric, DHT-based peer-to-peer framework for community currencies, mutual credit, and local-first apps like [Neighborhoods](https://neighbourhoods.network).
+- [Hypercerts](https://www.hypercerts.org) (hypercerts.org) – Protocol for funding and rewarding impact; powers impact markets like Gitcoin and Funding the Commons.
 - [IPFS](https://ipfs.tech) (ipfs.tech) – Content-addressed, distributed file storage for hosting open design libraries, governance documents, and knowledge commons without centralized servers.
 - [Open Source Ecology](https://opensourceecology.org) (opensourceecology.org) – Open-source blueprints for essential industrial machines—a global design commons enabling localized physical production.
 
