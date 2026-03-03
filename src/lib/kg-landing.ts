@@ -1,4 +1,6 @@
 import fs from "fs";
+import path from "path";
+import { execSync } from "child_process";
 import {
   getAllContentPaths,
   getContentByPath,
@@ -55,6 +57,33 @@ function formatRelativeDate(date: Date): string {
   return `${Math.floor(diffDays / 30)} months ago`;
 }
 
+/** Get last commit date for a file from git history. Stable across CI rebuilds. */
+function getGitLastModified(filePath: string): Date | null {
+  try {
+    const relativePath = path.relative(process.cwd(), filePath);
+    const output = execSync("git", ["log", "-1", "--format=%cI", "--", relativePath], {
+      encoding: "utf-8",
+      maxBuffer: 1024,
+    }).trim();
+    if (!output) return null;
+    const date = new Date(output);
+    return isNaN(date.getTime()) ? null : date;
+  } catch {
+    return null;
+  }
+}
+
+/** Resolve updatedAt: frontmatter date > git log > mtime (fallback for untracked files). */
+function resolveUpdatedAt(filePath: string, dateStr: string | undefined): Date {
+  if (dateStr) {
+    const fromMeta = new Date(dateStr);
+    if (!isNaN(fromMeta.getTime())) return fromMeta;
+  }
+  const fromGit = getGitLastModified(filePath);
+  if (fromGit) return fromGit;
+  return fs.statSync(filePath).mtime;
+}
+
 export function getRecentNotes(limit = 6): RecentNote[] {
   const paths = getAllContentPaths();
   const notes: RecentNote[] = [];
@@ -70,19 +99,7 @@ export function getRecentNotes(limit = 6): RecentNote[] {
     const meta = content.meta;
     const title = (meta?.title as string) ?? slug.split("/").pop() ?? "Untitled";
     const tags = Array.isArray(meta?.tags) ? meta.tags : [];
-    const dateStr = meta?.date as string | undefined;
-    let updatedAt: Date;
-
-    if (dateStr) {
-      updatedAt = new Date(dateStr);
-      if (isNaN(updatedAt.getTime())) {
-        const stat = fs.statSync(filePath);
-        updatedAt = stat.mtime;
-      }
-    } else {
-      const stat = fs.statSync(filePath);
-      updatedAt = stat.mtime;
-    }
+    const updatedAt = resolveUpdatedAt(filePath, meta?.date as string | undefined);
 
     notes.push({
       title,
@@ -148,19 +165,7 @@ export function getNotesByTag(tag: string): RecentNote[] {
 
     const meta = content.meta;
     const title = (meta?.title as string) ?? slug.split("/").pop() ?? "Untitled";
-    const dateStr = meta?.date as string | undefined;
-    let updatedAt: Date;
-
-    if (dateStr) {
-      updatedAt = new Date(dateStr);
-      if (isNaN(updatedAt.getTime())) {
-        const stat = fs.statSync(filePath);
-        updatedAt = stat.mtime;
-      }
-    } else {
-      const stat = fs.statSync(filePath);
-      updatedAt = stat.mtime;
-    }
+    const updatedAt = resolveUpdatedAt(filePath, meta?.date as string | undefined);
 
     notes.push({
       title,
