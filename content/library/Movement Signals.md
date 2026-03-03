@@ -9,6 +9,21 @@ tags:
 Dispatches, news articles, and project updates from the growing ecosystem of Ethereum Localism and aligned movements.
 
 ---
+### CoQuest Hamilton: A Place-Based Localist Art Festival
+
+**Date:** March 18–28, 2026
+
+**Source:** CoQuest  
+
+**Location:** Hamilton, Ontario, Canada  
+
+CoQuest Hamilton is a ten-day gathering of artists, organizers, and community builders exploring how culture, collaboration, and local coordination can take shape in practice. Emerging in part from relationships and inspiration catalyzed at GFELxBoulder 2025, the event reflects the continued diffusion of localist thinking into place-based creative ecosystems.
+
+Through workshops, open discussions, and co-creation sessions, CoQuest centers relational infrastructure — the human layer from which durable coordination systems grow.
+
+[Learn more →](https://coquest.xyz/)
+
+---
 ### "Inside Bioregionalism’s Tech-Driven Revival"
 
 **Date:** December 4, 2025
