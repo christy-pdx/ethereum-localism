@@ -21,7 +21,7 @@ CoQuest Hamilton is a ten-day gathering of artists, organizers, and community bu
 
 Through workshops, open discussions, and co-creation sessions, CoQuest centers relational infrastructure — the human layer from which durable coordination systems grow.
 
-[Learn more →](https://coquest.xyz/)
+[Learn more](https://coquest.xyz/)
 
 ---
 ### "Inside Bioregionalism’s Tech-Driven Revival"
