@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { execSync } from "child_process";
+import { execFileSync } from "child_process";
 import {
   getAllContentPaths,
   getContentByPath,
@@ -61,7 +61,7 @@ function formatRelativeDate(date: Date): string {
 function getGitLastModified(filePath: string): Date | null {
   try {
     const relativePath = path.relative(process.cwd(), filePath);
-    const output = execSync("git", ["log", "-1", "--format=%cI", "--", relativePath], {
+    const output = execFileSync("git", ["log", "-1", "--format=%cI", "--", relativePath], {
       encoding: "utf-8",
       maxBuffer: 1024,
     }).trim();
