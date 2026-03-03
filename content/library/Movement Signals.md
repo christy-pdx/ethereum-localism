@@ -38,7 +38,7 @@ Dispatches, news articles, and project updates from the growing ecosystem of Eth
 
 **What it Does:**
 
-- **Tracks and displays real-world impact** of local public goods funding initiatives in Taiwan, making contributions transparent and readable for community stakeholders. 
+- **Tracks and displays real-world impact** of local public goods funding initiatives in Taiwan, making contributions transparent and readable for community stakeholders.
 
 - **Bridges the gap between onchain data and offchain outcomes** by connecting verifiable blockchain records with human-centered impact narratives and documentation. 
 
