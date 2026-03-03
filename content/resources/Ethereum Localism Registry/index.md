@@ -39,7 +39,7 @@ Rome, Italy — Web3 builder community, meetups and hackathons across Europe
 
 **PDX DAO**  
 Portland, Oregon — Local DAO, civic education and governance experiments  
-**Contact:** [pdxdao.xyz](https://pdxdao.xyz) · [@PDXDAO](https://twitter.com/pdxdao)  
+**Contact:** [pdxdao.xyz](https://ethpdx.eth.limo) · [@PDXDAO](https://twitter.com/pdxdao) · [meetup.com/ethpdx](https://www.meetup.com/ethpdx/)  
 **More:** [Imagination Circle in Portland](library/Field-Reports/Imagination-Circle-in-Portland)
 
 **Regen Hub Boulder**  
