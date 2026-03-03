@@ -61,8 +61,11 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/logo-mark-bw.png",
-    apple: "/logo-mark-bw.png",
+    icon: [
+      { url: new URL("/favicon.ico", siteUrl).href, sizes: "any" },
+      { url: new URL("/logo-mark-bw.png", siteUrl).href, sizes: "256x256", type: "image/png" },
+    ],
+    apple: { url: new URL("/logo-mark-bw.png", siteUrl).href, sizes: "180x180", type: "image/png" },
   },
 };
 
