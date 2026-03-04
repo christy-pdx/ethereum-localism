@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const socialLinks = [
   { href: "https://t.me/+5Enk4J4d98MyMDkx", label: "Telegram" },
-  { href: "https://github.com/Clinamenic/GFEL", label: "GitHub" },
+  { href: "https://github.com/christy-pdx/ethereum-localism", label: "GitHub" },
 ];
 
 const pageLinks = [

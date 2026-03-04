@@ -38,7 +38,7 @@ If you have a resource you’d like to submit but don’t want to join the GitHu
 ### Option 2: Join the Repo
 
 1. Download [Obsidian](https://obsidian.md/download), a Markdown editor we use for authoring.
-2. Clone the [ethereum-localism repository](https://github.com/ethereumlocalism/ethereum-localism) (or the current project repo).
+2. Clone the [ethereum-localism repository](https://github.com/christy-pdx/ethereum-localism) (or the current project repo).
 3. Open the `/content` folder in Obsidian as a vault.
 4. Request GitHub access to push updates.
 5. Create a pull request from `your-branch-name` to `main`.
