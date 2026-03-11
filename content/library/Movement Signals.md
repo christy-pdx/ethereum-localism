@@ -63,7 +63,7 @@ For Ethereum Localism, the article signals broader cultural attention towards pl
 **Proposal & Support Page:** [Gardens Fund entry](https://app.gardens.fund/gardens/10/0xda10009cbd5d07dd0cecc66161fc93d7c9000da1/0xd95bf6da95c77466674bd1210e77a23492f6eef9/178/0x588e935cf4dae4361f33af2aadd4c3c3a06cab7d-7)
 
 ---
-## Localism Fund
+### Localism Fund
 
 **Date:** October 2025
 
