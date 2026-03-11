@@ -89,7 +89,7 @@ By channeling global onchain capital into locally governed funding rounds, the i
 
 This sensemaking report, authored by Regen Coordination and collaborators, proposes Ethereum Localism as a strategic domain for Gitcoin’s Dedicated Domain Allocation (DDA) process. It frames Ethereum Localism as a path to meaningful mass adoption - embedding Web3 tools like stablecoins, governance, and payments into local communities. Backed by $370K+ in grassroots funding rounds, the report outlines a plan for 3–5 local pilots during GG24, aiming to prototype scalable, cosmo-local public goods infrastructure.  
 
-[Read the forum post →](https://gov.gitcoin.co/t/ethereum-localism-x-regen-coordination-gitcoin-3-0-sensemaking-report/21940)
+[Read the forum post](https://gov.gitcoin.co/t/ethereum-localism-x-regen-coordination-gitcoin-3-0-sensemaking-report/21940)
 
 ---
 ### Celo Localism in Brazil: Mobile-First ReFi in Chapada Diamantina  
@@ -104,7 +104,7 @@ Celo LatAm and local partners are piloting a community-first Web3 economy in the
 
 Over 3 months, the pilot aims to launch 6 MiniApps, complete 2,000+ transactions, and onboard 10 local orgs—embedding Ethereum-aligned tools directly into the rhythms of territorial life.  
 
-[Read the thread →](https://x.com/celoorgbr/status/1938147875067990330?s=46&t=pL8JEAGv2UTP16nVi8QnmQ)  
+[Read the thread](https://x.com/celoorgbr/status/1938147875067990330?s=46&t=pL8JEAGv2UTP16nVi8QnmQ)  
 
 ---
 ### Wyoming State Gears Towards Launching a Stablecoin in 2025  
@@ -119,7 +119,7 @@ Wyoming moves closer to issuing its own state-backed stablecoin, The Wyoming Sta
 
 **Official website:** https://stabletoken.wyo.gov
 
-[Read the Article →](https://www.coindesk.com/policy/2025/03/26/wyoming-state-gears-towards-launching-a-stablecoin-this-year)
+[Read the Article](https://www.coindesk.com/policy/2025/03/26/wyoming-state-gears-towards-launching-a-stablecoin-this-year)
 
 ---
 ### Creating Community Asset Vouchers in Jackson, MS  
@@ -132,7 +132,7 @@ Wyoming moves closer to issuing its own state-backed stablecoin, The Wyoming Sta
 
 How Cooperation Jackson is developing a Mutual Exchange and Rotational Labor Association (ROLA) system. Their long-term vision: "Turn every yard into a farm and every garage into a factory, and through community collaboration and planning meet our collective needs.”
 
-[Read the blog post →](https://cooperationjackson.org/blog/creatingcommunityassetvouchersinjacksonms)
+[Read the blog post](https://cooperationjackson.org/blog/creatingcommunityassetvouchersinjacksonms)
 
 ---
 ### MiniPay Update Q4 2024: MiniPay Passes 5M Wallets, Scaling Stablecoins for Local Use  
@@ -145,7 +145,7 @@ How Cooperation Jackson is developing a Mutual Exchange and Rotational Labor Ass
 
 MiniPay is one of the fastest-growing tools for local stablecoin adoption. With #1 app store rankings in Kenya and expanding use in emerging markets, MiniPay is becoming infrastructure for real-world ReFi—bringing stablecoin utility to the hands of millions navigating economic volatility. The mobile-first wallet now supports seamless on/off ramps in 35+ local currencies, zero-fee cash-in/cash-out, and new MiniApps for donations, games, and Learn2Earn. 
 
-[Read the forum post →](https://forum.celo.org/t/minipay-update-q4-2024/10035)  
+[Read the forum post](https://forum.celo.org/t/minipay-update-q4-2024/10035)  
 
 ---
 
