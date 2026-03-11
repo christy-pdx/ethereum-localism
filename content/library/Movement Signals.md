@@ -63,6 +63,22 @@ For Ethereum Localism, the article signals broader cultural attention towards pl
 **Proposal & Support Page:** [Gardens Fund entry](https://app.gardens.fund/gardens/10/0xda10009cbd5d07dd0cecc66161fc93d7c9000da1/0xd95bf6da95c77466674bd1210e77a23492f6eef9/178/0x588e935cf4dae4361f33af2aadd4c3c3a06cab7d-7)
 
 ---
+## Localism Fund
+
+**Date:** October 2025
+
+**Source:** [localism.fund](https://www.localism.fund)
+
+**Location:** Global / Distributed
+
+The Localism Fund is a global initiative supporting place-based and bioregional communities experimenting with local public goods funding. Through matching pools and quadratic funding rounds, the fund helps local networks design and run their own grant programs to support regenerative projects, civic infrastructure, and community coordination.
+
+By channeling global onchain capital into locally governed funding rounds, the initiative explores how decentralized technologies can strengthen bioregional stewardship and community self-determination. For Ethereum Localism, the Localism Fund represents an emerging funding layer for place-based coordination.
+
+[Read the launch blog post](https://blog.refidao.com/localism-fund-launch/)  
+[Read the initial progress report](https://gov.gitcoin.co/t/localism-fund-initial-progress-reflections-report/24947) 
+
+---
 ### Ethereum Localism x Regen Coordination: Gitcoin 3.0 Sensemaking  
 
 **Date:** July 16, 2025
