@@ -26,15 +26,17 @@ export function UmamiTracking() {
       if (!window.umami?.track) return;
 
       const isExternal = link.hostname !== window.location.hostname;
-      if (isExternal) {
-        window.umami.track("Outbound Link", { url: link.href });
-        return;
-      }
 
       if (link.getAttribute("data-track") === "resource") {
         window.umami.track("Resource Click", {
           name: link.dataset.resourceName || link.href,
+          ...(isExternal && { url: link.href }),
         });
+        return;
+      }
+
+      if (isExternal) {
+        window.umami.track("Outbound Link", { url: link.href });
         return;
       }
 
