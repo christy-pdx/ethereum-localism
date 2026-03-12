@@ -112,6 +112,8 @@ export function RotatingFeaturedResources({
           href={resource.ctaHref}
           target="_blank"
           rel="noopener noreferrer"
+          data-track="resource"
+          data-resource-name={resource.title}
           className="mt-4 inline-block text-sm font-medium text-teal-700 hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-200"
         >
           {resource.ctaLabel} →

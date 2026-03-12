@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { SearchProvider } from "@/contexts/SearchContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { SearchModal } from "@/components/SearchModal";
 import { ThemeScript } from "@/components/ThemeScript";
+import { UmamiTracking } from "@/components/UmamiTracking";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -86,6 +88,17 @@ export default function RootLayout({
             <SearchModal />
           </SearchProvider>
         </ThemeProvider>
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Script
+              src="https://cloud.umami.is/script.js"
+              data-website-id="960685a1-4ecc-4978-ba1f-1fdd975075ae"
+              data-domains="ethereumlocalism.xyz,www.ethereumlocalism.xyz"
+              strategy="afterInteractive"
+            />
+            <UmamiTracking />
+          </>
+        )}
       </body>
     </html>
   );

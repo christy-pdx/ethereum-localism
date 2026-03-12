@@ -31,6 +31,22 @@ function isExternalLink(href: string | undefined): boolean {
   return href.startsWith("http://") || href.startsWith("https://");
 }
 
+/** Extract a readable label from link children for data-resource-name */
+function extractResourceName(
+  children: React.ReactNode,
+  href: string | undefined
+): string {
+  if (typeof children === "string") return children.trim();
+  try {
+    if (href && (href.startsWith("http://") || href.startsWith("https://"))) {
+      return new URL(href).hostname;
+    }
+  } catch {
+    /* fall through */
+  }
+  return href ?? "External link";
+}
+
 /** Resolve href to absolute KG URL. Handles paths the remark/rehype plugins may have missed. */
 function resolveHref(href: string | undefined, baseSlug?: string): string | undefined {
   if (!href || typeof href !== "string") return href;
@@ -53,9 +69,10 @@ function createComponents(baseSlug?: string): Components {
   return {
     a: ({ href, children, ...props }) => {
       const external = isExternalLink(href);
+      const resolvedHref = resolveHref(href, baseSlug);
       return (
         <a
-          href={resolveHref(href, baseSlug)}
+          href={resolvedHref}
           className={
             external
               ? "inline-flex items-baseline gap-1 text-teal-700 underline hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-200"
@@ -64,6 +81,10 @@ function createComponents(baseSlug?: string): Components {
           target={external ? "_blank" : undefined}
           rel={external ? "noopener noreferrer" : undefined}
           aria-label={external ? `${typeof children === "string" ? children : "External link"} (opens in new tab)` : undefined}
+          {...(external && {
+            "data-track": "resource",
+            "data-resource-name": extractResourceName(children, href),
+          })}
           {...props}
         >
           {children}
