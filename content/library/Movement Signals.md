@@ -9,6 +9,21 @@ tags:
 Dispatches, news articles, and project updates from the growing ecosystem of Ethereum Localism and aligned movements.
 
 ---
+### NetX State Web3 Onboarding Cohort (LATAM)
+
+**Date:** March 2026
+
+**Source:** NetX State
+
+**Location:** Latin America / Online
+
+This initiative introduces a Web3 onboarding program for regenerative projects across Latin America, addressing a common challenge: many eco-villages, agroecological initiatives, and local communities operate as isolated nodes without shared infrastructure for coordination, funding, or impact tracking.
+
+Through a free, four-session cohort, NetX State supports participants in adopting blockchain tools, wallets, and DAO-based coordination to strengthen networked collaboration. The program explores new economic models for regenerative finance, enables crowdfunding through platforms like Giveth, and culminates in the activation of a “mycelium network”—a shared digital layer where aligned projects can interconnect, resource one another, and grow collectively.
+
+[Read the full post (en español)](https://netxstate.substack.com/p/del-nodo-aislado-al-micelio)
+
+---
 ### CoQuest Hamilton: A Place-Based Localist Art Festival
 
 **Date:** March 18–28, 2026
