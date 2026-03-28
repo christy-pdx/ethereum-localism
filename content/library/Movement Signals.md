@@ -9,11 +9,22 @@ tags:
 Dispatches, news articles, and project updates from the growing ecosystem of Ethereum Localism and aligned movements.
 
 ---
+### Valley of the Commons (a Cosmo-local Gathering)
+
+**Date:** August 24 – September 20, 2026
+
+**Location:** Höllental, Austrian Alps
+
+A place-based commons experiment exploring shared stewardship, culture, and coordination. Valley of the Commons is an initiative of Commons Hub, extending years of practical commons work into an explicitly place-rooted form. It explores how land, resources, and community infrastructure can be stewarded collectively across cultural, economic, and governance layers.
+
+Emerging from the Commons Hub ecosystem, it signals a broader shift toward grounding digital coordination in lived environments, where shared ownership and local context shape how networks take root.
+
+[Learn more at valleyofthecommons.com](https://www.valleyofthecommons.com/)
+
+---
 ### NetX State Web3 Onboarding Cohort (LATAM)
 
 **Date:** March 2026
-
-**Source:** NetX State
 
 **Location:** Latin America / Online
 
@@ -21,14 +32,12 @@ This initiative introduces a Web3 onboarding program for regenerative projects a
 
 Through a free, four-session cohort, NetX State supports participants in adopting blockchain tools, wallets, and DAO-based coordination to strengthen networked collaboration. The program explores new economic models for regenerative finance, enables crowdfunding through platforms like Giveth, and culminates in the activation of a “mycelium network”—a shared digital layer where aligned projects can interconnect, resource one another, and grow collectively.
 
-[Read the full post (en español)](https://netxstate.substack.com/p/del-nodo-aislado-al-micelio)
+[Read the full post on NetX State (en español)](https://netxstate.substack.com/p/del-nodo-aislado-al-micelio)
 
 ---
 ### CoQuest Hamilton: A Place-Based Localist Art Festival
 
 **Date:** March 18–28, 2026
-
-**Source:** CoQuest  
 
 **Location:** Hamilton, Ontario, Canada  
 
