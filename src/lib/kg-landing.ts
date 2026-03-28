@@ -15,7 +15,8 @@ export interface RecentNote {
   excerpt: string;
   tags: string[];
   updatedAt: Date;
-  updatedAtLabel: string;
+  /** ISO 8601 for <time> and client-side locale formatting. */
+  updatedAtIso: string;
 }
 
 export interface PopularTag {
@@ -42,19 +43,6 @@ function getExcerpt(body: string, maxLength = 120): string {
     .trim();
   if (plain.length <= maxLength) return plain;
   return plain.slice(0, maxLength).trim() + "…";
-}
-
-function formatRelativeDate(date: Date): string {
-  const now = new Date();
-  const diffMs = now.getTime() - date.getTime();
-  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-  if (diffDays === 0) return "Today";
-  if (diffDays === 1) return "Yesterday";
-  if (diffDays < 7) return `${diffDays} days ago`;
-  if (diffDays < 14) return "1 week ago";
-  if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
-  if (diffDays < 60) return "1 month ago";
-  return `${Math.floor(diffDays / 30)} months ago`;
 }
 
 /** Get last commit date for a file from git history. Stable across CI rebuilds. */
@@ -108,7 +96,7 @@ export function getRecentNotes(limit = 6): RecentNote[] {
       excerpt: getExcerpt(content.body),
       tags,
       updatedAt,
-      updatedAtLabel: formatRelativeDate(updatedAt),
+      updatedAtIso: updatedAt.toISOString(),
     });
   }
 
@@ -174,7 +162,7 @@ export function getNotesByTag(tag: string): RecentNote[] {
       excerpt: getExcerpt(content.body),
       tags,
       updatedAt,
-      updatedAtLabel: formatRelativeDate(updatedAt),
+      updatedAtIso: updatedAt.toISOString(),
     });
   }
 

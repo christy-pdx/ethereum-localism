@@ -19,6 +19,7 @@ import { KnowledgeGraph } from "@/components/KnowledgeGraph";
 import { MarkdownContent } from "@/components/MarkdownContent";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { LocalizedUpdatedDate } from "@/components/LocalizedUpdatedDate";
 
 interface PageProps {
   params: Promise<{ slug?: string[] }>;
@@ -177,7 +178,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
                             {note.title}
                           </h3>
                           <p className="mt-1 text-xs text-stone-500 dark:text-stone-400">
-                            Updated {note.updatedAtLabel}
+                            Updated <LocalizedUpdatedDate iso={note.updatedAtIso} />
                           </p>
                           <p className="mt-2 text-sm text-stone-600 dark:text-stone-400 line-clamp-2">
                             {note.excerpt}
@@ -319,7 +320,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
                           {note.title}
                         </h2>
                         <p className="mt-1 text-xs text-stone-500 dark:text-stone-400">
-                          Updated {note.updatedAtLabel}
+                          Updated <LocalizedUpdatedDate iso={note.updatedAtIso} />
                         </p>
                         <p className="mt-2 text-sm text-stone-600 dark:text-stone-400 line-clamp-2">
                           {note.excerpt}

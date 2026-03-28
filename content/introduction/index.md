@@ -25,7 +25,6 @@ We know from history that the kind of technological simplicity that precedes rea
 ## Principles of Ethereum Localism
 
 ### Foundational Reminders
-
 Before applying frameworks or methodologies, Ethereum Localism might begin with three reminders—guiding anchors to help keep projects, and the Ethereum Localism meme, accountable to people and place.
 
 ### 1. Grounded in Place  
@@ -40,7 +39,6 @@ Before applying frameworks or methodologies, Ethereum Localism might begin with 
 ---
 
 ### Core Principles
-
 Ethereum Localism builds on those foundational reminders with a set of principles that guide local blockchain practice. These principles are grounded in real-world application, not abstract ideals.
 
 ### Decentralization with Purpose  
