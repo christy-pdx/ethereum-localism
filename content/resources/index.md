@@ -82,7 +82,7 @@ Protocols and infrastructures beyond Ethereum that share localist values—peer-
 
 ---
 
-Know a resource that belongs here? [Tell us in Telegram](https://t.me/+5Enk4J4d98MyMDkx) (Ethereum Localism).
+Know a resource that belongs here? Use **Edit on GitHub** at the top of this page to propose changes directly, or [tell us in Telegram](https://t.me/+5Enk4J4d98MyMDkx) (Ethereum Localism).
 
 
 
