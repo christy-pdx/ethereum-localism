@@ -84,6 +84,7 @@ Protocols and infrastructures beyond Ethereum that share localist values—peer-
 - [Holochain](https://holochain.org) (holochain.org) – Agent-centric, DHT-based peer-to-peer framework for community currencies, mutual credit, and local-first apps like [Neighborhoods](https://neighbourhoods.network).
 - [Hypercerts](https://www.hypercerts.org) (hypercerts.org) – Protocol for funding and rewarding impact; powers impact markets like Gitcoin and Funding the Commons.
 - [IPFS](https://ipfs.tech) (ipfs.tech) – Content-addressed, distributed file storage for hosting open design libraries, governance documents, and knowledge commons without centralized servers.
+- [Logos](https://logos.co) (logos.co) – An open-source stack (with place-based chapters) for decentralized messaging, storage, and coordination, built to enable resilient, peer-to-peer networks.
 - [Open Source Ecology](https://opensourceecology.org) (opensourceecology.org) – Open-source blueprints for essential industrial machines—a global design commons enabling localized physical production.
 
 ---
