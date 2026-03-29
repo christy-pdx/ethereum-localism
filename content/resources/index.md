@@ -5,14 +5,17 @@ tags:
   - theme/public-goods
   - format/guide
 ---
-Tools, guides, and communities we’ve found useful—from across the Ethereum Localism ecosystem and beyond. For deeper dives, the [Library](/knowledge-garden/library) has [Shared Definitions](/knowledge-garden/library/Shared-Definitions), [Field Reports](/knowledge-garden/library/Field-Reports), and [GFEL](/knowledge-garden/library/GFEL) documentation.
+**Tools, guides, and communities we’ve found useful, from across the Ethereum Localism ecosystem and beyond.**
 
-Sections are arranged by theme; browse what fits your interests. Links without ↗ stay in the Knowledge Garden; links with ↗ go to external sites (source in parentheses).
+Sections are arranged by theme; browse what fits your interests. Links with ↗ go to external sites (source in parentheses); link without ↗ stay in the Knowledge Garden. Within each section (except Ethereum), entries are listed alphabetically.
 
-**To contribute**: Add your initiative to the registry by using the Edit on GitHub link at the top of the page to propose changes directly—GitHub will prompt you to fork and open a pull request if you're not a collaborator. You can also reach out or see the [Contributon Guide →](/knowledge-garden/contribution-guide). Within each section (except Ethereum), entries are listed alphabetically.
+**To contribute**: Add your initiative to the registry by using the **Edit on GitHub** link at the top of the page to propose changes directly — GitHub will prompt you to fork and open a pull request if you're not a collaborator. Also see the [Contributon Guide](/knowledge-garden/contribution-guide). 
+
+--- 
 
 → [Chat about Ethereum Localism with CosmoGPT](https://chatgpt.com/g/g-67bcda8bdffc8191bb45c9aa78064051-cosmo) — A chatbot trained on our gatherings; useful for cosmo-local coordination questions. (OpenAI)
 
+---
 ## Ethereum
 Foundational reading on what Ethereum is and why it matters for communities experimenting with new coordination models.
 
@@ -35,6 +38,7 @@ Local currencies, commons governance, financial infrastructure that actually sup
 - [Eight Forms of Capital](https://wiki.p2pfoundation.net/Eight_Forms_of_Capital) (P2P Foundation) – A framework that expands value beyond financial capital to include social, cultural, and ecological capital.  
 - [Grassroots Economics](https://www.grassrootseconomics.org) (grassrootseconomics.org) – Community currencies and local economic empowerment.  
 - [Ostrom's Eight Principles for Successful Commons](https://earthbound.report/2018/01/15/elinor-ostroms-8-rules-for-managing-the-commons/) (earthbound.report) – A summary of Nobel laureate Elinor Ostrom's principles for sustainable commons management.  
+- [P2P Foundation Wiki](https://wiki.p2pfoundation.net/index.php/Main_Page) (p2pfoundation.net) – A foundational knowledge commons mapping the ideas behind peer-to-peer systems, local autonomy, and global coordination.
 - [Regen Commons](https://regencommons.com) (regencommons.com) – A digital space for regenerative finance and land stewardship collaboration.  
 - [Regen Coordination](https://hub.regencoordination.xyz/) (regencoordination.xyz) – An evolving alliance of Web3 organizations fostering collaboration for ecological, social, and economic regeneration.
 - [Regen Foundation](https://regen.foundation) (regen.foundation) – Supports ecological regeneration through Web3 tools and community-led initiatives.
@@ -81,6 +85,8 @@ Protocols and infrastructures beyond Ethereum that share localist values—peer-
 - [Open Source Ecology](https://opensourceecology.org) (opensourceecology.org) – Open-source blueprints for essential industrial machines—a global design commons enabling localized physical production.
 
 ---
+
+_"In order to change an existing paradigm you do not struggle to try and change the problematic model._ _You create a new model and make the old one obsolete._ _That, in essence, is the higher service to which we are all being called."_ - Buckminster Fuller
 
 Know a resource that belongs here? Use **Edit on GitHub** at the top of this page to propose changes directly, or [tell us in Telegram](https://t.me/+5Enk4J4d98MyMDkx) (Ethereum Localism).
 
