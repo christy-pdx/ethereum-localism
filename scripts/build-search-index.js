@@ -31,7 +31,7 @@ function getExcerpt(body, maxLength = 150) {
 
 function pathToSlug(filePath) {
   const relative = path.relative(CONTENT_DIR, filePath).replace(/\.md$/i, "");
-  return relative.split(path.sep).join("/").replace(/\s+/g, "-");
+  return relative.split(path.sep).join("/").replace(/[\s,]+/g, "-");
 }
 
 function slugToUrl(slug) {

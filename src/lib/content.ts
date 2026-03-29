@@ -14,7 +14,9 @@ function normalizePath(p: string): string {
 export function pathToSlug(filePath: string): string {
   const relative = normalizePath(path.relative(CONTENT_DIR, filePath));
   const withoutExt = relative.replace(/\.md$/, "");
-  return withoutExt.replace(/\s+/g, "-");
+  // Commas must not appear in slugs: Next.js does not match catch-all routes for paths
+  // that contain commas in a segment (request returns 404 even when the page is prerendered).
+  return withoutExt.replace(/[\s,]+/g, "-");
 }
 
 /** Convert slug to full Knowledge Garden URL */
@@ -51,11 +53,16 @@ export function getSlugToPathMap(): Map<string, string> {
   for (const filePath of paths) {
     const slug = pathToSlug(filePath);
     const relative = normalizePath(path.relative(CONTENT_DIR, filePath)).replace(/\.md$/, "");
-    const slugForm = relative.replace(/\s+/g, "-");
+    const slugForm = relative.replace(/[\s,]+/g, "-");
+    /** Legacy slugs used only spaces→hyphens; commas stayed in the URL and broke routing. */
+    const legacyCommaSlug = relative.replace(/\s+/g, "-");
 
     map.set(slug, filePath);
     map.set(slugForm, filePath);
     map.set(relative, filePath);
+    if (legacyCommaSlug !== slug) {
+      map.set(legacyCommaSlug, filePath);
+    }
 
     // Slug without trailing ? (e.g. What-is-Ethereum-For vs What-is-Ethereum-For?)
     if (slug.endsWith("?")) {

@@ -13,5 +13,5 @@ Research and theory into how both web and analogue protocols operate beyond inst
 - [Sketches Toward a Theory of the Protocol Underground](library/Extitutions-and-Open-Protocols/Sketches-Toward-a-Theory-of-the-Protocol-Underground)
 - [Speculative P2P and the Urban Protocol Underground](library/Extitutions-and-Open-Protocols/Speculative-P2P-and-the-Urban-Protocol-Underground)
 - [Undercapital](library/Extitutions-and-Open-Protocols/Undercapital)
-- [Capitalism, Communism, and the Extitutional Stakes of our Politics](library/Extitutions-and-Open-Protocols/Capitalism,-Communism,-and-the-Extitutional-Stakes-of-our-Politics)
+- [Capitalism, Communism, and the Extitutional Stakes of our Politics](library/Extitutions-and-Open-Protocols/Capitalism-Communism-and-the-Extitutional-Stakes-of-our-Politics)
 - [Interview with Mark Lakeman of City Repair](library/Extitutions-and-Open-Protocols/Interview-with-Mark-Lakeman-of-City-Repair---OPRG)

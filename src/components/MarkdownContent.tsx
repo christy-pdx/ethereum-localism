@@ -54,9 +54,9 @@ function resolveHref(href: string | undefined, baseSlug?: string): string | unde
     return href;
   // Content-root paths: library/..., resources/...
   if (href.startsWith("library/") || href.startsWith("resources/"))
-    return `/knowledge-garden/${href.replace(/\.md$/i, "")}`;
+    return `/knowledge-garden/${href.replace(/\.md$/i, "").replace(/[\s,]+/g, "-")}`;
   // Single-segment relative links (e.g. ethereum-localism-book-01-introduction.md) - resolve from baseSlug
-  const normalized = href.replace(/\.md$/i, "").replace(/\s+/g, "-");
+  const normalized = href.replace(/\.md$/i, "").replace(/[\s,]+/g, "-");
   if (baseSlug && !normalized.includes("/")) {
     const baseDir = baseSlug.includes("/") ? baseSlug.split("/").slice(0, -1).join("/") : "";
     const resolved = baseDir ? `${baseDir}/${normalized}` : normalized;

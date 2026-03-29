@@ -34,7 +34,7 @@ export async function generateStaticParams() {
       .split(path.sep)
       .join("/")
       .replace(/\.md$/, "");
-    const slugParts = relative.replace(/\s+/g, "-").split("/");
+    const slugParts = relative.replace(/[\s,]+/g, "-").split("/");
     if (relative === "index") {
       return [{ slug: [] as string[] }];
     }

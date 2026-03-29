@@ -35,7 +35,7 @@ export function resolveLink(href: string, sourceSlug?: string): string | null {
   const normalized = href
     .replace(/^\//, "")
     .replace(/\.md$/i, "")
-    .replace(/\s+/g, "-");
+    .replace(/[\s,]+/g, "-");
 
   if (!normalized) return KG_BASE;
 
