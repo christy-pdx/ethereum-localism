@@ -170,13 +170,13 @@ Through this site, we are building a living record of locally rooted initiatives
   <div class="home-card">
     <h3>Shared Definitions</h3>
     <p>Definitions to support a shared understanding.</p>
-    <a href="/knowledge-garden/library/Shared-Definitions">Explore →</a>
+    <a href="/knowledge-garden/library/Shared-Definitions">Build Understanding →</a>
   </div>
 
   <div class="home-card">
     <h3>Movement Signals</h3>
     <p>Track what’s emerging across the ecosystem.</p>
-    <a href="/knowledge-garden/library/Movement-Signals">Explore →</a>
+    <a href="/knowledge-garden/library/Movement-Signals">View Signals →</a>
   </div>
 
   <div class="home-card">
