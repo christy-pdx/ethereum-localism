@@ -5,14 +5,15 @@ tags:
   - theme/community
   - tool/dao
 ---
-A public directory of communities, DAOs, and other localist experiments using Ethereum-based tools. Registry entries power the [interactive map on our homepage](/)—which also includes initiatives from [Field Reports](library/Field-Reports) and allied organizations around the world. Entries are grouped by region; **Global** communities have distributed networks with place-based local activations. See [Implementation Guides](library/Implementation-Guides) for how-to resources.
+**A public directory of communities, DAOs, and other localist experiments using Ethereum and other decentralized or peer-to-peer technologies to coordinate, govern, and care for shared resources.**
 
-**Want to add your initiative?** Use the Edit on GitHub link above to add it directly, or [reach out to the curators](/knowledge-garden/contribution-guide).
+Entries are grouped by region; Global communities have distributed networks with place-based local activations.  Entries are listed in alphabetical order by initiative name within each region. 
 
-Entries are listed in alphabetical order by initiative name within each region. Please add new entries in alphabetical order. Listings are reviewed by curators before going live.
+**Add your initiative:** Use the **Edit on GitHub** link above to add it directly, or [reach out to the curators](/knowledge-garden/contribution-guide). Please add new entries in alphabetical order. Listings are reviewed by curators before going live.
+
+**Interested in starting an initiative?** See [Implementation Guides](library/Implementation-Guides) for how-to resources.
 
 ---
-
 ### Asia
 
 **GreenSofa Taiwan**  
@@ -21,7 +22,6 @@ Taipei, Taiwan — Ethereum public goods culture, bridging Web3 with civic tech
 **More:** [GreenSofa Taiwan](library/Field-Reports/GreenSofa-Taiwan)
 
 ---
-
 ### Europe
 
 **Crypto Commons Association**  
@@ -34,7 +34,6 @@ Rome, Italy — Web3 builder community, meetups and hackathons across Europe
 **More:** [the rise of urbe.eth](library/Field-Reports/the-rise-of-urbe.eth)
 
 ---
-
 ### North America
 
 **PDX DAO**  
@@ -48,7 +47,6 @@ Boulder, Colorado — Bioregional hub, regenerative finance and community coordi
 **More:** [Regen Hub Playbook](library/Implementation-Guides/Regen-Hub-Playbook), [Lessons Learned from the Boulder Blockchain Meetup](library/Field-Reports/Lessons-Learned-from-the-Boulder-Blockchain-Meetup)
 
 ---
-
 ### Global
 
 **Bloom Network**  
