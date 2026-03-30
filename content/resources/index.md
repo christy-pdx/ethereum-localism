@@ -21,7 +21,8 @@ Foundational reading on what Ethereum is and why it matters for communities expe
 
 - [Introduction to Ethereum Localism](/knowledge-garden/introduction)
 - [Learn About Ethereum](https://ethereum.org/en/learn/) (ethereum.org) – A beginner-friendly guide to understanding Ethereum and how it works.
-- [Ethereum Whitepaper](https://ethereum.org/en/whitepaper/) (ethereum.org) – The original vision for Ethereum as a programmable blockchain enabling decentralized applications and new coordination systems.
+- [Ethereum Whitepaper (2014)](https://ethereum.org/en/whitepaper/) (ethereum.org) – The original vision for Ethereum as a programmable blockchain enabling decentralized applications and new coordination systems.
+- ["Crypto Cities" (2021)](https://vitalik.eth.limo/general/2021/10/31/cities.html) (vitalik.eth.limo) – Vitalik Buterin explores how Ethereum can support city governance, public goods, and new models of local coordination.
 
 ## Ethereum Localism Playbooks
 Hands-on guides for organizing locally—starting a Fun DAO, hosting a GFEL, running a Regen Hub. Whatever your starting point, there’s a playbook for it.
