@@ -9,7 +9,7 @@ tags:
 
 Sections are arranged by theme; browse what fits your interests. Links with ↗ go to external sites (source in parentheses); link without ↗ stay in the Knowledge Garden. Within each section (except Ethereum), entries are listed alphabetically.
 
-**To contribute**: Add your initiative to the registry by using the **Edit on GitHub** link at the top of the page to propose changes directly — GitHub will prompt you to fork and open a pull request if you're not a collaborator. Also see the [Contributon Guide](/knowledge-garden/contribution-guide). 
+**To contribute**: Add your initiative to the registry by using the **Edit on GitHub** link at the top of the page to propose changes directly. Also see the [Contributon Guide](/knowledge-garden/contribution-guide). 
 
 --- 
 
