@@ -1,7 +1,7 @@
 import path from "path";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getContentBySlug, getAllContentPaths } from "@/lib/content";
+import { getContentBySlug, getAllContentPaths, getMetaDescription } from "@/lib/content";
 import {
   getRecentNotes,
   getPopularTags,
@@ -72,8 +72,28 @@ export async function generateMetadata({ params }: PageProps) {
   }
   const content = getContentBySlug(slugStr);
   if (!content) return { title: "Knowledge Garden | Ethereum Localism" };
+
+  const pageTitle = `${content.meta.title ?? "Page"} | Ethereum Localism Knowledge Garden`;
+  const description = getMetaDescription(content.meta);
+  const siteUrl = process.env.SITE_URL ?? "https://www.ethereumlocalism.xyz";
+  const canonicalPath = `/knowledge-garden/${slugStr}`;
+
   return {
-    title: `${content.meta.title ?? "Page"} | Ethereum Localism Knowledge Garden`,
+    title: pageTitle,
+    ...(description && {
+      description,
+      openGraph: {
+        title: pageTitle,
+        description,
+        url: canonicalPath,
+        type: "article",
+      },
+      twitter: {
+        card: "summary_large_image" as const,
+        title: pageTitle,
+        description,
+      },
+    }),
   };
 }
 

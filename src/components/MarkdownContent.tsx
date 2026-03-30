@@ -3,6 +3,7 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
 import { remarkTransformLinks } from "@/lib/remark-transform-links";
 import { rehypeTransformLinks } from "@/lib/rehype-transform-links";
 import { transformAssetSrc } from "@/lib/content-links";
@@ -127,13 +128,19 @@ function createComponents(baseSlug?: string): Components {
       {children}
     </h1>
   ),
-  h2: ({ children }) => (
-    <h2 className="mb-3 mt-8 border-b border-stone-200 pb-2 font-serif text-2xl font-light text-stone-900 dark:border-stone-700 dark:text-teal-50">
+  h2: ({ children, id }) => (
+    <h2
+      id={typeof id === "string" ? id : undefined}
+      className="mb-3 mt-8 scroll-mt-24 border-b border-stone-200 pb-2 font-serif text-2xl font-light text-stone-900 dark:border-stone-700 dark:text-teal-50"
+    >
       {children}
     </h2>
   ),
-  h3: ({ children }) => (
-    <h3 className="mb-2 mt-6 font-semibold text-stone-900 dark:text-teal-50">
+  h3: ({ children, id }) => (
+    <h3
+      id={typeof id === "string" ? id : undefined}
+      className="mb-2 mt-6 scroll-mt-24 font-semibold text-stone-900 dark:text-teal-50"
+    >
       {children}
     </h3>
   ),
@@ -179,7 +186,7 @@ export function MarkdownContent({ content, baseSlug }: MarkdownContentProps) {
     <article className="prose-kg min-w-0 w-full max-w-prose overflow-x-hidden lg:max-w-none">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkTransformLinks({ baseSlug })]}
-        rehypePlugins={[rehypeRaw, rehypeTransformLinks({ baseSlug })]}
+        rehypePlugins={[rehypeRaw, rehypeTransformLinks({ baseSlug }), rehypeSlug]}
         components={createComponents(baseSlug)}
       >
         {content}

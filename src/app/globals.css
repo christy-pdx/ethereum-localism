@@ -44,6 +44,45 @@ body {
   max-width: 100%;
   overflow-x: auto;
 }
+
+.prose-kg table {
+  width: 100%;
+  margin: 1.25rem 0;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.prose-kg th,
+.prose-kg td {
+  border: 1px solid rgb(228 228 231);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.dark .prose-kg th,
+.dark .prose-kg td {
+  border-color: rgb(63 63 70);
+}
+
+.prose-kg thead th {
+  background: rgb(245 245 244);
+  font-weight: 600;
+  color: rgb(41 37 36);
+}
+
+.dark .prose-kg thead th {
+  background: rgb(39 39 42);
+  color: rgb(214 211 209);
+}
+
+.prose-kg tbody tr:nth-child(even) {
+  background: rgb(250 250 249 / 0.6);
+}
+
+.dark .prose-kg tbody tr:nth-child(even) {
+  background: rgb(24 24 27 / 0.5);
+}
 .prose-kg img {
   max-width: 100%;
   height: auto;
@@ -79,6 +118,113 @@ body {
 
 .prose-kg .home-card a {
   font-weight: 500;
+}
+
+/* Optional panels in markdown (portable class hooks for any Knowledge Garden using this CSS) */
+.prose-kg .kg-wayfinding {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(228 228 231);
+  background: rgb(240 253 250);
+}
+
+.dark .prose-kg .kg-wayfinding {
+  border-color: rgb(63 63 70);
+  background: rgb(19 78 74 / 0.25);
+}
+
+.prose-kg .kg-wayfinding p {
+  margin: 0 0 0.75rem !important;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgb(68 64 60);
+}
+
+.dark .prose-kg .kg-wayfinding p {
+  color: rgb(214 211 209);
+}
+
+.prose-kg .kg-wayfinding ul {
+  margin: 0 !important;
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+
+.prose-kg .kg-wayfinding li {
+  margin: 0.5rem 0 !important;
+  padding-left: 0 !important;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.prose-kg .kg-wayfinding li::before {
+  content: none !important;
+}
+
+.prose-kg .kg-wayfinding a {
+  font-weight: 500;
+  color: rgb(15 118 110);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-kg .kg-wayfinding a:hover {
+  color: rgb(17 94 89);
+}
+
+.dark .prose-kg .kg-wayfinding a {
+  color: rgb(94 234 212);
+}
+
+.dark .prose-kg .kg-wayfinding a:hover {
+  color: rgb(153 246 228);
+}
+
+.prose-kg .kg-callout {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(20 184 166 / 0.35);
+  background: rgb(240 253 250);
+  font-style: normal;
+}
+
+.dark .prose-kg .kg-callout {
+  border-color: rgb(45 212 191 / 0.35);
+  background: rgb(19 78 74 / 0.2);
+}
+
+.prose-kg .kg-callout p {
+  margin: 0.5rem 0 !important;
+}
+
+.prose-kg .kg-callout p:first-child {
+  margin-top: 0 !important;
+}
+
+.prose-kg .kg-callout p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.prose-kg .kg-callout a {
+  color: rgb(15 118 110);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-kg .kg-callout a:hover {
+  color: rgb(17 94 89);
+}
+
+.dark .prose-kg .kg-callout a {
+  color: rgb(94 234 212);
+}
+
+.dark .prose-kg .kg-callout a:hover {
+  color: rgb(153 246 228);
 }
 
 /* Rotating featured resources fade-in */

@@ -93,10 +93,28 @@ export function getSlugToPathMap(): Map<string, string> {
 
 export interface ContentMeta {
   title?: string;
+  /** Shown in search/social previews when set in note frontmatter */
+  description?: string;
   date?: string;
   author?: string;
   tags?: string[];
   [key: string]: unknown;
+}
+
+/** Normalize frontmatter `description` for meta tags (string or YAML string array). */
+export function getMetaDescription(meta: ContentMeta): string | undefined {
+  const d: unknown = meta.description;
+  if (typeof d === "string") {
+    const t = d.trim();
+    return t || undefined;
+  }
+  if (Array.isArray(d)) {
+    const parts = d.filter((x): x is string => typeof x === "string");
+    if (parts.length === 0) return undefined;
+    const t = parts.join(" ").trim();
+    return t || undefined;
+  }
+  return undefined;
 }
 
 export interface ContentItem {
