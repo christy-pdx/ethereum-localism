@@ -27,13 +27,13 @@ This page offers a starting map — principles, followed by patterns, tradeoffs,
 
 ## What is Ethereum Localism?
 
-Ethereum Localism is a movement at the intersection of blockchain infrastructure and local empowerment. It asks how Ethereum’s decentralized networks can strengthen **place-based** economies, governance, and mutual support—without pretending that one global template fits every community.
+Ethereum Localism is a movement at the intersection of blockchain infrastructure and local empowerment. It asks how Ethereum’s decentralized networks can strengthen **place-based** economies, governance, and mutual support, without assuming one global template will fit every community or overlooking the opportunities localist applications offer.
 
-Unlike projects that treat “borderless” as the only goal, Ethereum Localism insists on **context**: the internet and shared protocols connect us globally, but daily life, care, and accountability still live in specific neighborhoods, watersheds, and towns.
+Unlike projects that treat “borderless” as the only goal, Ethereum Localism insists on **context**: the internet and shared protocols connect us globally, but daily life, care, and accountability still live in specific neighborhoods, watersheds, and towns. It works at this intersection, pairing global infrastructure with local responsibility.
 
-> Ethereum Localism balances blockchain's global power and intelligence with values-aligned, on-the-ground communities that bring life to the technology—enabling an ecosystem that roots down deeper to rise up higher.
+> Ethereum Localism balances blockchain's global power and intelligence with values-aligned, on-the-ground communities that bring life to the technology — enabling an ecosystem that roots down deeper to rise up higher.
 
-We know from history that the kind of technological simplicity that precedes real adoption often shows up first as **local experimentation**. If that holds, every site of novel local use is a potential inoculation against capture — [localism as an anticapture technology](/knowledge-garden/library/GFEL/GFEL-Announcement-2023).
+As systems scale, the risk of capture grows unless sovereignty is held close to the ground. We know from history that the kind of technological simplicity that precedes real adoption often shows up first as **local experimentation**. If that holds, every site of novel local use is a potential inoculation against capture. See [localism as an anticapture technology](/knowledge-garden/library/GFEL/GFEL-Announcement-2023).
 
 <div class="kg-callout">
 <p><strong><a href="https://chatgpt.com/g/g-67bcda8bdffc8191bb45c9aa78064051-cosmo">CosmoGPT — chat and learn about Ethereum Localism with Cosmo</a></strong></p>
@@ -42,7 +42,7 @@ We know from history that the kind of technological simplicity that precedes rea
 
 ## Principles of Ethereum Localism
 
-### Foundational reminders
+### Foundational Reminders
 
 Before frameworks or tooling, these three anchors help keep work accountable to people and place.
 
@@ -52,7 +52,8 @@ Before frameworks or tooling, these three anchors help keep work accountable to 
 
 **3. Empirical improvisation.** *If it doesn't work here, it doesn't work.* Practice beats abstraction: adapt with feedback, measure viability in use, not in pitch decks. Treat each effort as a living experiment. Stay responsive to what actually happens on the ground, and let reality rather than theory be the guide.
 
-### Core principles
+· · ·
+### Core Principles
 
 These build on the reminders and guide how Ethereum shows up locally.
 
@@ -121,7 +122,7 @@ Blockchain-based systems can support local production by coordinating distribute
 
 **Further reading:** [Ethereum Localism x Regen Coordination — Powering Regenerative Local Economies with Web3](library/Ethereum-Localism/Ethereum-Localism-x-Regen-Coordination---Powering-Regenerative-Local-Economies-with-Web3)
 
-## Challenges and considerations
+## Challenges and Considerations
 
 Ethereum Localism is an emerging field, shaped in practice across technical, legal, and social terrain. Conditions vary from place to place, and the work asks for care, coordination, and persistence. The challenges listed below are not barriers to avoid, but conditions to work with. They are part of building systems that are grounded, resilient, and responsive to the communities they serve.
 
@@ -135,7 +136,7 @@ Ethereum Localism is an emerging field, shaped in practice across technical, leg
 | **Local ↔ global**    | Balancing interoperability with local autonomy remains an ongoing design challenge.                   |
 | **Market volatility** | Price fluctuations impact budgets, payroll, and trust in onchain systems.                             |
 
-## Our mission
+## Our Mission
 
 Ethereum Localists work to bring decentralized tools into meaningful relationship with place. The aim is not just to build new systems, but to support communities in shaping their own futures with tools that are open, adaptable, and aligned with local needs.
 
@@ -143,7 +144,7 @@ Through this site, we are building a living record of locally rooted initiatives
 
 ![Ethereum Localism community](assets/goat.jpeg)
 
-## Join the movement
+## Join the Movement!
 
 **Connect, build, and explore with others** working toward more resilient, equitable, local systems. Share what you’re seeing. Build where you are. *What takes root locally shapes what grows globally.*
 
