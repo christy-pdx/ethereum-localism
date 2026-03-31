@@ -5,9 +5,7 @@ tags:
   - theme/community
   - tool/dao
 ---
-**A public directory of communities, DAOs, and other localist experiments using Ethereum and other decentralized or peer-to-peer technologies to coordinate, govern, and care for shared resources.**
-
-Entries are grouped by region; Global communities have distributed networks with place-based local activations.  Entries are listed in alphabetical order by initiative name within each region. 
+**A public directory of communities, DAOs, and other localist experiments using Ethereum and other decentralized or peer-to-peer technologies to coordinate, govern, and care for shared resources.** Entries are grouped by region; Global communities have distributed networks with place-based local activations.  Entries are listed in alphabetical order by initiative name within each region. 
 
 **Add your initiative:** Use the **Edit on GitHub** link above to add it directly, or [reach out to the curators](/knowledge-garden/contribution-guide). Please add new entries in alphabetical order. Listings are reviewed by curators before going live.
 
@@ -50,7 +48,7 @@ Boulder, Colorado — Bioregional hub, regenerative finance and community coordi
 ### South America
 
 **Ekonavi**  
-Brazil — Collaborative network for ecological development, with the aim of connecting agriculture, ecology and bioconstruction activities in Brazil
+Brazil — Collaborative network for ecological development, with the aim of connecting agriculture, ecology and bioconstruction activities in Brazil  
 **Contact:** [ekonavi.com](https://ekonavi.com)
 
 **ReFi Colombia**  
