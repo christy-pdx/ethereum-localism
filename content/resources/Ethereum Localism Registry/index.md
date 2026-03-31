@@ -53,11 +53,13 @@ Boulder, Colorado — Bioregional hub, regenerative finance and community coordi
 Brazil — Collaborative network for ecological development, with the aim of connecting agriculture, ecology and bioconstruction activities in Brazil
 **Contact:** [ekonavi.com](https://ekonavi.com)
 
-**ReFi Colombia**
-Contact: [linktr.ee/reficolombia](https://linktr.ee/reficolombia)
+**ReFi Colombia**  
+Columbia — Local node of ReFi DAO  
+**Contact:** [linktr.ee/reficolombia](https://linktr.ee/reficolombia)
 
-**ReFi Costa Rica**
-Contact: [linktr.ee/reficostarica](https://linktr.ee/reficostarica)
+**ReFi Costa Rica**  
+Costa Rica — Local node of ReFi DAO  
+**Contact:** [linktr.ee/reficostarica](https://linktr.ee/reficostarica)
 
 ---
 ### Global
