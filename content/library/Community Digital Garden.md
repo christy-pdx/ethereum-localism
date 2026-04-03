@@ -1,9 +1,14 @@
 ---
 title: Community Digital Garden
+description: >-
+  Curated newsletters, essays, reflections, and digital gardens from Ethereum
+  Localists—independently maintained notes on place-based coordination and
+  technology in practice.
+updated: 2026-04-02
 tags:
+  - format/article
   - theme/ethereum-localism
   - theme/community
-  - format/article
 ---
 **Personal field notes, reflections, essays, curated articles and newsletters, and experiments from Ethereum Localists around the world.** These resources are independently maintained—living documents of place-based coordination, tech in practice, and new patterns of thought.
 
