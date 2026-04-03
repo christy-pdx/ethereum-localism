@@ -15,84 +15,84 @@ tags:
 
 ---
 ## Ethereum
-Foundational reading on what Ethereum is and why it matters for communities experimenting with new coordination models.
+Foundational reading on what Ethereum is and why it matters for communities experimenting with new coordination models.  
 
-- [Introduction to Ethereum Localism](/knowledge-garden/introduction)
-- [Learn About Ethereum](https://ethereum.org/en/learn/) (ethereum.org) – A beginner-friendly guide to understanding Ethereum and how it works.
-- [Ethereum Whitepaper (2014)](https://ethereum.org/en/whitepaper/) (ethereum.org) – The original vision for Ethereum as a programmable blockchain enabling decentralized applications and new coordination systems.
-- ["Crypto Cities" (2021)](https://vitalik.eth.limo/general/2021/10/31/cities.html) (vitalik.eth.limo) – Vitalik Buterin explores how Ethereum can support city governance, public goods, and new models of local coordination.
+- [Introduction to Ethereum Localism](/knowledge-garden/introduction)  
+- [Learn About Ethereum](https://ethereum.org/en/learn/) (ethereum.org) – A beginner-friendly guide to understanding Ethereum and how it works.  
+- [Ethereum Whitepaper (2014)](https://ethereum.org/en/whitepaper/) (ethereum.org) – The original vision for Ethereum as a programmable blockchain enabling decentralized applications and new coordination systems.  
+- ["Crypto Cities" (2021)](https://vitalik.eth.limo/general/2021/10/31/cities.html) (vitalik.eth.limo) – Vitalik Buterin explores how Ethereum can support city governance, public goods, and new models of local coordination.  
 
 ## Ethereum Localism Playbooks
-Hands-on guides for organizing locally. Starting a Fun DAO, hosting a GFEL, running a Regen Hub. Whatever your starting point, find inspiration here.
+Hands-on guides for organizing locally. Starting a Fun DAO, hosting a GFEL, running a Regen Hub. Whatever your starting point, find inspiration here.  
 
-- [Ethereum Localism Action Kit](/knowledge-garden/introduction/action-kit) - Practical tools, templates, and guidance to start creating local impact.
-- [Ethereum Localism Implementation Guides](/knowledge-garden/library/Implementation-Guides)
-- [Local Regen Guide #1](https://greenpill.network/pdf/local-regen-guide.pdf) (greenpill.network) – A practical handbook for creating regenerative systems through open-source collaboration and Web3 tools.
+- [Ethereum Localism Action Kit](/knowledge-garden/introduction/action-kit) - Practical tools, templates, and guidance to start creating local impact.  
+- [Ethereum Localism Implementation Guides](/knowledge-garden/library/Implementation-Guides)  
+- [Local Regen Guide #1](https://greenpill.network/pdf/local-regen-guide.pdf) (gree. pill.network) – A practical handbook for creating regenerative systems through open-source collaboration and Web3 tools.  
 
 ## Regenerative Finance & Commons Economy
-Local currencies, commons governance, financial infrastructure that actually supports people and place. Theory and practice from the ReFi and commons economy worlds.
+Local currencies, commons governance, financial infrastructure that actually supports people and place. Theory and practice from the ReFi and commons economy worlds.  
 
 - [Bread Cooperative](https://bread.coop) (bread.coop) – A collective federation of decentralized cooperative projects looking to advance a progressive vision for blockchain and its effect on society.  
 - [Commons Economy Roadmap](https://info.commonseconomy.org/) (commonseconomy.org) – A guide for transitioning from extractive systems to commons-based, cooperative economies.  
-- [Commons-Based Peer Production](https://wiki.p2pfoundation.net/Commons-Based_Peer_Production) (P2P Foundation) – An overview of decentralized, collaborative production enabled by digital networks.
+- [Commons-Based Peer Production](https://wiki.p2pfoundation.net/Commons-Based_Peer_Production) (P2P Foundation) – An overview of decentralized, collaborative production enabled by digital networks.  
 - [Eight Forms of Capital](https://wiki.p2pfoundation.net/Eight_Forms_of_Capital) (P2P Foundation) – A framework that expands value beyond financial capital to include social, cultural, and ecological capital.  
 - [Grassroots Economics](https://www.grassrootseconomics.org) (grassrootseconomics.org) – Community currencies and local economic empowerment.  
+- [MycoFi.earth](https://mycofi.earth) – A regenerative systems exploration inspired by mycelial networks, envisioning community-driven capital flows supporting diverse ecosystems and projects.  
 - [Ostrom's Eight Principles for Successful Commons](https://earthbound.report/2018/01/15/elinor-ostroms-8-rules-for-managing-the-commons/) (earthbound.report) – A summary of Nobel laureate Elinor Ostrom's principles for sustainable commons management.  
-- [P2P Foundation Wiki](https://wiki.p2pfoundation.net/index.php/Main_Page) (p2pfoundation.net) – A foundational knowledge commons mapping the ideas behind peer-to-peer systems, local autonomy, and global coordination.
+- [P2P Foundation Wiki](https://wiki.p2pfoundation.net/index.php/Main_Page) (p2pfoundation.net) – A foundational knowledge commons mapping the ideas behind peer-to-peer systems, local autonomy, and global coordination.  
 - [Regen Commons](https://regencommons.com) (regencommons.com) – A digital space for regenerative finance and land stewardship collaboration.  
-- [Regen Coordination](https://hub.regencoordination.xyz/) (regencoordination.xyz) – An evolving alliance of Web3 organizations fostering collaboration for ecological, social, and economic regeneration.
-- [Regen Foundation](https://regen.foundation) (regen.foundation) – Supports ecological regeneration through Web3 tools and community-led initiatives.
+- [Regen Coordination](https://hub.regencoordination.xyz/) (regencoordination.xyz) – An evolving alliance of Web3 organizations fostering collaboration for ecological, social, and economic regeneration.  
+- [Regen Foundation](https://regen.foundation) (regen.foundation) – Supports ecological regeneration through Web3 tools and community-led initiatives.  
 
 ## Cosmolocal Governance
-Balancing local autonomy with global solidarity. Protocols, tools, and experiments in shared governance across place and distance.
+Balancing local autonomy with global solidarity. Protocols, tools, and experiments in shared governance across place and distance.  
 
-- [Community Rule](https://communityrule.info) (communityrule.info) – A simple tool for designing and sharing governance models for groups and communities.
-- [DAOHaus](https://daohaus.club) (daohaus.club) – A platform for creating and managing DAOs using Moloch smart contracts.
-- [Gardens.fund](https://www.gardens.fund) – DAO infrastructure for communities to govern shared resources with conviction voting. Built by the [1Hive](https://1hive.org) ecosystem.
-- [Metagov](https://metagov.org) (metagov.org) – A research collective developing governance infrastructure for digital communities and DAOs.
-- [Neighbourhoods](https://neighbourhoods.network) (neighbourhoods.network) – A framework for building online communities with composable governance and cultural protocols. Built on [Holochain](https://holochain.org).
-- [Open Civics](https://www.opencivics.co) (opencivics.co) – Tools and frameworks for participatory and inclusive civic processes.
+- [Community Rule](https://communityrule.info) (communityrule.info) – A simple tool for designing and sharing governance models for groups and communities.  
+- [DAOHaus](https://daohaus.club) (daohaus.club) – A platform for creating and managing DAOs using Moloch smart contracts.  
+- [Gardens.fund](https://www.gardens.fund) – DAO infrastructure for communities to govern shared resources with conviction voting. Built by the [1Hive](https://1hive.org) ecosystem.  
+- [Metagov](https://metagov.org) (metagov.org) – A research collective developing governance infrastructure for digital communities and DAOs.  
+- [Neighbourhoods](https://neighbourhoods.network) (neighbourhoods.network) – A framework for building online communities with composable governance and cultural protocols. Built on [Holochain](https://holochain.org).  
+- [Open Civics](https://www.opencivics.co) (opencivics.co) – Tools and frameworks for participatory and inclusive civic processes.  
 
 ## Participatory Funding
-Who decides what gets funded? Quadratic voting, retro PGF, place-based grants; experiments in letting communities fund what they care about.
+Who decides what gets funded? Quadratic voting, retro PGF, place-based grants; experiments in letting communities fund what they care about.  
 
-- [Allo IRL](https://irl.allo.capital) (Allo) – Participatory funding for in-person, place-based experiments using the Allo Protocol.
-- [CLR.fund](https://clr.fund/#/) – Permissionless quadratic funding protocol for public goods on Ethereum.
-- [Easy Retro PGF](https://easyretropgf.xyz) (easyretropgf.xyz) – Lightweight tool for retroactive public goods funding that rewards real-world impact with minimal overhead.
-- [Gitcoin Grants](https://grants.gitcoin.co) (Gitcoin) – Long-running quadratic funding platform for open-source software and public goods.
-- [Giveth](https://giveth.io) (giveth.io) – Web3-native donation platform for public goods, with GIVbacks and regenerative incentives.
+- [Allo IRL](https://irl.allo.capital) (Allo) – Participatory funding for in-person, place-based experiments using the Allo Protocol.  
+- [CLR.fund](https://clr.fund/#/) – Permissionless quadratic funding protocol for public goods on Ethereum.  
+- [Easy Retro PGF](https://easyretropgf.xyz) (easyretropgf.xyz) – Lightweight tool for retroactive public goods funding that rewards real-world impact with minimal overhead.  
+- [Gitcoin Grants](https://grants.gitcoin.co) (Gitcoin) – Long-running quadratic funding platform for open-source software and public goods.  
+- [Giveth](https://giveth.io) (giveth.io) – Web3-native donation platform for public goods, with GIVbacks and regenerative incentives.  
 
 ## Community
-Allies and fellow travelers in the space. People and organizations experimenting with new ways to coordinate, govern, and build locally.
+Allies and fellow travelers in the space. People and organizations experimenting with new ways to coordinate, govern, and build locally.  
 
-- [Ethereum Localism Initiative & Community Registry](/knowledge-garden/resources/Ethereum-Localism-Registry)
-- [Bloom Network](https://bloomnetwork.earth) (bloomnetwork.earth) – A place-based social network and peer incubator for regeneration, mutual aid, and local resilience.
-- [citydao.network (Telegram)](http://t.me/citydaonetwork) – Networking hub for members or aspiring builders of local city DAOs.
-- [Crypto Commons Association](https://www.crypto-commons.org/) (crypto-commons.org) – A think/do tank in the Austrian Alps for crypto-commons, post-capitalist tech, and open knowledge.
-- [Ekonavi](https://ekonavi.com) (ekonavi.com) – A community platform connecting agriculture, ecological activities, and bio-construction in Brazil and beyond.
-- [Ethereum Everywhere](https://x.com/EFetheverywhere) (Ethereum Foundation) – EF initiative supporting community hubs and local Ethereum ecosystems worldwide; physical spaces for co-working, events, and collaboration.
-- [greenpill.network](https://greenpill.network) – A network working to export regenerative digital infrastructure through the lens of the green pill meme.
-- [Regens Unite](https://www.regensunite.earth/) (regensunite.earth) – Immersive gatherings around regeneration, coordination, and trust.
+- [Ethereum Localism Initiative & Community Registry](/knowledge-garden/resources/Ethereum-Localism-Registry)  
+- [Bloom Network](https://bloomnetwork.earth) (bloomnetwork.earth) – A place-based social network and peer incubator for regeneration, mutual aid, and local resilience.  
+- [citydao.network (Telegram)](http://t.me/citydaonetwork) – Networking hub for members or aspiring builders of local city DAOs.  
+- [Crypto Commons Association](https://www.crypto-commons.org/) (crypto-commons.org) – A think/do tank in the Austrian Alps for crypto-commons, post-capitalist tech, and open knowledge.  
+- [Ekonavi](https://ekonavi.com) (ekonavi.com) – A community platform connecting agriculture, ecological activities, and bio-construction in Brazil and beyond.  
+- [Ethereum Everywhere](https://x.com/EFetheverywhere) (Ethereum Foundation) – EF initiative supporting community hubs and local Ethereum ecosystems worldwide; physical spaces for co-working, events, and collaboration.  
+- [greenpill.network](https://greenpill.network) – A network working to export regenerative digital infrastructure through the lens of the green pill meme.  
+- [Regens Unite](https://www.regensunite.earth/) (regensunite.earth) – Immersive gatherings around regeneration, coordination, and trust.  
 
 ## Decentralized Tech Stack
-Protocols and infrastructures beyond Ethereum that share localist values — peer-to-peer, community-run, no single point of failure. Complementary stacks you may encounter or integrate with.
+Protocols and infrastructures beyond Ethereum that share localist values — peer-to-peer, community-run, no single point of failure. Complementary stacks you may encounter or integrate with.  
 
-- [Althea](https://www.althea.net) (althea.net) – Decentralized mesh networking and community-owned broadband, with micropayments between routers so anyone can buy or sell connectivity peer-to-peer.
-- [Citizen Wallet](https://citizenwallet.xyz) (citizenwallet.xyz) – A mobile wallet designed for community currencies and local networks, enabling simple, accessible participation in Ethereum-based systems.
-- [Grassroots Economics (Sarafu Network)](https://www.grassrootseconomics.org) (grassrootseconomics.org) – Commitment pooling and community currency infrastructure rooted in indigenous coordination practices, blockchain-supported but locally governed.
-- [Green Goods](https://www.greengoods.app) (greengoods.app) – A mobile first tool that helps local communities document, verify, and fund their positive impact. Build by [Greenpill Dev Guild](https://discord.com/invite/ZJjft2EKz7).
-- [Holochain](https://holochain.org) (holochain.org) – Agent-centric, DHT-based peer-to-peer framework for community currencies, mutual credit, and local-first apps like [Neighbourhoods](https://neighbourhoods.network).
-- [Hypercerts](https://www.hypercerts.org) (hypercerts.org) – Protocol for funding and rewarding impact; powers impact markets like Gitcoin and Funding the Commons.
-- [IPFS](https://ipfs.tech) (ipfs.tech) – Content-addressed, distributed file storage for hosting open design libraries, governance documents, and knowledge commons without centralized servers.
-- [Logos](https://logos.co) (logos.co) – An open-source stack (with place-based chapters) for decentralized messaging, storage, and coordination, built to enable resilient, peer-to-peer networks.
-- [Open Source Ecology](https://opensourceecology.org) (opensourceecology.org) – Open-source blueprints for essential industrial machines—a global design commons enabling localized physical production.
+- [Althea](https://www.althea.net) (althea.net) – Decentralized mesh networking and community-owned broadband, with micropayments between routers so anyone can buy or sell connectivity peer-to-peer.  
+- [Citizen Wallet](https://citizenwallet.xyz) (citizenwallet.xyz) – A mobile wallet designed for community currencies and local networks, enabling simple, accessible participation in Ethereum-based systems.  
+- [Grassroots Economics (Sarafu Network)](https://www.grassrootseconomics.org) (grassrootseconomics.org) – Commitment pooling and community currency infrastructure rooted in indigenous coordination practices, blockchain-supported but locally governed.  
+- [Green Goods](https://www.greengoods.app) (greengoods.app) – A mobile first tool that helps local communities document, verify, and fund their positive impact. Build by [Greenpill Dev Guild](https://discord.com/invite/ZJjft2EKz7).  
+- [Holochain](https://holochain.org) (holochain.org) – Agent-centric, DHT-based peer-to-peer framework for community currencies, mutual credit, and local-first apps like [Neighbourhoods](https://neighbourhoods.network).  
+- [Hypercerts](https://www.hypercerts.org) (hypercerts.org) – Protocol for funding and rewarding impact; powers impact markets like Gitcoin and Funding the Commons.  
+- [IPFS](https://ipfs.tech) (ipfs.tech) – Content-addressed, distributed file storage for hosting open design libraries, governance documents, and knowledge commons without centralized servers.  
+- [Logos](https://logos.co) (logos.co) – An open-source stack (with place-based chapters) for decentralized messaging, storage, and coordination, built to enable resilient, peer-to-peer networks.  
+- [Open Source Ecology](https://opensourceecology.org) (opensourceecology.org) – Open-source blueprints for essential industrial machines—a global design commons enabling localized physical production.  
 
 ---
 
-_"In order to change an existing paradigm you do not struggle to try and change the problematic model._ _You create a new model and make the old one obsolete._ _That, in essence, is the higher service to which we are all being called."_ - Buckminster Fuller
+_"In order to change an existing paradigm you do not struggle to try and change the problematic model._ _You create a new model and make the old one obsolete._ _That, in essence, is the higher service to which we are all being called."_ - Buckminster Fuller  
 
-Know a resource that belongs here? Use **Edit on GitHub** at the top of this page to propose changes directly, or [tell us in Telegram](https://t.me/+5Enk4J4d98MyMDkx).
-
+Know a resource that belongs here? Use **Edit on GitHub** at the top of this page to propose changes directly, or [tell us in Telegram](https://t.me/+5Enk4J4d98MyMDkx).  
 
 
 ![](assets/lovewall.jpeg)
