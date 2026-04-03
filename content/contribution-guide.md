@@ -79,6 +79,9 @@ tags:  - format/case-study  - place/rural  - theme/community-currency
 - `source`: Original source of the publication
 - `language`: Language of the publication
 - `license`: License of the publication
+- `updated`: Last substantive revision (`YYYY-MM-DD`)
+
+**Recent Notes:** The Knowledge Garden home lists a small set of recently active notes. Ordering uses `updated` when you set it, otherwise `date`, then the file’s last change in git. When you materially revise an existing note and want it to surface there, add or bump `updated` and keep `date` as the original publication or submission day.
 
 ---
 ### Markdown Cheatsheet

@@ -85,11 +85,14 @@ function getGitLastModified(filePath: string): Date | null {
   }
 }
 
-/** Resolve updatedAt: frontmatter date > git log > mtime (fallback for untracked files). */
-function resolveUpdatedAt(filePath: string, dateStr: string | undefined): Date {
-  if (dateStr) {
-    const fromMeta = new Date(dateStr);
-    if (!isNaN(fromMeta.getTime())) return fromMeta;
+/** Resolve updatedAt: frontmatter updated > date > git log > mtime (untracked fallback). */
+function resolveUpdatedAt(filePath: string, meta: ContentMeta | undefined): Date {
+  for (const key of ["updated", "date"] as const) {
+    const s = meta?.[key];
+    if (typeof s === "string" && s.trim()) {
+      const d = new Date(s);
+      if (!isNaN(d.getTime())) return d;
+    }
   }
   const fromGit = getGitLastModified(filePath);
   if (fromGit) return fromGit;
@@ -111,7 +114,7 @@ export function getRecentNotes(limit = 6): RecentNote[] {
     const meta = content.meta;
     const title = (meta?.title as string) ?? slug.split("/").pop() ?? "Untitled";
     const tags = Array.isArray(meta?.tags) ? meta.tags : [];
-    const updatedAt = resolveUpdatedAt(filePath, meta?.date as string | undefined);
+    const updatedAt = resolveUpdatedAt(filePath, meta as ContentMeta | undefined);
 
     notes.push({
       title,
@@ -177,7 +180,7 @@ export function getNotesByTag(tag: string): RecentNote[] {
 
     const meta = content.meta;
     const title = (meta?.title as string) ?? slug.split("/").pop() ?? "Untitled";
-    const updatedAt = resolveUpdatedAt(filePath, meta?.date as string | undefined);
+    const updatedAt = resolveUpdatedAt(filePath, meta as ContentMeta | undefined);
 
     notes.push({
       title,

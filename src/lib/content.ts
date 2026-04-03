@@ -95,6 +95,8 @@ export interface ContentMeta {
   title?: string;
   /** Shown in search/social previews when set in note frontmatter */
   description?: string;
+  /** Last substantive revision; used for Recent Notes when set (before git/mtime). */
+  updated?: string;
   date?: string;
   author?: string;
   tags?: string[];
