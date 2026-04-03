@@ -9,6 +9,7 @@ tags:
 ---
 ![Illustration: What is Ethereum Localism](assets/whatisethereum.png)
 
+
 <div class="kg-wayfinding">
 <p>Introduction — Start here</p>
 <ul>
