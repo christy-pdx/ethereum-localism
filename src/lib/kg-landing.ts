@@ -4,8 +4,10 @@ import { execFileSync } from "child_process";
 import {
   getAllContentPaths,
   getContentByPath,
+  getMetaDescription,
   pathToSlug,
   slugToUrl,
+  type ContentMeta,
 } from "./content";
 
 export interface RecentNote {
@@ -33,16 +35,38 @@ const EXCLUDE_SLUGS = new Set([
   "featured-resources-readme",
 ]);
 
-function getExcerpt(body: string, maxLength = 120): string {
-  const plain = body
+/** Strip HTML for plain-text previews; keeps text that was inside tags. */
+function stripHtmlTags(raw: string): string {
+  return raw
+    .replace(/<!--[\s\S]*?-->/g, " ")
+    .replace(/<script\b[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style\b[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ");
+}
+
+function truncatePlain(text: string, maxLength: number): string {
+  const t = text.replace(/\s+/g, " ").trim();
+  if (t.length <= maxLength) return t;
+  return t.slice(0, maxLength).trim() + "…";
+}
+
+/** Plain excerpt from note body (after frontmatter): markdown + raw HTML normalized. */
+function getExcerptFromBody(body: string, maxLength = 120): string {
+  const plain = stripHtmlTags(body)
     .replace(/^#+\s*/gm, "")
     .replace(/!\[[^\]]*\]\([^)]+\)/g, "") // strip image syntax e.g. ![](assets/library.png)
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // strip link syntax, keep link text
     .replace(/[#*_`]/g, "")
     .replace(/\n+/g, " ")
     .trim();
-  if (plain.length <= maxLength) return plain;
-  return plain.slice(0, maxLength).trim() + "…";
+  return truncatePlain(plain, maxLength);
+}
+
+/** Card/list excerpt: prefer frontmatter description, else first chars of body. */
+function resolveExcerpt(meta: ContentMeta | undefined, body: string, maxLength = 120): string {
+  const fromMeta = meta ? getMetaDescription(meta) : undefined;
+  if (fromMeta) return truncatePlain(fromMeta, maxLength);
+  return getExcerptFromBody(body, maxLength);
 }
 
 /** Get last commit date for a file from git history. Stable across CI rebuilds. */
@@ -93,7 +117,7 @@ export function getRecentNotes(limit = 6): RecentNote[] {
       title,
       slug,
       url: slugToUrl(slug),
-      excerpt: getExcerpt(content.body),
+      excerpt: resolveExcerpt(content.meta as ContentMeta | undefined, content.body),
       tags,
       updatedAt,
       updatedAtIso: updatedAt.toISOString(),
@@ -159,7 +183,7 @@ export function getNotesByTag(tag: string): RecentNote[] {
       title,
       slug,
       url: slugToUrl(slug),
-      excerpt: getExcerpt(content.body),
+      excerpt: resolveExcerpt(content.meta as ContentMeta | undefined, content.body),
       tags,
       updatedAt,
       updatedAtIso: updatedAt.toISOString(),
