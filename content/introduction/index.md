@@ -9,10 +9,6 @@ tags:
 ---
 ![Illustration: What is Ethereum Localism](assets/whatisethereum.png)
 
-**Ethereum Localism** connects open, global protocols with grounded communities: local economies, governance, culture, and ecology. It is an approach to building with decentralized technologies that begins in and honors place, where coordination emerges from real relationships rather than abstraction.
-
-This page offers a starting map — principles, followed by patterns, tradeoffs, and ways to plug in. Explore the map, follow what resonates, and contribute what you can. The movement depends on all of us. *Together we rise.*
-
 <div class="kg-wayfinding">
 <p>Introduction — Start here</p>
 <ul>
@@ -23,11 +19,13 @@ This page offers a starting map — principles, followed by patterns, tradeoffs,
 </ul>
 </div>
 
+This page offers a starting map: principles, followed by patterns, tradeoffs, and ways to plug in. Explore the map, follow what resonates, and contribute what you can. The movement depends on all of us. *Together we rise.*
+
 **On this page:** [What is Ethereum Localism?](#what-is-ethereum-localism) · [Principles](#principles-of-ethereum-localism) · [Applications](#applications-and-use-cases) · [Challenges](#challenges-and-considerations) · [Mission](#our-mission) · [Join](#join-the-movement)
 
 ## What is Ethereum Localism?
 
-Ethereum Localism is a movement at the intersection of blockchain infrastructure and local empowerment. It asks how Ethereum’s decentralized networks can strengthen **place-based** economies, governance, and mutual support, without assuming one global template will fit every community or overlooking the opportunities localist applications offer.
+**Ethereum Localism** is a movement at the intersection of blockchain infrastructure and local empowerment. It asks how Ethereum’s decentralized networks can strengthen **place-based** economies, governance, and mutual support, without assuming one global template will fit every community or overlooking the opportunities localist applications offer.
 
 Unlike projects that treat “borderless” as the only goal, Ethereum Localism insists on **context**: the internet and shared protocols connect us globally, but daily life, care, and accountability still live in specific neighborhoods, watersheds, and towns. It works at this intersection, pairing global infrastructure with local responsibility.
 
@@ -52,14 +50,14 @@ Before frameworks or tooling, these three anchors help keep work accountable to 
 
 **3. Empirical improvisation.** *If it doesn't work here, it doesn't work.* Practice beats abstraction: adapt with feedback, measure viability in use, not in pitch decks. Treat each effort as a living experiment. Stay responsive to what actually happens on the ground, and let reality rather than theory be the guide.
 
-· · ·
+—
 ### Core Principles
 
 These build on the reminders and guide how Ethereum shows up locally.
 
 **Decentralization With Purpose**
 
-Decentralization is a means toward just, resilient, participatory systems, not an end that excuses recentralization or harm. It should increase agency where it is needed most and remain accountable to the people it affects. If power quietly recenters, the work is not complete.
+Decentralization is a means toward just, resilient, participatory systems, not an end that excuses recentralization or harm. It should increase agency and freedom where it is needed most and remain accountable to the people it affects. If power quietly recenters, the work is not complete.
 
 **Community Sovereignty**
 
