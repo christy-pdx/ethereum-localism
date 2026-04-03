@@ -16,11 +16,13 @@ license: CC BY-SA 4.0
 ---
 *An Emerging Model of Applied Cosmo-Localism and Regenerative Financial Infrastructure*
 
-While [Ethereum Localism](/knowledge-garden/introduction) evolves from conceptual frameworks toward grounded practice, initiatives like the BioFi Project represent a new frontier: **Applied [Cosmo-Localism](library/Shared-Definitions)**. BioFi offers a living prototype for how decentralized technologies, commons-based governance, and regenerative finance can converge at the [bioregional](library/Shared-Definitions) scale. This entry serves as both an implementation guide and a glimpse into how financial infrastructure can be reimagined to align with ecological cycles, Indigenous wisdom, and community sovereignty. As we cultivate this growing body of work, BioFi stands as a cornerstone in the architecture of **regenerative financial infrastructure** for place-based resilience.
+While [Ethereum Localism](/knowledge-garden/introduction) evolves from conceptual frameworks toward grounded practice, initiatives like the BioFi Project represent a new frontier: **Applied [Cosmo-Localism](library/Shared-Definitions)**.
 
-**URL:** [biofi.earth](https://www.biofi.earth)  
+**BioFi** offers a living prototype for how decentralized technologies, commons-based governance, and regenerative finance can converge at the [bioregional](library/Shared-Definitions) scale. This entry serves as both an implementation guide and a glimpse into how financial infrastructure can be reimagined to align with ecological cycles, Indigenous wisdom, and community sovereignty. As we cultivate this growing body of work, BioFi stands as a cornerstone in the architecture of **regenerative financial infrastructure** for place-based resilience.
+
+**Visit the BioFi Project at [biofi.earth](https://www.biofi.earth)**  
 ## Overview
-The BioFi Project reimagines finance as a catalyst for ecological and cultural regeneration. It designs and implements **Bioregional Financing Facilities (BFFs)**—decentralized financial infrastructures that direct resources into place-based regenerative initiatives.
+The BioFi Project reimagines finance as a catalyst for ecological and cultural regeneration. It designs and implements **Bioregional Financing Facilities (BFFs)**: decentralized financial infrastructures that direct resources into place-based regenerative initiatives.
 
 BioFi operationalizes cosmo-local principles by connecting global financial flows with grounded, community-led action.
 
@@ -43,7 +45,7 @@ By Samantha Power & Leon Seefeld
 
 ## Alignment with Ethereum Localism & Web3
 
-BioFi’s mission complements Ethereum Localism by bridging **on-chain coordination** with **off-chain regeneration**. Potential integrations include:
+BioFi’s mission aligns with Ethereum Localism by bridging **on-chain coordination** with **off-chain regeneration**. Potential integrations include:
 
 ### Ethereum/Web3 Integration Ideas
 
