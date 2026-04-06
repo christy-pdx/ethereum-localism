@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { POPULAR_CATEGORIES } from "@/lib/kg-landing";
+import { POPULAR_CATEGORIES, QUICK_LINKS } from "@/lib/kg-landing";
 import { SearchTrigger } from "@/components/SearchTrigger";
 
 interface KgSidebarProps {
@@ -39,6 +39,24 @@ export function KgSidebar({ isKnowledgeHome = false }: KgSidebarProps) {
             Knowledge Home
           </Link>
         </nav>
+
+        <div>
+          <h3 className="px-3 text-xs font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">
+            Quick Links
+          </h3>
+          <ul className="mt-2 space-y-0.5">
+            {QUICK_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="block rounded-lg px-3 py-2 text-sm text-stone-600 hover:bg-stone-100 hover:text-stone-900 dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-teal-100"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div>
           <h3 className="px-3 text-xs font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">

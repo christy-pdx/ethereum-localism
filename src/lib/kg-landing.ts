@@ -226,12 +226,21 @@ export function getAllTags(): string[] {
   return Array.from(tagSet);
 }
 
+/** High-value pages that are not topic-style categories */
+export const QUICK_LINKS = [
+  {
+    label: "Community Registry",
+    href: "/knowledge-garden/resources/Ethereum-Localism-Registry",
+  },
+  { label: "Movement Signals", href: "/knowledge-garden/library/Movement-Signals" },
+  { label: "Shared Definitions", href: "/knowledge-garden/library/Shared-Definitions" },
+];
+
 export const POPULAR_CATEGORIES = [
   { label: "Home", href: "/knowledge-garden" },
   { label: "Introduction", href: "/knowledge-garden/introduction" },
   { label: "Library", href: "/knowledge-garden/library" },
   { label: "Resources", href: "/knowledge-garden/resources" },
-  { label: "Shared Definitions", href: "/knowledge-garden/library/Shared-Definitions" },
   {
     label: "Implementation Guides",
     href: "/knowledge-garden/library/Implementation-Guides",

@@ -14,13 +14,12 @@ import {
   getNotesByTag,
   getAllTags,
   getOgDescription,
-  POPULAR_CATEGORIES,
-  CONTRIBUTE_LINKS,
 } from "@/lib/kg-landing";
 import { getBookNav, stripBookNavFromBody } from "@/lib/ethereum-localism-book";
 import { BookNavLinks } from "@/components/BookNavLinks";
 import { getEditOnGitHubUrl } from "@/lib/github";
 import { buildGraphData } from "@/lib/graph-data";
+import { KgMobileBrowseNav } from "@/components/KgMobileBrowseNav";
 import { KgSidebar } from "@/components/KgSidebar";
 import { KnowledgeGraph } from "@/components/KnowledgeGraph";
 import { MarkdownContent } from "@/components/MarkdownContent";
@@ -183,33 +182,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
 
             {/* Main content */}
             <div className="min-w-0 flex-1 px-5 py-8 sm:px-6 lg:px-8">
-              {/* Mobile categories */}
-              <div className="mb-6 lg:hidden">
-                <p className="mb-3 text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400">
-                  Browse the Knowledge Garden
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {POPULAR_CATEGORIES.slice(0, 4).map((cat) => (
-                    <Link
-                      key={cat.href}
-                      href={cat.href}
-                      className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-700 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-300"
-                    >
-                      {cat.label}
-                    </Link>
-                  ))}
-                  {CONTRIBUTE_LINKS.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-sm font-medium text-teal-800 dark:border-teal-800 dark:bg-teal-950/50 dark:text-teal-200"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-                <div className="mt-6 border-t border-stone-200 pt-6 dark:border-stone-700" />
-              </div>
+              <KgMobileBrowseNav />
 
               <div className="mb-10">
                 <h1 className="font-serif text-3xl font-light text-stone-900 dark:text-teal-50 sm:text-4xl">
@@ -340,32 +313,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
 
             <div className="min-w-0 flex-1 border-y border-teal-950/10 bg-white dark:border-teal-100/10 dark:bg-stone-900/30">
               <div className="mx-auto min-w-0 max-w-4xl px-5 py-12 sm:px-6 sm:py-16">
-                <div className="mb-6 lg:hidden">
-                  <p className="mb-3 text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400">
-                    Browse the Knowledge Garden
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {POPULAR_CATEGORIES.slice(0, 4).map((cat) => (
-                      <Link
-                        key={cat.href}
-                        href={cat.href}
-                        className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-700 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-300"
-                      >
-                        {cat.label}
-                      </Link>
-                    ))}
-                    {CONTRIBUTE_LINKS.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className="rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-sm font-medium text-teal-800 dark:border-teal-800 dark:bg-teal-950/50 dark:text-teal-200"
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                  <div className="mt-6 border-t border-stone-200 pt-6 dark:border-stone-700" />
-                </div>
+                <KgMobileBrowseNav />
                 <Link
                   href="/knowledge-garden"
                   className="mb-6 inline-block text-sm font-medium text-stone-500 hover:text-stone-700 dark:text-stone-400 dark:hover:text-teal-200"
@@ -476,33 +424,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
 
           <div className="min-w-0 flex-1 border-y border-teal-950/10 bg-white dark:border-teal-100/10 dark:bg-stone-900/30">
             <div className="mx-auto min-w-0 max-w-4xl px-5 py-12 sm:px-6 sm:py-16">
-              {/* Mobile categories (sidebar hidden on small screens) */}
-              <div className="mb-6 lg:hidden">
-                <p className="mb-3 text-xs font-medium uppercase tracking-wider text-stone-500 dark:text-stone-400">
-                  Browse the Knowledge Garden
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {POPULAR_CATEGORIES.slice(0, 4).map((cat) => (
-                    <Link
-                      key={cat.href}
-                      href={cat.href}
-                      className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-700 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-300"
-                    >
-                      {cat.label}
-                    </Link>
-                  ))}
-                  {CONTRIBUTE_LINKS.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-sm font-medium text-teal-800 dark:border-teal-800 dark:bg-teal-950/50 dark:text-teal-200"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-                <div className="mt-6 border-t border-stone-200 pt-6 dark:border-stone-700" />
-              </div>
+              <KgMobileBrowseNav />
               {(() => {
                 const bookNav = content ? getBookNav(content.slug) : null;
                 return bookNav ? (
