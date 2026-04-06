@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { SearchModal } from "@/components/SearchModal";
 import { ThemeScript } from "@/components/ThemeScript";
 import { UmamiTracking } from "@/components/UmamiTracking";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,7 +25,31 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
 });
 
-const siteUrl = process.env.SITE_URL ?? "https://www.ethereumlocalism.xyz";
+const siteUrl = getSiteUrl();
+const siteOrigin = siteUrl.replace(/\/$/, "");
+
+const siteDescription =
+  "Connecting digital tools with on-the-ground action—empowering communities to build more resilient local economies through local currencies, innovative funding models, and community-led governance.";
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteOrigin}/#website`,
+      url: siteUrl,
+      name: "Ethereum Localism",
+      description: siteDescription,
+      publisher: { "@id": `${siteOrigin}/#organization` },
+    },
+    {
+      "@type": "Organization",
+      "@id": `${siteOrigin}/#organization`,
+      name: "Ethereum Localism",
+      url: siteUrl,
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -32,16 +57,14 @@ export const metadata: Metadata = {
     default: "Ethereum Localism",
     template: "%s | Ethereum Localism",
   },
-  description:
-    "Connecting digital tools with on-the-ground action—empowering communities to build more resilient local economies through local currencies, innovative funding models, and community-led governance.",
+  description: siteDescription,
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteUrl,
     siteName: "Ethereum Localism",
     title: "Ethereum Localism",
-    description:
-      "Connecting digital tools with on-the-ground action—empowering communities to build more resilient local economies through local currencies, innovative funding models, and community-led governance.",
+    description: siteDescription,
     images: [
       {
         url: "/hero-graphic.png",
@@ -54,8 +77,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ethereum Localism",
-    description:
-      "Connecting digital tools with on-the-ground action—empowering communities to build more resilient local economies.",
+    description: siteDescription,
     images: ["/hero-graphic.png"],
   },
   robots: {
@@ -81,6 +103,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} font-sans antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <ThemeScript />
         <ThemeProvider>
           <SearchProvider>

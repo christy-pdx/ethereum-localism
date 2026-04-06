@@ -71,7 +71,7 @@ export default function Home() {
           <div className="relative aspect-[3/1] w-full min-h-[min(420px,85vh)] sm:min-h-[min(480px,80vh)]">
             <Image
               src="/hero-graphic.png"
-              alt=""
+              alt="Ethereum Localism — community and place-based coordination"
               fill
               className="object-cover object-top"
               priority

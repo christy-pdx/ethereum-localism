@@ -27,6 +27,10 @@ export const metadata = {
   title: "New Note | Ethereum Localism Knowledge Garden",
   description:
     "Contribute a new note to the Ethereum Localism Knowledge Garden. Share field reports, guides, and reflections.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function NewNotePage() {

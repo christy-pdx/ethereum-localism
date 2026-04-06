@@ -1,12 +1,19 @@
 import path from "path";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getContentBySlug, getAllContentPaths, getMetaDescription } from "@/lib/content";
+import {
+  getContentBySlug,
+  getAllContentPaths,
+  getKgIndex,
+  getMetaDescription,
+  type ContentMeta,
+} from "@/lib/content";
 import {
   getRecentNotes,
   getPopularTags,
   getNotesByTag,
   getAllTags,
+  getOgDescription,
   POPULAR_CATEGORIES,
   CONTRIBUTE_LINKS,
 } from "@/lib/kg-landing";
@@ -20,6 +27,7 @@ import { MarkdownContent } from "@/components/MarkdownContent";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { LocalizedUpdatedDate } from "@/components/LocalizedUpdatedDate";
+import { ArticleJsonLd } from "@/components/ArticleJsonLd";
 
 interface PageProps {
   params: Promise<{ slug?: string[] }>;
@@ -60,40 +68,84 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const slugStr = slug?.join("/") ?? "";
+
   if (!slugStr) {
-    return { title: "Knowledge Garden | Ethereum Localism" };
-  }
-  // Tag-filtered page
-  if (slug?.[0] === "tag" && slug.length > 1) {
-    const tag = slug.slice(1).join("/");
+    const indexContent = getKgIndex();
+    const description =
+      (indexContent ? getMetaDescription(indexContent.meta as ContentMeta) : undefined) ??
+      "An interconnected collection of ideas, concepts, and resources on Ethereum Localism.";
+    const title = "Knowledge Garden | Ethereum Localism";
     return {
-      title: `#${tag} | Ethereum Localism Knowledge Garden`,
+      title,
+      description,
+      alternates: { canonical: "/knowledge-garden" },
+      openGraph: {
+        title,
+        description,
+        url: "/knowledge-garden",
+        type: "website",
+        siteName: "Ethereum Localism",
+      },
+      twitter: {
+        card: "summary_large_image" as const,
+        title,
+        description,
+      },
     };
   }
+
+  if (slug?.[0] === "tag" && slug.length > 1) {
+    const tag = slug.slice(1).join("/");
+    const notes = getNotesByTag(tag);
+    const tagDisplay = tag.split("/").pop() ?? tag;
+    const title = `#${tagDisplay} | Ethereum Localism Knowledge Garden`;
+    const description =
+      notes.length > 0
+        ? `Browse ${notes.length} note${notes.length === 1 ? "" : "s"} in the Ethereum Localism Knowledge Garden tagged with ${tag}.`
+        : `Ethereum Localism Knowledge Garden notes tagged with ${tag}.`;
+    const canonicalPath = `/knowledge-garden/tag/${tag.split("/").join("/")}`;
+    return {
+      title,
+      description,
+      alternates: { canonical: canonicalPath },
+      openGraph: {
+        title,
+        description,
+        url: canonicalPath,
+        type: "website",
+        siteName: "Ethereum Localism",
+      },
+      twitter: {
+        card: "summary_large_image" as const,
+        title,
+        description,
+      },
+    };
+  }
+
   const content = getContentBySlug(slugStr);
   if (!content) return { title: "Knowledge Garden | Ethereum Localism" };
 
   const pageTitle = `${content.meta.title ?? "Page"} | Ethereum Localism Knowledge Garden`;
-  const description = getMetaDescription(content.meta);
-  const siteUrl = process.env.SITE_URL ?? "https://www.ethereumlocalism.xyz";
+  const description = getMetaDescription(content.meta) ?? getOgDescription(content.meta, content.body);
   const canonicalPath = `/knowledge-garden/${slugStr}`;
 
   return {
     title: pageTitle,
-    ...(description && {
+    description,
+    alternates: { canonical: canonicalPath },
+    openGraph: {
+      title: pageTitle,
       description,
-      openGraph: {
-        title: pageTitle,
-        description,
-        url: canonicalPath,
-        type: "article",
-      },
-      twitter: {
-        card: "summary_large_image" as const,
-        title: pageTitle,
-        description,
-      },
-    }),
+      url: canonicalPath,
+      type: "article",
+      siteName: "Ethereum Localism",
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: pageTitle,
+      description,
+    },
   };
 }
 
@@ -469,6 +521,7 @@ export default async function KnowledgeGardenPage({ params }: PageProps) {
               ) : null}
               {content && (
                 <>
+                  <ArticleJsonLd content={content} />
                   <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
                     <h1 className="font-serif text-3xl font-light text-stone-900 dark:text-teal-50 sm:text-4xl">
                       {content.meta.title
