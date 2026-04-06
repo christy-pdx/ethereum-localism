@@ -29,6 +29,9 @@ The taxonomy below will grow as the garden grows. If you have a term that does n
 - **#format/guide**  
   Step-by-step how-tos, onboarding resources, or documentation for replicating localist practices.
 
+- **#format/registry**  
+  Curated directories or public listings—inventories of initiatives, communities, or resources (often grouped by region or theme).
+
 - **#format/interview**  
   Conversations with organizers, builders, artists, or researchers involved in Ethereum localism.
 

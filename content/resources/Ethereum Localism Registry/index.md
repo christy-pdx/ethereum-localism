@@ -1,13 +1,19 @@
 ---
 title: Ethereum Localism Initiative & Community Registry
+description: >-
+  A public directory of place-based communities, DAOs, and localist experiments
+  using Ethereum and peer-to-peer tools to coordinate, govern, and care for
+  shared resources—grouped by region with contacts and links.
+updated: 2026-04-04
 tags:
+  - format/registry
   - theme/ethereum-localism
   - theme/community
   - tool/dao
 ---
-**A public directory of communities, DAOs, and other localist experiments using Ethereum and other decentralized or peer-to-peer technologies to coordinate, govern, and care for shared resources.** Entries are grouped by region; Global communities have distributed networks with place-based local activations.  Entries are listed in alphabetical order by initiative name within each region. 
+**A public directory of communities, DAOs, and other localist experiments using Ethereum and other decentralized or peer-to-peer technologies to coordinate, govern, and care for shared resources.** Entries are grouped by region; communities listed under **Global** have distributed networks with place-based local activations. Within each region, entries are listed in alphabetical order by initiative name.
 
-**Add your initiative:** Use the **Edit on GitHub** link above to add it directly, or [reach out to the curators](/knowledge-garden/contribution-guide). Please add new entries in alphabetical order. Listings are reviewed by curators before going live.
+**Add your initiative:** Use the **Edit on GitHub** link above to add it directly, or read the [Contribution Guide](/knowledge-garden/contribution-guide) for how to submit listings. Please add new entries in alphabetical order. Listings are reviewed by curators before going live.
 
 **Interested in starting an initiative?** See [Implementation Guides](library/Implementation-Guides) for how-to resources.
 
@@ -52,7 +58,7 @@ Brazil — Collaborative network for ecological development, with the aim of con
 **Contact:** [ekonavi.com](https://ekonavi.com)
 
 **ReFi Colombia**  
-Columbia — Local node of ReFi DAO  
+Colombia — Local node of ReFi DAO  
 **Contact:** [linktr.ee/reficolombia](https://linktr.ee/reficolombia)
 
 **ReFi Costa Rica**  
@@ -73,6 +79,11 @@ Ethereum-based regenerative movement: local chapters, guilds and Impact DAOs; ed
 **Pizza DAO**  
 Distributed network with local activations; annual Global Pizza Parties on Bitcoin Pizza Day (May 22), supporting local pizzerias and small businesses  
 **Contact:** [globalpizza.party](https://globalpizza.party/) · [pizzadao.xyz](https://pizzadao.xyz/)
+
+**ReFi DAO**  
+Network of place-based Regenerative Finance communities, empowering communities to co-create a future rooted in social equity, economic opportunity, and ecological restoration  
+**About:** [refidao.com/about](https://refidao.com/about)  
+**Browse local nodes:** [refidao.com/local-nodes](https://refidao.com/local-nodes)
 
 **Regens Unite**  
 In-person gatherings connecting regenerative thinkers and builders across climate, Web3, ReFi and arts; events in Brussels, Berlin, London, Amsterdam, Bangkok and beyond  
