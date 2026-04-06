@@ -1,5 +1,10 @@
 ---
 title: Movement Signals
+description: >-
+  Curated dispatches, articles, and project updates from the Ethereum Localism
+  ecosystem and aligned movements—place-based coordination, ReFi, and
+  regenerative experiments worth watching.
+updated: 2026-04-04
 tags:
   - format/article
   - theme/ethereum-localism
@@ -7,6 +12,8 @@ tags:
   - theme/regenerative-finance
 ---
 **Dispatches, news articles, and project updates from the growing ecosystem of Ethereum Localism and aligned movements.**
+
+Signals are listed in reverse chronological order (newest first). To suggest an entry, use the **Edit on GitHub** link at the top of the page, or see the footer for quick submissions.
 
 ---
 ### Valley of the Commons (a Cosmo-local Gathering)
@@ -39,13 +46,27 @@ Through a free, four-session cohort, NetX State supports participants in adoptin
 
 **Date:** March 18–28, 2026
 
-**Location:** Hamilton, Ontario, Canada  
+**Location:** Hamilton, Ontario, Canada
 
-CoQuest Hamilton is a ten-day gathering of artists, organizers, and community builders exploring how culture, collaboration, and local coordination can take shape in practice. Emerging in part from relationships and inspiration catalyzed at GFELxBoulder 2025, the event reflects the continued diffusion of localist thinking into place-based creative ecosystems.
+CoQuest Hamilton is a ten-day gathering of artists, organizers, and community builders exploring how culture, collaboration, and local coordination can take shape in practice. Emerging in part from relationships and inspiration catalyzed at GFEL × Boulder 2025, the event reflects the continued diffusion of localist thinking into place-based creative ecosystems.
 
 Through workshops, open discussions, and co-creation sessions, CoQuest centers relational infrastructure — the human layer from which durable coordination systems grow.
 
 **[Learn more](https://coquest.xyz/)**
+
+---
+
+### "Growing Sicily's Regenerative Future"
+
+**Date:** January 21, 2026
+
+**Source:** By Regen Avocado, via Paragraph
+
+**Location:** Sicily, Italy; the Mediterranean
+
+A detailed bioregional portfolio proposes Sicily as a living model for regenerative economic development—integrating agroforestry, local food systems, ecological tourism, and community-based finance into a coordinated, place-based system. Designed as a modular and replicable framework, it combines onchain tools, mutual credit currency, and regenerative land practices to demonstrate how bioregions can build sovereignty through interconnected ecological and economic infrastructure.
+
+**[Read the full post on Paragraph](https://paragraph.com/@regen-avocado/sicily-bioregional-portfolio-business-plan)**
 
 ---
 ### "Inside Bioregionalism’s Tech-Driven Revival"
@@ -67,22 +88,22 @@ For Ethereum Localism, the article signals broader cultural attention towards pl
 
 **Date:** October 31, 2025
 
-**Hosted at:** https://fabdaotw.github.io/ 
+**Hosted at:** [fabdaotw.github.io](https://fabdaotw.github.io/)
 
 **Location:** Taiwan
 
 **Project:** Taiwan Hypercerts Dashboard
 
-**Summary:** [GreenSofa Taiwan](library/Field-Reports/GreenSofa-Taiwan) has launched a localized Hypercerts Dashboard to make public goods impact visible, verifiable, and meaningful at the regional level. This dashboard aggregates and visualizes Taiwan-specific [Hypercerts](https://www.hypercerts.org)—onchain certificates of public goods contributions—transforming fragmented project data into structured, traceable impact evidence. 
+**Summary:** [GreenSofa Taiwan](library/Field-Reports/GreenSofa-Taiwan) has launched a localized Hypercerts Dashboard to make public goods impact visible, verifiable, and meaningful at the regional level. This dashboard aggregates and visualizes Taiwan-specific [Hypercerts](https://www.hypercerts.org)—onchain certificates of public goods contributions—transforming fragmented project data into structured, traceable impact evidence.
 
-**What it Does:**
+**What it does:**
 
 - **Tracks and displays real-world impact** of local public goods funding initiatives in Taiwan, making contributions transparent and readable for community stakeholders.
-- **Bridges the gap between onchain data and offchain outcomes** by connecting verifiable blockchain records with human-centered impact narratives and documentation. 
-- **Addresses key challenges** in the global public goods ecosystem—limited reviewer bandwidth and trustworthiness of impact evaluation—by offering a regionally focused verification layer. 
+- **Bridges the gap between onchain data and offchain outcomes** by connecting verifiable blockchain records with human-centered impact narratives and documentation.
+- **Addresses key challenges** in the global public goods ecosystem—limited reviewer bandwidth and trustworthiness of impact evaluation—by offering a regionally focused verification layer.
 - **Supports ecosystem growth** by enabling data visualization, a review interface, and IPFS-based storage for evidence of impact, thereby encouraging more builders and projects to participate.
 
-**Why It Matters:** Hypercerts aim to standardize how impact is certified across decentralized public goods efforts. By localizing this tooling for Taiwan, GreenSofa is not only advancing onchain accountability but also fostering a replicable model for other regions and communities seeking to ground public goods evaluation in shared data and transparency.
+**Why it matters:** Hypercerts aim to standardize how impact is certified across decentralized public goods efforts. By localizing this tooling for Taiwan, GreenSofa is not only advancing onchain accountability but also fostering a replicable model for other regions and communities seeking to ground public goods evaluation in shared data and transparency.
 
 **Proposal & Support Page: [Gardens Fund entry](https://app.gardens.fund/gardens/10/0xda10009cbd5d07dd0cecc66161fc93d7c9000da1/0xd95bf6da95c77466674bd1210e77a23492f6eef9/178/0x588e935cf4dae4361f33af2aadd4c3c3a06cab7d-7)**
 
@@ -100,7 +121,7 @@ The Localism Fund is a global initiative supporting place-based and bioregional 
 By channeling global onchain capital into locally governed funding rounds, the initiative explores how decentralized technologies can strengthen bioregional stewardship and community self-determination. For Ethereum Localism, the Localism Fund represents an emerging funding layer for place-based coordination.
 
 **[Read the launch blog post](https://blog.refidao.com/localism-fund-launch/)**  
-**[Read the initial progress report](https://gov.gitcoin.co/t/localism-fund-initial-progress-reflections-report/24947)** 
+**[Read the initial progress report](https://gov.gitcoin.co/t/localism-fund-initial-progress-reflections-report/24947)**
 
 ---
 ### "Bhutan Adopts Ethereum for National Identity: A New Chapter in Digital Sovereignty"
@@ -124,7 +145,7 @@ Bhutan has integrated Ethereum into its national digital identity system—using
 
 **Location:** Global / Digital
 
-This sensemaking report, authored by Regen Coordination and collaborators, proposes Ethereum Localism as a strategic domain for Gitcoin’s Dedicated Domain Allocation (DDA) process. It frames Ethereum Localism as a path to meaningful mass adoption - embedding Web3 tools like stablecoins, governance, and payments into local communities. Backed by $370K+ in grassroots funding rounds, the report outlines a plan for 3–5 local pilots during GG24, aiming to prototype scalable, cosmo-local public goods infrastructure.  
+This sensemaking report, authored by Regen Coordination and collaborators, proposes Ethereum Localism as a strategic domain for Gitcoin’s Dedicated Domain Allocation (DDA) process. It frames Ethereum Localism as a path to meaningful mass adoption—embedding Web3 tools like stablecoins, governance, and payments into local communities. Backed by $370K+ in grassroots funding rounds, the report outlines a plan for 3–5 local pilots during GG24, aiming to prototype scalable, cosmo-local public goods infrastructure.  
 
 **[Read the forum post](https://gov.gitcoin.co/t/ethereum-localism-x-regen-coordination-gitcoin-3-0-sensemaking-report/21940)**
 
@@ -154,12 +175,12 @@ Over 3 months, the pilot aims to launch 6 MiniApps, complete 2,000+ transactions
 
 Wyoming moves closer to issuing its own state-backed stablecoin, The Wyoming Stable Token (WYST), aiming to create a blockchain-based public utility. The move reflects growing interest in localized financial infrastructure that leverages the global crypto network without ceding power to private intermediaries.  
 
-**Official website:** https://stabletoken.wyo.gov
+**Official website:** [stabletoken.wyo.gov](https://stabletoken.wyo.gov)
 
-**[Read the Article](https://www.coindesk.com/policy/2025/03/26/wyoming-state-gears-towards-launching-a-stablecoin-this-year)**
+**[Read the article](https://www.coindesk.com/policy/2025/03/26/wyoming-state-gears-towards-launching-a-stablecoin-this-year)**
 
 ---
-### Creating Community Asset Vouchers in Jackson, MS  
+### Creating Community Asset Vouchers in Jackson, MS
 
 **Date:** March 19, 2025
 
@@ -186,4 +207,4 @@ MiniPay is one of the fastest-growing tools for local stablecoin adoption. With 
 
 ---
 
-_Know of a signal we should include?_ [Submit a link on Telegram](https://t.me/+5Enk4J4d98MyMDkx)
+_Know of a signal we should include?_ [Submit a link on Telegram](https://t.me/+5Enk4J4d98MyMDkx) · For other contributions to the garden, read the [Contribution Guide](/knowledge-garden/contribution-guide).
